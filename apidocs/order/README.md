@@ -2,6 +2,12 @@
 
 Version: `v1`
 
+## Table of Contents
+- [Place order](#place-order)
+- [Dispatch order](#dispatch-order)
+- [Get order keys](#get-order-keys)
+- [Get order](#get-order)
+
 ## Place order
 
 `POST /{version}/order`

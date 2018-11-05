@@ -2,6 +2,14 @@
 
 Version: `v1`
 
+## Table of Contents
+
+- [List products](#list-products)
+- [Get single product](#get-single-product)
+- [Product Object](#product-object)
+- [Tags](#tags)
+- [Regions](#regions)
+
 ## List products
 
 `GET /{version}/products`
