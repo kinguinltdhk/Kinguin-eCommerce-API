@@ -8,12 +8,14 @@ Base URL sandbox: https://api-sandbox.kinguin.info/integration
 
 ## Authorization
 
-Requests are authorized based on HTTP header `api-ecommerce-auth`. You can find your access key in a Dashboard.
+Requests are authorized based on HTTP header `api-ecommerce-auth`. You can find your access key in a Dashboard in "My Stores" section.
 
 Example:
 ```
 curl -H 'api-ecommerce-auth: abcdefghijkl1234567890' ...
 ```
+
+**Remember that credentials on sandbox environment are different.**
 
 ## [Products](products/README.md)
 

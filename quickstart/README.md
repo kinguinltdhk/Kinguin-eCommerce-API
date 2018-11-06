@@ -25,6 +25,8 @@ After store is verified you can find there API KEY you should use to [authorize]
 
 `Keep your API KEY secret !!!`
 
+**Remember that credentials on sandbox environment are different.**
+
 ## List products
 
 [List, search, filter products](../apidocs/products/README.md#list-products) you want to offer to your customers.
