@@ -7,6 +7,7 @@ Version: `v1`
 - [Dispatch order](#dispatch-order)
 - [Get order keys](#get-order-keys)
 - [Get order](#get-order)
+- [Order statuses](#order-statuses)
 
 ## Place order
 
@@ -181,6 +182,8 @@ HTTP Status 200
 }
 ```
 
+**check available [order statuses](#order-statuses)**
+
 ### Example
 ```
 curl -X GET
@@ -218,4 +221,12 @@ curl -X GET
 }
 ```
 
+## Order Statuses
 
+Status | Description
+------ | -------------
+pending | Order is being processed
+processing | Order awaits dispatch
+completed | Order is completed, keys can be downloaded
+out_of_stock | Out of requested quantity with given price
+error | There was an unrecoverable error in processing order request
