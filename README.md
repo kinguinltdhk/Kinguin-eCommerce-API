@@ -6,3 +6,5 @@
 [Quick start](quickstart/README.md)
 
 [API](apidocs/README.md)
+
+[Changelog](CHANGELOG.md)
