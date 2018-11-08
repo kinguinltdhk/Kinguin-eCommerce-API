@@ -121,9 +121,9 @@ HTTP Status 200
 
 `name` is product name
 
-`type` can be `text/plain` or `image/jpeg`
+`type` can be `text/plain` or `image/jpeg`, `image/png`, `image/gif`
 
-`serial` is a plain text serial key or in case of `image/jpeg` base64 encoded content of the image with product serial key
+`serial` is a plain text serial key or in case of `image/*` base64 encoded content of the image with product serial key
 
 ### Example
 ```
