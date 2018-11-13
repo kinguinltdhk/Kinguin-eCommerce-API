@@ -17,8 +17,20 @@ curl -H 'api-ecommerce-auth: abcdefghijkl1234567890' ...
 
 **Remember that credentials on sandbox environment are different.**
 
+If invalid key is provided you can expect:
+
+HTTP 403 Forbidden  
+```
+{
+    "error": "Access to this API has been disallowed"
+}
+```
+
+
 ## [Products](products/README.md)
 
 ## [Order](order/README.md)
 
 ## [User](user/README.md)
+
+## [Errors Codes](ErrorsCodes.md)

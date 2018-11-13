@@ -39,7 +39,7 @@ HTTP Status 201
 }
 ```
 
-In case of error HTTP Status other then 2xx is return and error object containing code and message
+In case of error HTTP Status other then 2xx is return and [error object](../ErrorsCodes.md) containing code and message
 
 ### Example
 ```
