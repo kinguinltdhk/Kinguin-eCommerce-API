@@ -126,7 +126,7 @@ HTTP Status 200
 
 `serial` is a plain text serial key or in case of `image/*` base64 encoded content of the image with product serial key
 
-`kinguinId` is product id (may not exist for orders from before 2018-11-13)
+`kinguinId` is product id (only available for orders created after 2018-11-13)
 
 ### Example
 ```
