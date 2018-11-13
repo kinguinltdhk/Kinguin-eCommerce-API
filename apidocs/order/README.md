@@ -113,7 +113,8 @@ HTTP Status 200
     {
         "serial": [string],
         "type": [string],
-        "name": [string]
+        "name": [string],
+        "kinguinId": [integer]
     },
     (...)
 ]
@@ -124,6 +125,8 @@ HTTP Status 200
 `type` can be `text/plain` or `image/jpeg`, `image/png`, `image/gif`
 
 `serial` is a plain text serial key or in case of `image/*` base64 encoded content of the image with product serial key
+
+`kinguinId` is product id (may not exist for orders from before 2018-11-13)
 
 ### Example
 ```
@@ -139,12 +142,14 @@ curl -X GET
     {
         "serial": "0ddbebb2-559d-42e9-a8e1-fd4b2bdea858",
         "type": "text/plain",
-        "name": "Anno"
+        "name": "Anno",
+        "kinguinId": 4
     },
     {
         "serial": "/9j/4AAQSkZJRgABAQEAYABgAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAFA3PEY8MlBGQUZaVVBfeMiCeG5uePWvuZHI////////////////////////////////////////////////////wAALCAASABABAREA/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/AJo0iEMZZFywH8PU4pWjjV1Hlptbj7o60sWfIjAGcqM89OKGUBkUEnndyc06H/UR/wC6P5U6v//Z",
         "type": "image/jpeg",
-        "name": "Aliens"
+        "name": "Aliens",
+        "kinguinId": 409
     }
 ]
 ```

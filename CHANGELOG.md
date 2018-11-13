@@ -24,4 +24,6 @@
 ## [2018-11-13]
 ### Changed
 - improved [errors and messages](apidocs/ErrorsCodes.md)
-  
+
+### Added
+- `kinguinId` in order/dispatch/keys endpoint
