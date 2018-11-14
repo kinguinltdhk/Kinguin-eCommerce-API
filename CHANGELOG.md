@@ -1,6 +1,13 @@
 # Changelog
 
-## [Unreleased]
+## [2018-11-13]
+### Changed
+- improved [errors and messages](apidocs/ErrorsCodes.md)
+
+### Added
+- `kinguinId` in order/dispatch/keys endpoint
+
+## [2018-11-14]
 ### Changed
 - product `regionalLimitations` field now stores a *name of region* instead of url to icon
 - fields such as `originalName`, `description`, `coverImage`, `screenshots`, `videos`, `developers`, `publishers` and `releaseDate` have become optional fields and may not be accessible for all products
@@ -20,10 +27,3 @@
 - added `regionId` parameter to query filters
 - added `tags` parameter to query filters. It should be comma separated list of tags
 - added `updatedSince` and `updatedTo` parameters to query filters. Both should be a valid UTC date. It allows to filter products by last update date
-
-## [2018-11-13]
-### Changed
-- improved [errors and messages](apidocs/ErrorsCodes.md)
-
-### Added
-- `kinguinId` in order/dispatch/keys endpoint
