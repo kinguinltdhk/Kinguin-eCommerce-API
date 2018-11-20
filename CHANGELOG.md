@@ -27,3 +27,8 @@
 - added `regionId` parameter to query filters
 - added `tags` parameter to query filters. It should be comma separated list of tags
 - added `updatedSince` and `updatedTo` parameters to query filters. Both should be a valid UTC date. It allows to filter products by last update date
+
+## [2018-11-20]
+
+### Added
+- new endpoint GET /order, [details here](apidocs/order/README.md#get-orders)

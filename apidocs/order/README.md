@@ -7,6 +7,8 @@ Version: `v1`
 - [Dispatch order](#dispatch-order)
 - [Get order keys](#get-order-keys)
 - [Get order](#get-order)
+- [Get orders](#get-orders)
+- [Order object](#order-object)
 - [Order statuses](#order-statuses)
 
 ## Place order
@@ -159,7 +161,7 @@ curl -X GET
 
 `GET /{version}/order/{orderId}`
 
-`orderId` is a value returned by `/order` request
+`orderId` is a value returned by POST `/order` request (only with status other than "error")
 
 **Response**
 
@@ -225,6 +227,134 @@ curl -X GET
     }
 }
 ```
+
+## Get orders
+
+`GET /{version}/order`
+
+### Input
+
+Parameter | Type | Required | Description
+--------- | -----| :--------: | -----------
+page | int | - | Page number
+limit | int | - | Limit results (default: `10`, maximum: `100`)
+sortBy | string | - | Sort field name (default: `createdAt`, values: `totalPrice`, `status` or `createdAt`)
+sortType | string | - | Sort type (default: `desc`, values: `asc` or `desc`)
+totalPriceFrom | float | - | Total price from
+totalPriceTo | float | - | Total price to
+createdAtFrom | string | - | UTC date
+createdAtTo | string | - | UTC date
+kinguinId | int | - | Product id
+name | string | - | Product name
+status | string | - | Comma separated list of [order statuses](#order-statuses)
+
+### Output
+
+Parameter | Type | Description
+--------- | -----| --------
+results | array-object | Array of [Order Object](#order-object)
+item_count | int | Total number of available orders matching filters
+
+**Response**
+
+HTTP Status 200
+```
+{
+    "results": [
+        {
+            "totalPrice": [float],
+            "orderId": [string],
+            "status": [string],
+            "storeId": [int],
+            "createdAt": [string],
+            "products": [
+                {
+                    "kinguinId": [int],
+                    "qty": [int],
+                    "name": [string],
+                    "price": [float]
+                },
+                (...)
+            ],
+            "dispatch": {
+                "dispatchId": [int],
+                "createdAt": [string]
+            }
+        },
+        (...)
+    ],
+    "item_count": [int]
+}
+```
+
+**check available [order statuses](#order-statuses)**
+
+### Example
+```
+curl -X GET
+     -H 'api-ecommerce-auth: ...' \
+     -H 'Content-Type: application/json' \
+     https://api2.kinguin.net/integration/v1/order?totalPriceFrom=4&totalPriceTo=15&limit=2&status=completed,error
+```
+
+### Example response
+```
+{
+    {
+    "results": [
+        {
+            "totalPrice": 13.5,
+            "status": "error",
+            "storeId": 1,
+            "createdAt": "2018-11-13T11:05:30+00:00",
+            "products": [
+                {
+                    "kinguinId": 18,
+                    "qty": 1,
+                    "product_id": 367,
+                    "price": 13.5,
+                    "name": "Battlefield 3 Close Quarters Expansion Pack DLC"
+                }
+            ]
+        },
+        {
+            "totalPrice": 13.5,
+            "orderId": "17461",
+            "status": "completed",
+            "storeId": 1,
+            "createdAt": "2018-11-13T10:26:56+00:00",
+            "products": [
+                {
+                    "kinguinId": 18,
+                    "qty": 1,
+                    "product_id": 367,
+                    "price": 13.5,
+                    "name": "Battlefield 3 Close Quarters Expansion Pack DLC"
+                }
+            ],
+            "dispatch": {
+                "dispatchId": 10352,
+                "createdAt": "2018-11-13T10:27:19+00:00"
+            }
+        }
+    ],
+    "item_count": 2
+}
+```
+
+## Order Object
+
+Field | Type | Description
+--------- | -----| --------
+totalPrice | float | Total price
+orderId`*` | string | Order id
+status | string | Status
+storeId | int | Store id
+createdAt | string | UTC date
+products | array | Products list
+dispatch`*` | array | Dispatch id and date of create
+
+`* optional attribute`
 
 ## Order Statuses
 
