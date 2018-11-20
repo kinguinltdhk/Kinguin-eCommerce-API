@@ -1,11 +1,9 @@
 # Changelog
 
-## [2018-11-13]
-### Changed
-- improved [errors and messages](apidocs/ErrorsCodes.md)
+## [2018-11-20]
 
 ### Added
-- `kinguinId` in order/dispatch/keys endpoint
+- new endpoint GET /order, [details here](apidocs/order/README.md#get-orders)
 
 ## [2018-11-14]
 ### Changed
@@ -28,7 +26,9 @@
 - added `tags` parameter to query filters. It should be comma separated list of tags
 - added `updatedSince` and `updatedTo` parameters to query filters. Both should be a valid UTC date. It allows to filter products by last update date
 
-## [2018-11-20]
+## [2018-11-13]
+### Changed
+- improved [errors and messages](apidocs/ErrorsCodes.md)
 
 ### Added
-- new endpoint GET /order, [details here](apidocs/order/README.md#get-orders)
+- `kinguinId` in order/dispatch/keys endpoint
