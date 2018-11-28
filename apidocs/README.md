@@ -4,7 +4,7 @@ Version: `v1`
 
 Base URL: https://api2.kinguin.net/integration
 
-Base URL sandbox: https://api-sandbox.kinguin.info/integration
+Base URL sandbox: https://api.api-sandbox.kinguin.info/integration
 
 ## Authorization
 
