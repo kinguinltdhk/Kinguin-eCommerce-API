@@ -5,7 +5,7 @@
 
 # Products updates notifications
 
-These notifications inform you when products price or stock level have been changed.
+These notifications inform you about changes in products price or stock level.
 
 ### Payload
 
@@ -23,8 +23,8 @@ After every response code from your notification endpoint different than `200` w
 
 # How to
 
-Notifications urls can be configured for each store.
+Notification url can be configured for each store.
 
 Before enable **store postback notifications** you should verify you store (see store details in your Dashboard).
 
-**Please keep in mind that your every notifications url should be placed into the same host name as your store url.**
+**Please keep in mind that every notification url should be placed into the same host name as store url.**
