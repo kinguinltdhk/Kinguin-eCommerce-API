@@ -1,5 +1,10 @@
 # Changelog
 
+## [2019-01-09]
+
+### Added
+- postback notifications for products updates, [details here](apidocs/Postback.md#products-updates-notifications)
+
 ## [2018-11-20]
 
 ### Added
