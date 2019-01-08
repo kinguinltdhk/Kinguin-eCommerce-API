@@ -1,7 +1,5 @@
 # Postback notifications
 
-**Table of Contents**
-
 - [Products updates notifications](#products-updates-notifications)
 - [How to](#how-to)
 
