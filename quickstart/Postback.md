@@ -9,12 +9,16 @@ These notifications inform you about changes in products price or stock level.
 
 ### Payload
 
+Each postback notification will be an `application/json` message with:
+
 ```
 {
    "kinguinId": [integer],
    "updatedAt": [string]
 }
 ```
+
+Where `kinguinId` is an id of updated product and `updatedAt` is a date of update.
 
 ### Response
 
