@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+- `coverImageOriginal` - full with url to product cover image
+- required to set minimum 3 characters to `name` parameter when querying products
+
 ## [2019-01-09]
 
 ### Added
