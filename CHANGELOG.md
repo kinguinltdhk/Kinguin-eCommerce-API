@@ -4,6 +4,11 @@
 - `coverImageOriginal` - full with url to product cover image
 - required to set minimum 3 characters to `name` parameter when querying products
 
+## [2019-01-23]
+
+### Added
+- add `offerId` to `order.products` collection, [details here](apidocs/order/README.md#get-orders)
+
 ## [2019-01-09]
 
 ### Added

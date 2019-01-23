@@ -176,6 +176,7 @@ HTTP Status 200
     "products": [
         {
             "kinguinId": [int],
+            "offerId": [int],
             "qty": [int],
             "name": [string],
             "price": [float]
@@ -210,12 +211,14 @@ curl -X GET
     "products": [
         {
             "kinguinId": 5,
+            "offerId": 347,
             "qty": 1,
             "name": "Anno",
             "price": 3.59
         },
         {
             "kinguinId": 8,
+            "offerId": 351,
             "qty": 1,
             "name": "Alien",
             "price": 4.99
