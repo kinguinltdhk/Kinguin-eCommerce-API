@@ -12,7 +12,7 @@
 ## [2019-01-09]
 
 ### Added
-- postback notifications for products updates, [details here](quickstart/Postback.md#products-updates-notifications)
+- postback notifications for products updates, [details here](features/Postback.md#products-updates-notifications)
 
 ## [2018-11-20]
 

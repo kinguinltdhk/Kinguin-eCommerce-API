@@ -273,6 +273,7 @@ HTTP Status 200
             "products": [
                 {
                     "kinguinId": [int],
+                    "offerId": [int],
                     "qty": [int],
                     "name": [string],
                     "price": [float]
@@ -313,8 +314,8 @@ curl -X GET
             "products": [
                 {
                     "kinguinId": 18,
+                    "offerId": 367,
                     "qty": 1,
-                    "product_id": 367,
                     "price": 13.5,
                     "name": "Battlefield 3 Close Quarters Expansion Pack DLC"
                 }
@@ -329,8 +330,8 @@ curl -X GET
             "products": [
                 {
                     "kinguinId": 18,
+                    "offerId": 367,
                     "qty": 1,
-                    "product_id": 367,
                     "price": 13.5,
                     "name": "Battlefield 3 Close Quarters Expansion Pack DLC"
                 }
@@ -354,10 +355,12 @@ orderId`*` | string | Order id
 status | string | Status
 storeId | int | Store id
 createdAt | string | UTC date
-products | array | Products list
+products`**` | array | Ordered offers
 dispatch`*` | array | Dispatch id and date of create
 
 `* optional attribute`
+
+> Keep in mind that during processing order your `products` property are transformed into offers, so the number of items in order `products` property can increased.
 
 ## Order Statuses
 

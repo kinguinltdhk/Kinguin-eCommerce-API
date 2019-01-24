@@ -7,4 +7,8 @@
 
 [API](apidocs/README.md)
 
+[Postback notifications](features/Postback.md)
+
+[How To](HOWTO.md)
+
 [Changelog](CHANGELOG.md)
