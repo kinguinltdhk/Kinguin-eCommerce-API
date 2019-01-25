@@ -25,10 +25,10 @@ This is a useful property when you want to filter products that have been update
 For this purpose we can use the `updatedSince`:
 
 ```
-curl -H "api-ecommerce-auth: [api-key]" -G --data-urlencode "updatedSince=2019-01-25T01:00:00+00:00" -XGET https://api2.kinguin.net/integrtion/v1/products
+curl -H "api-ecommerce-auth: [api-key]" -G --data-urlencode "updatedSince=2019-01-25T01:00:00+00:00" -XGET https://api2.kinguin.net/integration/v1/products
 ```
 
-The date provided in `updatedSince` filter should be in the right format `Y-m-d \ TH: i: sP` (please keep in mind that the dates are presented in `UTC` timezone).
+The date provided in `updatedSince` filter should be in the right format `Y-m-d\TH:i:sP` (please keep in mind that the dates are presented in `UTC` timezone).
 
 When you call the specified request, the value of the `updatedSince` parameter should indicates the time in which you made the last request using the` updatedSince` parameter.
 So you should always save the date when you use `updatedSince` filter.
@@ -41,7 +41,7 @@ During the ordering you will may receive such an error:
 ```
 {
     "code": 2610,
-    "message": "Requested quantity" 1 "for product with id" 5 "and price" 0.95 "is not available"
+    "message": "Requested quantity \"1\" for product with id \"5\" and price \"0.95\" is not available"
 }
 ```
 
