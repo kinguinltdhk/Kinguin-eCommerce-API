@@ -22,15 +22,16 @@ Version: `v1`
     "products": [
         {
             "kinguinId": [integer],
-            "qty": [integer],
+            "qty"*: [integer],
             "price": [float],
-            "name"*: [string]
+            "name"**: [string]
         },
         (...)
     ] 
 }
 ```
-`* optional field`
+` * total quantity of products should be lower or equal 100`
+`** optional field`
 
 **Response**
 
