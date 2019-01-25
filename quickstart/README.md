@@ -2,7 +2,6 @@
 
 - [Apply](#apply)
 - [Create store](#create-store)
-- [Postback notifications](Postback.md)
 - [List products](#list-products)
 - [Place order](#place-order)
 - [Dispatch order](#dispatch-order)
