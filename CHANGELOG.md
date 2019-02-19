@@ -1,8 +1,15 @@
 # Changelog
 
 ## Unreleased
-- `coverImageOriginal` - full with url to product cover image
 - required to set minimum 3 characters to `name` parameter when querying products
+
+## [2019-02-20]
+
+### Added
+- added `coverImageOriginal` to product, [details here](apidocs/products/README.md#product-object)
+
+### Changed
+- updated products genres list, [details here](apidocs/products/README.md#genres)
 
 ## [2019-01-23]
 

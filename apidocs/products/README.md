@@ -127,7 +127,8 @@ kinguinId | int | Product id
 name | string | Product name
 originalName`*` | string | Original name
 description`*` | string | Product description
-coverImage`*` | string | Cover image
+coverImage`*` | string | Cover image (thumb)
+coverImageOriginal`*` | string | Cover image (full size)
 developers`*` | array | Developers list
 publishers`*` | array | Publishers list
 genres | array | Genres list
@@ -192,3 +193,43 @@ Id | Region name
 16 | India
 17 | Japan
 18 | North America
+
+## Genres
+
+| Genre
+| ----------------------
+| Action
+| Adventure
+| Anime
+| Casual
+| Co-op
+| Dating Simulator
+| Fighting
+| FPS
+| Hack and Slash
+| Hidden Object
+| Horror
+| Indie
+| Life Simulation
+| MMO
+| Music / Soundtrack
+| Online Courses
+| Open World
+| Platformer
+| Point & click
+| PSN Card
+| Puzzle
+| Racing
+| RPG
+| Simulation
+| Software
+| Sport
+| Story rich
+| Strategy
+| Subscription
+| Survival
+| Third-Person Shooter
+| Visual Novel
+| VR Games
+| XBOX LIVE Gold Card
+| XBOX LIVE Points

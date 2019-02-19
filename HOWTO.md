@@ -30,7 +30,7 @@ curl -H "api-ecommerce-auth: [api-key]" -G --data-urlencode "updatedSince=2019-0
 
 The date provided in `updatedSince` filter should be in the right format `Y-m-d\TH:i:sP` (please keep in mind that the dates are presented in `UTC` timezone).
 
-When you call the specified request, the value of the `updatedSince` parameter should indicates the time in which you made the last request using the` updatedSince` parameter.
+When you call the specified request, the value of the `updatedSince` parameter should indicates the time in which you made the last request using the `updatedSince` parameter.
 So you should always save the date when you use `updatedSince` filter.
 
 
