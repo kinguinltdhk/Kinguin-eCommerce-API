@@ -131,13 +131,13 @@ coverImage`*` | string | Cover image (thumb)
 coverImageOriginal`*` | string | Cover image (full size)
 developers`*` | array | Developers list
 publishers`*` | array | Publishers list
-genres | array | Genres list
+genres | array | [Genres](#genres)
 platform | string | Platform name
 releaseDate`*` | string | First release date
 stock | bool | Is in stock
 qty | int | Quantity
 price | float | Price
-steamScore | float | Steam score
+steamScore | float | Steam score **DEPRECATED**
 originScore | float | Origin score
 isPreorder | bool | Is preorder
 preorderFromDate | string | Preorder date from

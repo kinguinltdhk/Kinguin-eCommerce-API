@@ -2,6 +2,7 @@
 
 ## Unreleased
 - required to set minimum 3 characters to `name` parameter when querying products
+- steam score attribute is going to be removed from products
 
 ## [2019-02-20]
 
