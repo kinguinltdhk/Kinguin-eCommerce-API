@@ -28,6 +28,7 @@ priceFrom | float | - | Price from
 priceTo | float | - | Price to
 stock | string | - | Is in stock (values: `yes` or `no`)
 platform | string | - | Platform name
+genre | string | - | [Genre](#genres)
 kinguinId | int | - | Product id
 languages | string | - | Language
 isPreorder | string | - | Preorders (values: `yes` or `no`)

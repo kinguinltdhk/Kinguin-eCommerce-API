@@ -4,10 +4,11 @@
 - required to set minimum 3 characters to `name` parameter when querying products
 - steam score attribute is going to be removed from products
 
-## [2019-02-20]
+## [2019-02-21]
 
 ### Added
 - added `coverImageOriginal` to product, [details here](apidocs/products/README.md#product-object)
+- added `genre` filter, [details here](apidocs/products/README.md#list-products)
 
 ### Changed
 - updated products genres list, [details here](apidocs/products/README.md#genres)
