@@ -50,8 +50,9 @@ Perhaps you are getting this error because you have outdated product information
 In this case, by responding to the error code `2610`, you can send a product request and update it.
 If the product exists, you will be able to resend your order.
 
+
 **Updates after order created**
 
 If you do not decided to use **postback notifications** as a main way to update products you should always try to update products
-that have been purchased by you after last order request. It is handy, when you purchase the same product many times and for some reasons
+that have been purchased in the last order request. It is handy, when you purchase the same products many times and for some reasons
 you have not been able to update them on time.
