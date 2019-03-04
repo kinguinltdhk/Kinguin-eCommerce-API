@@ -12,6 +12,7 @@ In case of error API returns HTTP Status code different than 2xx and JSON object
 
 Code | HTTP Status Code | Description
 -----|------------------|-----------------------
+1000 | 500 | Internal Server Error
 1001 | 401 | Unauthorized
 1002 | 400 | Quantity validation error
 1003 | 404 | Product not found
@@ -22,7 +23,11 @@ Code | HTTP Status Code | Description
 1008 | 400 | Insufficient balance
 1009 | 500 | Internal Server Error
 1010 | 500 | Internal Server Error
+1100 | 500 | Internal Server Error
 1101 | 404 | Order not found
+1102 | 400 | Preorder not ready
+1103 | 400 | Order status closed
+1104 | 400 | Order status canceled
 1400 | 400 | Bad Request
 1401 | 401 | Unauthorized
 1404 | 404 | Not Found

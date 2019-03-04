@@ -181,7 +181,8 @@ HTTP Status 200
             "offerId": [int],
             "qty": [int],
             "name": [string],
-            "price": [float]
+            "price": [float],
+            "isPreorder": [bool]
         },
         (...)
     ],
@@ -216,14 +217,16 @@ curl -X GET
             "offerId": 347,
             "qty": 1,
             "name": "Anno",
-            "price": 3.59
+            "price": 3.59,
+            "isPreorder": false
         },
         {
             "kinguinId": 8,
             "offerId": 351,
             "qty": 1,
             "name": "Alien",
-            "price": 4.99
+            "price": 4.99,
+            "isPreorder": false
         }
     ],
     "dispatch": {
@@ -252,6 +255,7 @@ createdAtTo | string | - | UTC date
 kinguinId | int | - | Product id
 name | string | - | Product name
 status | string | - | Comma separated list of [order statuses](#order-statuses)
+isPreorder | string | - | Preorders (values: `yes` or `no`)
 
 ### Output
 
@@ -278,7 +282,8 @@ HTTP Status 200
                     "offerId": [int],
                     "qty": [int],
                     "name": [string],
-                    "price": [float]
+                    "price": [float],
+                    "isPreorder": [bool]
                 },
                 (...)
             ],
@@ -319,7 +324,8 @@ curl -X GET
                     "offerId": 367,
                     "qty": 1,
                     "price": 13.5,
-                    "name": "Battlefield 3 Close Quarters Expansion Pack DLC"
+                    "name": "Battlefield 3 Close Quarters Expansion Pack DLC",
+                    "isPreorder": false
                 }
             ]
         },
@@ -335,7 +341,8 @@ curl -X GET
                     "offerId": 367,
                     "qty": 1,
                     "price": 13.5,
-                    "name": "Battlefield 3 Close Quarters Expansion Pack DLC"
+                    "name": "Battlefield 3 Close Quarters Expansion Pack DLC",
+                    "isPreorder": false
                 }
             ],
             "dispatch": {
