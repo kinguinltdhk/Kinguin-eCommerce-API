@@ -1,11 +1,7 @@
-# How to buy pre-orders
+# How to order pre-orders
 
-Pre-orders are [products](apidocs/products/README.md#product-object) with field `isPreorder` set to `true` and field `preorderToDate` set to release date.
+**Requirements for ordering pre-orderes items**
 
-Ordering preorders genarally looks the same as ordering the rest of the products ([Place order](apidocs/order/README.md#place-order)).
-
-**The differences:**
-- Pre-order cannot be ordered with other products types.
-- Cannot order more than one pre-order product in one order (but `qty` can be gross that 1).
-- Dispatch will be made automatically after the date `preorderToDate`. After this it is possible to take `orderId` by calling the
-[Dispatch order](apidocs/order/README.md#dispatch-order).
+1. Pre-order can't be ordered with other products types.
+2. An order with a pre-order should have only one product item.
+3. Pre-order's are dispatched automatically after the release date. Attempt to dispatch order before the release date will fail. To get `dispatchId` try to send [request for dispatch](../apidocs/order/README.md#dispatch-order) after release date.
