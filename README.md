@@ -9,6 +9,8 @@
 
 [Postback notifications](features/Postback.md)
 
+[Pre-orders](apidocs/order/Preorders.md)
+
 [How To](HOWTO.md)
 
 [Changelog](CHANGELOG.md)
