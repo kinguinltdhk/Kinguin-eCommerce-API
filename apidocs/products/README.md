@@ -21,15 +21,14 @@ Parameter | Type | Required | Description
 --------- | -----| :--------: | -----------
 page | int | - | Page number
 limit | int | - | Limit results (default: `10`, maximum: `100`)
-name | string | - | Product name
+name | string | - | Product name (minimum: `3` characters)
 sortBy | string | - | Sort field name (values: `kingiunId`, `name`, `qty` or `price`)
 sortType | string | - | Sort type (values: `asc` or `desc`)
 priceFrom | float | - | Price from
 priceTo | float | - | Price to
-stock | string | - | Is in stock (values: `yes` or `no`)
 platform | string | - | Platform name
 genre | string | - | [Genre](#genres)
-kinguinId | int | - | Product id
+kinguinId | string | - | Comma separated list of products ids (maximum: `100`)
 languages | string | - | Language
 isPreorder | string | - | Preorders (values: `yes` or `no`)
 activePreorder | string | - | Only active preorders (values: `yes`)
@@ -75,7 +74,6 @@ curl -H 'api-ecommerce-auth: ...' \
             ],
             "platform": "Uplay",
             "releaseDate": "2011-11-17",
-            "stock": true,
             "qty": 230,
             "price": 4.39,
             (...)
@@ -135,10 +133,9 @@ publishers`*` | array | Publishers list
 genres | array | [Genres](#genres)
 platform | string | Platform name
 releaseDate`*` | string | First release date
-stock | bool | Is in stock
+stock | bool | Is in stock **DEPRECATED** (use `qty` field instead)
 qty | int | Quantity
 price | float | Price
-steamScore | float | Steam score **DEPRECATED**
 originScore | float | Origin score
 isPreorder | bool | Is preorder
 preorderFromDate | string | Preorder date from

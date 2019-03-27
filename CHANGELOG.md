@@ -1,9 +1,17 @@
 # Changelog
 
-## Unreleased
-- required to set minimum 3 characters to `name` parameter when querying products
-- `steamScore` attribute is going to be removed from products
-- `stock` attribute is going to be removed from products
+## [2019-03-27]
+
+### Added
+- min length validation for `name` filter, [details here](apidocs/products/README.md#list-products)
+
+### Changed
+- `kinguinId` filter accepts multiple `kinguinId` values, [details here](apidocs/products/README.md#list-products)
+- `stock` field is **DEPRECATED** and will be removed, use `qty` field instead
+
+### Removed
+- removed `steamScore` from products fields
+- removed `stock` filter
 
 ## [2019-02-28]
 
