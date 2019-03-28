@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- `newsFromDate` and `newsToDate` fields are **DEPRECATED** and are going to be removed near May of 2019
+- `stock` field is **DEPRECATED** and is going to be removed near May of 2019
+
 ## [2019-03-27]
 
 ### Added
