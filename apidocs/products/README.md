@@ -140,8 +140,8 @@ originScore | float | Origin score
 isPreorder | bool | Is preorder
 preorderFromDate | string | Preorder date from
 preorderToDate | string | Preorder date to
-newsFromDate | string | Is new date from
-newsToDate | string | Is new date to
+newsFromDate | string | Is new date from **DEPRECATED**
+newsToDate | string | Is new date to **DEPRECATED**
 metacriticScore | float | Metacritic score
 regionalLimitations | string | Region name
 regionId | id | [Region id](#regions)
