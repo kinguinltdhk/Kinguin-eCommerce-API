@@ -10,7 +10,7 @@ We recommend using those methods together to reduce the risk of having outdated 
 
 Postback notifications are automatic product updates, which we send to a previously configured and verified endpoint.
 Notifications are sent when the product price or quantity was changed.
-You can [read more](features/Postback.md) about the notifications in a separate section of our documentation.
+You can [read more](../features/Postback.md) about the notifications in a separate section of our documentation.
 
 
 **Interval updates**
