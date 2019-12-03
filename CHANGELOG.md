@@ -2,10 +2,15 @@
 
 ## Unreleased
 
-- `newsFromDate` and `newsToDate` fields are **DEPRECATED** and are going to be removed near May of 2019
-- `stock` field is **DEPRECATED** and is going to be removed near May of 2019
+### Added
 - possibility to select key type (`text` or `image`), [details here](how_to/KeyType.md#how-to-select-key-type)
 - possibility to buy selected offer, [details here](how_to/BuyOffer.md#how-to-buy-selected-offer)
+- added `vendorName` and `onlyText` filters to products, [details here](apidocs/products/README.md#list-products)
+- added `textQty`, `imageQty` to product, [details here](apidocs/products/README.md#product-object)
+- added `offers`, `offersCount`, `totalQty` to product, [details here](apidocs/products/README.md#offer-object)
+
+### Removed
+- removed `newsFromDate`, `newsToDate`, `stock` from product (was DEPRECATED before)
 
 ## [2019-03-27]
 
