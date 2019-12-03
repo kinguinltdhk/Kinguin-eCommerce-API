@@ -24,8 +24,8 @@ limit | int | - | Limit results (default: `10`, maximum: `100`)
 name | string | - | Product name (minimum: `3` characters)
 sortBy | string | - | Sort field name (values: `kingiunId`, `name`, `qty` or `price`)
 sortType | string | - | Sort type (values: `asc` or `desc`)
-priceFrom | float | - | Price from
-priceTo | float | - | Price to
+priceFrom | float | - | Cheapest price from
+priceTo | float | - | Cheapest price to
 platform | string | - | Platform name
 genre | string | - | [Genre](#genres)
 kinguinId | string | - | Comma separated list of products ids (maximum: `100`)
@@ -36,6 +36,10 @@ regionId | int | - | [Region id](#regions)
 tags | string | - | Comma separated list of [tags](#tags)
 updatedSince | string | - | UTC date
 updatedTo | string | - | UTC date
+onlyText** | string | - | Products with `text` keys only (values: `yes`)
+vendorName** | string | - | Offer vendor name
+
+`** in case of use please contact our business manager`
 
 ### Output
 
@@ -133,15 +137,17 @@ publishers`*` | array | Publishers list
 genres | array | [Genres](#genres)
 platform | string | Platform name
 releaseDate`*` | string | First release date
-stock | bool | Is in stock **DEPRECATED** (use `qty` field instead)
-qty | int | Quantity
-price | float | Price
+qty | int | Cheapest offer quantity
+price | float | Cheapest price
+textQty** | int | Quantity of `text` keys
+imageQty** | int | Quantity of `image` keys
+offers** | array-object | List of available [offers](/#offer-object)
+offersCount** | int | Total number of product offers
+totalQty** | int | Total quantity of products offers
 originScore | float | Origin score
 isPreorder | bool | Is preorder
 preorderFromDate | string | Preorder date from
 preorderToDate | string | Preorder date to
-newsFromDate | string | Is new date from **DEPRECATED**
-newsToDate | string | Is new date to **DEPRECATED**
 metacriticScore | float | Metacritic score
 regionalLimitations | string | Region name
 regionId | id | [Region id](#regions)
@@ -156,6 +162,23 @@ systemRequirements | array-object | System requirements
 tags | array | Array of [tags](#tags)
 
 `* optional attribute`
+
+`** optional attribute, in case of use please contact our business manager`
+
+## Offer Object
+
+Field | Type | Description
+--------- | -----| --------
+price | float | Offer price
+offerId | int | Offer id
+qty | int | Total quantity
+textQty** | int | Quantity of text serials
+imageQty** | int | Quantity of image serials
+status | string | Current offer status
+name | string | Offer name
+vendorName | string | Vendor name
+
+`** optional attribute, in case of use please contact our business manager`
 
 ## Tags
 

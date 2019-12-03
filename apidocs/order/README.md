@@ -24,7 +24,9 @@ Version: `v1`
             "kinguinId": [integer],
             "qty"*: [integer],
             "price": [float],
-            "name"**: [string]
+            "name"**: [string],
+            "keyType"***: [string],
+            "offerId"***: [integer]
         },
         (...)
     ] 
@@ -33,6 +35,8 @@ Version: `v1`
 ` * total quantity of products should be lower or equal 100`
 
 `** optional field`
+
+`*** optional field, in case of use please contact our business manager`
 
 **Response**
 
@@ -182,7 +186,8 @@ HTTP Status 200
             "qty": [int],
             "name": [string],
             "price": [float],
-            "isPreorder": [bool]
+            "isPreorder": [bool],
+            "keyType": [string]
         },
         (...)
     ],
@@ -218,7 +223,8 @@ curl -X GET
             "qty": 1,
             "name": "Anno",
             "price": 3.59,
-            "isPreorder": false
+            "isPreorder": false,
+            "keyType": "text"
         },
         {
             "kinguinId": 8,
@@ -283,7 +289,8 @@ HTTP Status 200
                     "qty": [int],
                     "name": [string],
                     "price": [float],
-                    "isPreorder": [bool]
+                    "isPreorder": [bool],
+                    "keyType": [string]
                 },
                 (...)
             ],
@@ -325,7 +332,8 @@ curl -X GET
                     "qty": 1,
                     "price": 13.5,
                     "name": "Battlefield 3 Close Quarters Expansion Pack DLC",
-                    "isPreorder": false
+                    "isPreorder": false,
+                    "keyType": "text"
                 }
             ]
         },
