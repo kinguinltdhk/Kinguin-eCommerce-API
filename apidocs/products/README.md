@@ -175,8 +175,11 @@ qty | int | Total quantity
 textQty** | int | Quantity of text serials
 imageQty** | int | Quantity of image serials
 status | string | Current offer status
+type | string | Offer type
+isPreorder | bool | Preorder
 name | string | Offer name
 vendorName | string | Vendor name
+isCheapest | bool | Has lowest price
 
 `** optional attribute, in case of use please contact our business manager`
 
