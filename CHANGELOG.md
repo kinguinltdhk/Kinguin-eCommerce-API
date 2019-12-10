@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [2019-12-10]
 
 ### Added
 - possibility to select key type (`text` or `image`), [details here](how_to/KeyType.md#how-to-select-key-type)
