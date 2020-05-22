@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+- product `preorder_from_date` and `preorder_to_date` fields set as **DEPRECATED** and will be removed on July. Now `releaseDate` field stores information about activity of preorder.
+- product `origin_score` field set as **DEPRECATED** and will be removed on July
+- product `type` field set as **DEPRECATED** and will be removed on July (values are always `serial`)
+- product `status` field set as **DEPRECATED** and will be removed on July (values are always `Active`)
+- offer `type` field set as **DEPRECATED** and will be removed on July (values are always `serial`)
+- offer `offerId` field will be typeof `integer` or `string` (this change will be also applicable in ordered products)
+- offer `vendorName` will be renamed to `merchantName`
+- filter `vendorName` for products will be renamed to `merchantName`
+- `steam gift` and `preorder` tags set as **DEPRECATED** and will be removed on July
+
 ## [2019-12-10]
 
 ### Added

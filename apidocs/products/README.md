@@ -144,10 +144,10 @@ imageQty** | int | Quantity of `image` keys
 offers** | array-object | List of available [offers](/#offer-object)
 offersCount** | int | Total number of product offers
 totalQty** | int | Total quantity of products offers
-originScore | float | Origin score
+originScore`*` | float | Origin score **DEPRECATED**
 isPreorder | bool | Is preorder
-preorderFromDate | string | Preorder date from
-preorderToDate | string | Preorder date to
+preorderFromDate | string | Preorder date from **DEPRECATED**
+preorderToDate | string | Preorder date to **DEPRECATED**
 metacriticScore | float | Metacritic score
 regionalLimitations | string | Region name
 regionId | id | [Region id](#regions)
@@ -156,8 +156,8 @@ screenshots`*` | array-object | Screenshots
 videos`*` | array-object | Videos
 languages | array | Languages
 updatedAt | string | Last update date (UTC format)
-status | string | Offer status
-type | string | Product type (values: `serial`)
+status | string | Product status **DEPRECATED**
+type | string | Product type (values: `serial`) **DEPRECATED**
 systemRequirements | array-object | System requirements
 tags | array | Array of [tags](#tags)
 
@@ -175,10 +175,10 @@ qty | int | Total quantity
 textQty** | int | Quantity of text serials
 imageQty** | int | Quantity of image serials
 status | string | Current offer status
-type | string | Offer type
+type | string | Offer type **DEPRECATED**
 isPreorder | bool | Preorder
 name | string | Offer name
-vendorName | string | Vendor name
+vendorName, merchantName | string | Merchant name 
 isCheapest | bool | Has lowest price
 
 `** optional attribute, in case of use please contact our business manager`
@@ -187,13 +187,13 @@ isCheapest | bool | Has lowest price
 
 Available list of product's tags:
 
-* `preorder`
+* `preorder` **DEPRECATED**
 * `indie valley`
 * `dlc`
 * `base`
 * `software`
 * `prepaid`
-* `steam gift`
+* `steam gift` **DEPRECATED**
 
 ## Regions
 
