@@ -10,6 +10,7 @@
 - offer `type` field set as **DEPRECATED** and will be removed on July (values are always `serial`)
 - offer `offerId` field will be typeof `integer` or `string` (this change will be also applicable in ordered products)
 - offer `vendorName` will be renamed to `merchantName`
+- offer `isCheapest` field set as **DEPRECATED** and will be removed on July
 - filter `vendorName` for products will be renamed to `merchantName`
 - `steam gift` and `preorder` tags set as **DEPRECATED** and will be removed on July
 
