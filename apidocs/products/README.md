@@ -37,7 +37,7 @@ tags | string | - | Comma separated list of [tags](#tags)
 updatedSince | string | - | UTC date
 updatedTo | string | - | UTC date
 onlyText** | string | - | Products with `text` keys only (values: `yes`)
-vendorName** | string | - | Offer vendor name
+merchantName** | string | - | Offer seller name
 
 `** in case of use please contact our business manager`
 
@@ -144,10 +144,7 @@ imageQty** | int | Quantity of `image` keys
 offers** | array-object | List of available [offers](/#offer-object)
 offersCount** | int | Total number of product offers
 totalQty** | int | Total quantity of products offers
-originScore`*` | float | Origin score **DEPRECATED**
 isPreorder | bool | Is preorder
-preorderFromDate | string | Preorder date from **DEPRECATED**
-preorderToDate | string | Preorder date to **DEPRECATED**
 metacriticScore | float | Metacritic score
 regionalLimitations | string | Region name
 regionId | id | [Region id](#regions)
@@ -156,8 +153,6 @@ screenshots`*` | array-object | Screenshots
 videos`*` | array-object | Videos
 languages | array | Languages
 updatedAt | string | Last update date (UTC format)
-status | string | Product status **DEPRECATED**
-type | string | Product type (values: `serial`) **DEPRECATED**
 systemRequirements | array-object | System requirements
 tags | array | Array of [tags](#tags)
 
@@ -170,16 +165,14 @@ tags | array | Array of [tags](#tags)
 Field | Type | Description
 --------- | -----| --------
 price | float | Offer price
-offerId | int | Offer id
+offerId | string | Offer id
 qty | int | Total quantity
 textQty** | int | Quantity of text serials
 imageQty** | int | Quantity of image serials
 status | string | Current offer status
-type | string | Offer type **DEPRECATED**
 isPreorder | bool | Preorder
 name | string | Offer name
-vendorName, merchantName | string | Merchant name 
-isCheapest | bool | Has lowest price
+merchantName | string | Seller name
 
 `** optional attribute, in case of use please contact our business manager`
 
@@ -187,13 +180,11 @@ isCheapest | bool | Has lowest price
 
 Available list of product's tags:
 
-* `preorder` **DEPRECATED**
 * `indie valley`
 * `dlc`
 * `base`
 * `software`
 * `prepaid`
-* `steam gift` **DEPRECATED**
 
 ## Regions
 

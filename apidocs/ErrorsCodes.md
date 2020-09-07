@@ -69,3 +69,43 @@ Example error response:
     "message": "Parameter \"priceFrom\" should be numeric"
 }
 ```
+
+# New error response format
+
+Example error response
+```json
+    {
+        "kind": "ConstraintViolation",
+        "status": 400,
+        "title": "Bad Request",
+        "detail": "Invalid \"products\" property. Sum of total values of \"qty\" must be lower than or equal 100.",
+        "path": "/api/v1/order",
+        "method": "POST",
+        "trace": "082a4cee9b",
+        "timestamp": "2020-09-01T13:06:06+00:00",
+        "propertyPath": "products",
+        "invalidValue": 1000
+    }
+```
+
+## List of error kinds
+
+**Available since end of September**
+
+Check `detail` field in error response for more info.
+
+In any of unreasonable errors please contact with us and provide `trace` value.
+
+Kind | Description
+-----|------------------
+ConstraintViolation | Bad request. The message payload is invalid.
+Error | Unspecified error.
+HttpClient | Internal communication failed.
+Authorization | Bad authorization credentials.
+InsufficientBalance | There are not enough funds to place order.
+OrderHold | Order has been hold. Dispatch has been blocked.
+OrderNotDispatchedYet | Order has not been dispatched yet. Please try send request again.
+OrderNotPaid | Problem with payment with balance.
+OrderPartiallyDispatched | Not of all products has been dispatched yet. Please try send request again.
+Preorder | Problem with preorder. See `detail` for more info.
+ProductUnavailable | Product has been sold or is not active. Maybe try to update product and send request again.

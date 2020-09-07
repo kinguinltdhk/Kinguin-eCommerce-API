@@ -26,7 +26,7 @@ Version: `v1`
             "price": [float],
             "name"**: [string],
             "keyType"***: [string],
-            "offerId"***: [integer]
+            "offerId"***: [string]
         },
         (...)
     ] 
@@ -36,7 +36,7 @@ Version: `v1`
 
 `** optional field`
 
-`*** optional field, in case of use please contact our business manager`
+`*** optional field, in case of use please contact your business manager`
 
 **Response**
 
@@ -122,7 +122,8 @@ HTTP Status 200
         "serial": [string],
         "type": [string],
         "name": [string],
-        "kinguinId": [integer]
+        "kinguinId": [integer],
+        "offerId": [string]
     },
     (...)
 ]
@@ -135,6 +136,8 @@ HTTP Status 200
 `serial` is a plain text serial key or in case of `image/*` base64 encoded content of the image with product serial key
 
 `kinguinId` is product id (only available for orders created after 2018-11-13)
+
+`offerId` is an offer id for given product
 
 ### Example
 ```
@@ -151,13 +154,15 @@ curl -X GET
         "serial": "0ddbebb2-559d-42e9-a8e1-fd4b2bdea858",
         "type": "text/plain",
         "name": "Anno",
-        "kinguinId": 4
+        "kinguinId": 4,
+        "offerId": "602"
     },
     {
         "serial": "/9j/4AAQSkZJRgABAQEAYABgAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAFA3PEY8MlBGQUZaVVBfeMiCeG5uePWvuZHI////////////////////////////////////////////////////wAALCAASABABAREA/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/AJo0iEMZZFywH8PU4pWjjV1Hlptbj7o60sWfIjAGcqM89OKGUBkUEnndyc06H/UR/wC6P5U6v//Z",
         "type": "image/jpeg",
         "name": "Aliens",
-        "kinguinId": 409
+        "kinguinId": 409,
+        "offerId": "603"
     }
 ]
 ```
@@ -182,7 +187,7 @@ HTTP Status 200
     "products": [
         {
             "kinguinId": [int],
-            "offerId": [int],
+            "offerId": [string],
             "qty": [int],
             "name": [string],
             "price": [float],
@@ -219,7 +224,7 @@ curl -X GET
     "products": [
         {
             "kinguinId": 5,
-            "offerId": 347,
+            "offerId": "347",
             "qty": 1,
             "name": "Anno",
             "price": 3.59,
@@ -228,7 +233,7 @@ curl -X GET
         },
         {
             "kinguinId": 8,
-            "offerId": 351,
+            "offerId": "351",
             "qty": 1,
             "name": "Alien",
             "price": 4.99,
@@ -256,8 +261,8 @@ sortBy | string | - | Sort field name (default: `createdAt`, values: `totalPrice
 sortType | string | - | Sort type (default: `desc`, values: `asc` or `desc`)
 totalPriceFrom | float | - | Total price from
 totalPriceTo | float | - | Total price to
-createdAtFrom | string | - | UTC date
-createdAtTo | string | - | UTC date
+createdAtFrom | string | - | RFC3339 date
+createdAtTo | string | - | RFC3339 date
 kinguinId | int | - | Product id
 name | string | - | Product name
 status | string | - | Comma separated list of [order statuses](#order-statuses)
@@ -285,7 +290,7 @@ HTTP Status 200
             "products": [
                 {
                     "kinguinId": [int],
-                    "offerId": [int],
+                    "offerId": [string],
                     "qty": [int],
                     "name": [string],
                     "price": [float],
@@ -312,7 +317,7 @@ HTTP Status 200
 curl -X GET
      -H 'api-ecommerce-auth: ...' \
      -H 'Content-Type: application/json' \
-     https://api2.kinguin.net/integration/v1/order?totalPriceFrom=4&totalPriceTo=15&limit=2&status=completed,error
+     https://api2.kinguin.net/integration/v1/order?totalPriceFrom=4&totalPriceTo=15&limit=2
 ```
 
 ### Example response
@@ -328,7 +333,7 @@ curl -X GET
             "products": [
                 {
                     "kinguinId": 18,
-                    "offerId": 367,
+                    "offerId": "367",
                     "qty": 1,
                     "price": 13.5,
                     "name": "Battlefield 3 Close Quarters Expansion Pack DLC",
@@ -346,7 +351,7 @@ curl -X GET
             "products": [
                 {
                     "kinguinId": 18,
-                    "offerId": 367,
+                    "offerId": "367",
                     "qty": 1,
                     "price": 13.5,
                     "name": "Battlefield 3 Close Quarters Expansion Pack DLC",
@@ -386,5 +391,3 @@ Status | Description
 pending | Order is being processed
 processing | Order awaits dispatch
 completed | Order is completed, keys can be downloaded
-out_of_stock | Out of requested quantity with given price
-error | There was an unrecoverable error in processing order request

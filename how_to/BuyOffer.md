@@ -10,6 +10,6 @@
 curl -X POST
      -H 'api-ecommerce-auth: ...' \
      -H 'Content-Type: application/json' \
-     -d '{"products":[{"kinguinId":5,"qty":1,"name":"Anno","price":3.59,"offerId":92}]}' \
+     -d '{"products":[{"kinguinId":5,"qty":1,"name":"Anno","price":3.59,"offerId":"92"}]}' \
      https://api2.kinguin.net/integration/v1/order
 ```

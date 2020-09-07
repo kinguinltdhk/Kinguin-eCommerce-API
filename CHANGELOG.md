@@ -2,6 +2,25 @@
 
 ## [Unreleased]
 
+### Breaking change (release: end of September 2020)
+- type of `orderId` and `offerId` fields/parameters will be transformed to `string`, current is `mixed` (`string` or `integer`). The change includes endpoints:
+    - `POST /api/v1/order`
+    - `GET /api/v1/order`
+    - `GET /api/v1/order/{orderId}`
+    - `POST /api/v1/order/dispatch`
+    - `GET /api/v1/products`
+    - `GET /api/v1/products/{kinguinId}`
+- new error response format, [details here](apidocs/ErrorsCodes.md#list-of-error-kinds)
+- all of failed transactions will be moved from merchant's dashboard
+
+### Added
+- added `couponCode` property to order request payload, [details here](features/CouponCode.md#ask-for-coupon)
+- added `orderExternalId` property to order request payload, [details here](features/OrderExternalId.md)
+- added `orderExternalId` filter for `/api/v1/order` endpoint
+- added `offerId` property to response from `/api/v1/order/dispatch/keys` endpoint
+- added `paymentPrice` and `requestTotalPrice` fields to order, [details here](features/CouponCode.md#using-coupon)
+- added `X-Api-Key` header as a replacement/alias for `Api-Ecommerce-Auth`
+
 ### Changed
 - product `preorder_from_date` and `preorder_to_date` fields set as **DEPRECATED** and will be removed on July. Now `releaseDate` field stores information about activity of preorder.
 - product `origin_score` field set as **DEPRECATED** and will be removed on July

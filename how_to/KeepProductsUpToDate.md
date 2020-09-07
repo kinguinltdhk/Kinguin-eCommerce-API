@@ -35,8 +35,8 @@ During the ordering you will may receive such an error:
 
 ```
 {
-    "code": 2610,
-    "message": "Requested quantity \"1\" for product with id \"5\" and price \"0.95\" is not available"
+    "code": 2610,
+    "message": "Requested quantity \"1\" for product with id \"5\" and price \"0.95\" is not available"
 }
 ```
 
