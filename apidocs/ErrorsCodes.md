@@ -107,5 +107,5 @@ OrderHold | Order has been hold. Dispatch has been blocked.
 OrderNotDispatchedYet | Order has not been dispatched yet. Please try send request again.
 OrderNotPaid | Problem with payment with balance.
 OrderPartiallyDispatched | Not of all products has been dispatched yet. Please try send request again.
-Preorder | Problem with preorder. See `detail` for more info.
+Preorder | Problem with buying preorder. See `detail` for more info.
 ProductUnavailable | Product has been sold or is not active. Maybe try to update product and send request again.

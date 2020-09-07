@@ -11,14 +11,14 @@
     - `GET /api/v1/products`
     - `GET /api/v1/products/{kinguinId}`
 - new error response format, [details here](apidocs/ErrorsCodes.md#list-of-error-kinds)
-- all of failed transactions will be moved from merchant's dashboard
+- all failed transactions will be moved from merchant's dashboard
 
-### Added
+### Added (release: end of September 2020)
 - added `couponCode` property to order request payload, [details here](features/CouponCode.md#ask-for-coupon)
 - added `orderExternalId` property to order request payload, [details here](features/OrderExternalId.md)
 - added `orderExternalId` filter for `/api/v1/order` endpoint
 - added `offerId` property to response from `/api/v1/order/dispatch/keys` endpoint
-- added `paymentPrice` and `requestTotalPrice` fields to order, [details here](features/CouponCode.md#using-coupon)
+- added `paymentPrice`, `requestTotalPrice`, `products.requestPrice` fields to order, [details here](features/CouponCode.md#using-coupon)
 - added `X-Api-Key` header as a replacement/alias for `Api-Ecommerce-Auth`
 
 ### Changed
