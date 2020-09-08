@@ -11,6 +11,8 @@
     - `GET /api/v1/products`
     - `GET /api/v1/products/{kinguinId}`
 - new error response format, [details here](apidocs/ErrorsCodes.md#list-of-error-kinds)
+- `image` choice from `keyType` property will be removed
+- `imageQty` property from product and offer will be removed
 - all failed transactions will be moved from merchant's dashboard
 
 ### Added (release: end of September 2020)

@@ -16,4 +16,3 @@ curl -X POST
 List of available key types:
 
 * `text`
-* `image`
