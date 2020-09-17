@@ -13,7 +13,7 @@
 
 [Coupon codes](features/CouponCode.md)
 
-[Pre-orders](apidocs/order/Preorders.md)
+[Pre-orders](how_to/Preorders.md)
 
 [How To](HOWTO.md)
 
