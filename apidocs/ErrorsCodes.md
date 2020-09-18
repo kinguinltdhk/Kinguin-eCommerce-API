@@ -72,7 +72,9 @@ Example error response:
 
 # New error response format
 
-Example error response
+**DEPRECATED since end of September 2020**
+
+Example new error response format
 ```json
     {
         "kind": "ConstraintViolation",
@@ -92,9 +94,9 @@ Example error response
 
 **Available since end of September**
 
-Check `detail` field in error response for more info.
+Check `detail` property for more info about raised problem.
 
-In any of unreasonable errors please contact with us and provide `trace` value.
+For any unreasonable errors please contact with us and provide value of `trace` property.
 
 Kind | Description
 -----|------------------
@@ -109,3 +111,15 @@ OrderNotPaid | Problem with payment with balance.
 OrderPartiallyDispatched | Not of all products has been dispatched yet. Please try send request again.
 Preorder | Problem with buying preorder. See `detail` for more info.
 ProductUnavailable | Product has been sold or is not active. Maybe try to update product and send request again.
+
+
+## Retryable kinds
+
+- `OrderHold`
+- `OrderNotDispatchedYet`
+- `OrderPartiallyDispatched`
+
+Retryable kinds should have set additional property `retryable`.
+
+It means that the order is being processed and the request should be repeated until the correct response from API will be received.
+It may happen that for some reasons the order stuck, so you should define a certain limit of requests and contact our Customer Support to resolve a problem.
