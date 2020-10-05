@@ -10,6 +10,8 @@ In case of error API returns HTTP Status code different than 2xx and JSON object
 
 ## List of error codes
 
+**DEPRECATED since end of September 2020**
+
 Code | HTTP Status Code | Description
 -----|------------------|-----------------------
 1000 | 500 | Internal Server Error
@@ -71,8 +73,6 @@ Example error response:
 ```
 
 # New error response format
-
-**DEPRECATED since end of September 2020**
 
 Example new error response format
 ```json
