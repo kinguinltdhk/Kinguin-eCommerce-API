@@ -22,6 +22,8 @@
 - added `offerId` property to response from `/api/v1/order/dispatch/keys` endpoint
 - added `paymentPrice`, `requestTotalPrice`, `products.requestPrice` fields to order, [details here](features/CouponCode.md#using-coupon)
 - added `X-Api-Key` header as a replacement/alias for `Api-Ecommerce-Auth`
+- added `/api/v2/order/{orderId}/dispatch` endpoint, [details here](apidocs/order/v2/README.md#dispatch-order)
+- added `/api/v2/order/{orderId}/keys` endpoint, [details here](apidocs/order/v2/README.md#get-order-keys)
 
 ### Changed
 - product `preorder_from_date` and `preorder_to_date` fields set as **DEPRECATED** and will be removed on July. Now `releaseDate` field stores information about activity of preorder.
