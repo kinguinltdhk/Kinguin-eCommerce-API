@@ -140,7 +140,7 @@ releaseDate`*` | string | First release date
 qty | int | Cheapest offer quantity
 price | float | Cheapest price
 textQty** | int | Quantity of `text` keys
-imageQty** | int | Quantity of `image` keys
+imageQty** | int | Quantity of `image` keys **DEPRECATED**
 offers** | array-object | List of available [offers](/#offer-object)
 offersCount** | int | Total number of product offers
 totalQty** | int | Total quantity of products offers
@@ -168,7 +168,7 @@ price | float | Offer price
 offerId | string | Offer id
 qty | int | Total quantity
 textQty** | int | Quantity of text serials
-imageQty** | int | Quantity of image serials
+imageQty** | int | Quantity of image serials **DEPRECATED**
 status | string | Current offer status
 isPreorder | bool | Preorder
 name | string | Offer name
