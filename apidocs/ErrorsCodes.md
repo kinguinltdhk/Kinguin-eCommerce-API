@@ -111,6 +111,7 @@ OrderNotDispatchedYet | Order has not been dispatched yet. Please try send reque
 OrderNotPaid | Problem with payment with balance.
 OrderPartiallyDispatched | Not of all products has been dispatched yet. Please try send request again.
 Preorder | Problem with buying preorder. See `detail` for more info.
+ProcessingPreorder | Order will be dispatched after product release date.
 ProductUnavailable | Product has been sold or is not active. Maybe try to update product and send request again.
 OrderNotFound | Order not found - invalid `orderId` value
 DispatchNotFound | Dispatch not found - invalid `dispatchId` value
