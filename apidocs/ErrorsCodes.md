@@ -122,6 +122,7 @@ DispatchNotFound | Dispatch not found - invalid `dispatchId` value
 - `OrderHold`
 - `OrderNotDispatchedYet`
 - `OrderPartiallyDispatched`
+- `ProcessingPreorder`
 
 Retryable kinds should have set additional property `retryable`.
 
