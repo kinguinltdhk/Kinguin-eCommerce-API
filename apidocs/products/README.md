@@ -36,7 +36,7 @@ regionId | int | - | [Region id](#regions)
 tags | string | - | Comma separated list of [tags](#tags)
 updatedSince | string | - | UTC date
 updatedTo | string | - | UTC date
-onlyText** | string | - | Products with `text` keys only (values: `yes`)
+onlyText** | string | - | Products with `text` keys only (values: `yes`) **DEPRECATED**
 merchantName** | string | - | Offer seller name
 
 `** in case of use please contact our business manager`
