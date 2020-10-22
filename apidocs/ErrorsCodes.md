@@ -106,6 +106,7 @@ HttpClient | Internal communication failed.
 Authorization | Bad authorization credentials.
 InsufficientBalance | There are not enough funds to place order.
 BalanceRequired | The balance value is lower than minimum balance required to place order.
+OrderFailed | Order has not been created.
 OrderHold | Order has been hold. Dispatch has been blocked.
 OrderNotDispatchedYet | Order has not been dispatched yet. Please try send request again.
 OrderNotPaid | Problem with payment with balance.
