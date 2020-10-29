@@ -2,6 +2,14 @@
 
 Version: `v1`
 
+## Table of Contents
+
+- [Products](products/v1/README.md)
+- [Orders `v1`](order/v1/README.md)
+- [Orders `v2`](order/v2/README.md)
+- [Balance](balance/v1/README.md)
+- [Errors Codes](ErrorsCodes.md)
+
 ## Environment
 
 **PRODUCTION**: https://api2.kinguin.net/integration or https://gateway.kinguin.net/esa/api/v1 (recommended)
@@ -36,11 +44,3 @@ If invalid API key is being provided you can expect response in below format:
   "type": "Unauthorized"
 }
 ```
-
-## Documentation
-
-- [Products](products/v1/README.md)
-- [Orders `v1`](order/v1/README.md)
-- [Orders `v2`](order/v2/README.md)
-- [Balance](balance/v1/README.md)
-- [Errors Codes](ErrorsCodes.md)

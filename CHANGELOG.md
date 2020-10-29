@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 ### Removed
-- the `https://api2.kinguin.net/integration/v1` will be removed, please switch to `https://gateway.kinguin.net/esa/api/v1`
+- the `https://api2.kinguin.net/integration/v1` will be removed at end of the 2020, please switch to `https://gateway.kinguin.net/esa/api/v1`
 
 ## [2020-10-28]
 
@@ -31,7 +31,7 @@
 ### Removed
 - removed product `preorderFromDate`, `preorderToDate`, `imageQty`, `originScore`, `type`, `status` fields, use `releaseDate` instead,
 - removed offer `type`, `vendorName`, `isCheapest`, `imageQty` fields,
-- removed product `vendorName` filter
+- removed product `vendorName` filter,
 - removed tags `steam gift` and `preorder`,
 - removed `image` choice from `keyType` property,
 
