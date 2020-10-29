@@ -21,7 +21,7 @@ Check `detail` property for more info about the problem.
 
 Kind | Description
 -----|------------------
-`ConstraintViolation` | The message payload is invalid.
+`ConstraintViolation` | The request payload is invalid.
 `Error` | Unspecified error.
 `HttpClient` | Internal communication failed.
 `Http` | Invalid request.
@@ -33,7 +33,7 @@ Kind | Description
 `OrderNotDispatchedYet` | Order has not been dispatched yet. Please try send request again.
 `OrderNotPaid` | Problem with payment with balance.
 `OrderPartiallyDispatched` | Not of all products has been dispatched yet. Please try send request again.
-`Preorder` | Problem with buying preorder. See `detail` for more info.
+`Preorder` | Problem with buying PRE-ORDER. See `detail` for more info.
 `ProcessingPreorder` | Order will be dispatched after product release date.
 `ProductUnavailable` | Product has been sold or is not active. Maybe try to update product and send request again.
 `OrderNotFound` | Order not found - invalid `orderId` value
@@ -46,6 +46,21 @@ Kind | Description
 - `OrderPartiallyDispatched`
 - `ProcessingPreorder`
 
-Retryable kinds should have set additional property `retryable` with `true`.
+Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. This means that the order is still being processed. As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
 
-It means that the order is being processed and the request should be repeated until the correct response from API will be received.
+### Example retryable error
+
+```json
+{
+    "kind": "OrderNotDispatchedYet",
+    "status": 422,
+    "title": "Unprocessable Entity",
+    "detail": "Order \"PHS84FJAG5U\" not dispatched yet. Please retry request later",
+    "path": "/api/v1/order/dispatch",
+    "method": "POST",
+    "trace": "082a4cee9b",
+    "timestamp": "2020-09-01T13:06:06+00:00",
+    "orderId": "PHS84FJAG5U",
+    "retryable": true
+}
+```

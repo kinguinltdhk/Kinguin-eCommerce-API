@@ -1,6 +1,6 @@
 # Quick start
 
-- [Apply](#apply)
+- [Apply for access](#apply-for-access)
 - [Create store](#create-store)
 - [Search products](#search-products)
 - [Place order](#place-order)
@@ -8,20 +8,20 @@
 - [Get keys](#get-keys)
 
 
-## Apply
+## Apply for access
 
-First go to https://www.kinguin.net/integration and apply for an eCommerce API account.
+First go to [Kinguin Integration](https://www.kinguin.net/integration) and apply for the **Kinguin Api E-Commerce** account.
 
-If you don't have Kinguin ID account yet register new account.
+Before apply you must to have registered and accepted Kinguin ID account.
 
 
 ## Create store
 
 We'll inform you when your application is accepted.
 
-Sign in on Dashboard and add store in "My Stores" section.
+Sign in on Dashboard and add store in **My Stores** section.
 
-After store is verified you can find there API key you should use to [authorize](../api/README.md#authorization) HTTP request.
+After you verify the store, a key will be generated and you can use it to [authorize](../api/README.md#authorization) all HTTP API requests.
 
 **Keep your API key secret!**
 
@@ -35,7 +35,7 @@ After store is verified you can find there API key you should use to [authorize]
 curl -X POST
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
-     https://gateway.kinguin.net/esa/api/v1/products?limit=10
+     https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
 
 ## Place Order
@@ -59,6 +59,8 @@ curl -X GET
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
 ```
+
+Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. This means that the order is still being processed. As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
 
 ## Get Keys
 

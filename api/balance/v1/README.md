@@ -31,7 +31,6 @@ Field | Type | Description
 ```bash
 curl -X GET
      -H 'X-Api-Key: [api-key]' \
-     -H 'Content-Type: application/json' \
      https://gateway.kinguin.net/esa/api/v1/balance
 ```
 

@@ -271,7 +271,7 @@ Field | Type | Description
 ```bash
 curl -X GET
      -H 'X-Api-Key: [api-key]' \
-     https://gateway.kinguin.net/esa/api/v1/products?limit=10
+     https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
 
 #### Example response
