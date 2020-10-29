@@ -64,7 +64,7 @@ In case of error HTTP status other than `201` is return and [Error Object](../..
 ### Example request
 
 ```bash
-curl -X POST
+curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
      -d '{"products":[{"kinguinId":1949,"qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79"}]}' \
@@ -145,7 +145,7 @@ Field | Type | Description
 ### Example request
 
 ```bash
-curl -X POST
+curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
      -d '{"orderId": "PHS84FJAG5U"}' \
@@ -183,7 +183,7 @@ Returns the array of [Key Object](#key-object)
 ### Example request
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v1/order/dispatch/keys?dispatchId=14169762
 ```
@@ -237,7 +237,7 @@ Returns the [Order Object](#order-object)
 ### Example request
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v1/order/PHS84FJAG5U
 ```

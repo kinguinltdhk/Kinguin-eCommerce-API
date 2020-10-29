@@ -36,7 +36,7 @@ Content-Type: `application/json`
 ### Example request
 
 ```bash
-curl -X POST
+curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
@@ -71,7 +71,7 @@ Content-Type: `application/json`
 ### Example request
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```

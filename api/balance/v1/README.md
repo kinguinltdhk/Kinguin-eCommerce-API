@@ -29,7 +29,7 @@ Field | Type | Description
 ### Example request
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v1/balance
 ```

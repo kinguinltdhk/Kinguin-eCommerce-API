@@ -30,7 +30,7 @@ After you verify the store, store API key will be generated and you can use it t
 [Search products](../api/products/v1/README.md#search-products) you want to offer to your customers.
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
@@ -40,7 +40,7 @@ curl -X GET
 [Place order](../api/order/v1/README.md#place-order) with selected products.
 
 ```bash
-curl -X POST
+curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
      -d '{"products":[{"kinguinId":1949,"qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79"}]}' \
@@ -52,7 +52,7 @@ curl -X POST
 After creating order you need to [dispatch](../api/order/v2/README.md#dispatch) it.
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
 ```
@@ -64,7 +64,7 @@ Due to the asynchronous nature of order processing, the API may return an error 
 After dispatching you can [get keys](../api/order/v2/README.md#get-keys).
 
 ```bash
-curl -X GET
+curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```
