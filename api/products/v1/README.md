@@ -24,6 +24,8 @@ Parameter | Type | Description
 
 ### Output
 
+HTTP Status: `200`
+
 Content-Type: `application/json`
 
 Returns the [Product Object](#product-object)
@@ -231,16 +233,16 @@ Field | Type | Description
 Parameter | Type | Description
 --------- | :-----: | -----------
 `page` | int | Page number (default: `1`)
-`limit` | int | Limit results (default: `25`, maximum: `100`)
+`limit` | int | Number products on page (default: `25`, maximum: `100`)
 `name` | string | Product name (minimum: `3` characters)
 `sortBy` | string | Sort field name (values: `kingiunId`, `name`, `qty` or `price`)
 `sortType` | string | Sort type (values: `asc` or `desc`)
-`priceFrom` | float | Cheapest price from
-`priceTo` | float | Cheapest price to
+`priceFrom` | float | Price from
+`priceTo` | float | Price to
 `platform` | string | Comma separated list of platforms
 `genre` | string | Comma separated list of [Genre](#genres)
-`kinguinId` | string | Comma separated list of product `kinguinId` values (maximum: `100`)
-`productId` | string | Comma separated list of product `productId` values (maximum: `100`)
+`kinguinId` | string | Comma separated list of product ID
+`productId` | string | Comma separated list of another product ID
 `languages` | string | Language
 `isPreorder` | string | PRE-ORDER (values: `yes` or `no`)
 `activePreorder` | string | Only active PRE-ORDER (values: `yes`)
@@ -248,7 +250,7 @@ Parameter | Type | Description
 `tags` | string | Comma separated list of [Tags](#tags)
 `updatedSince` | string | Filter products since given update time
 `updatedTo` | string | Filter products updated to given time
-`withText`* | string | Products with text serials (values: `yes`)
+`withText`* | string | Filter products only with text serials (values: `yes`)
 `merchantName` | string | Seller name
 
 `* fetaure property, in case of use please contact your business manager`

@@ -29,7 +29,7 @@ After store is verified you can find there API key you should use to [authorize]
 
 ## Search Products
 
-[Search Products](../api/products/v1/README.md#search-products) you want to offer to your customers.
+[Search products](../api/products/v1/README.md#search-products) you want to offer to your customers.
 
 ```bash
 curl -X POST
@@ -40,7 +40,7 @@ curl -X POST
 
 ## Place Order
 
-[Place Order](../api/order/v1/README.md#place-order) with selected products.
+[Place order](../api/order/v1/README.md#place-order) with selected products.
 
 ```bash
 curl -X POST
@@ -62,10 +62,10 @@ curl -X GET
 
 ## Get Keys
 
-After dispatching you can [Get Keys](../api/order/v2/README.md#get-keys).
+After dispatching you can [get keys](../api/order/v2/README.md#get-keys).
 
 ```bash
-curl -X POST
-    -H 'X-Api-Key: [api-key]' \
+curl -X GET
+     -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```

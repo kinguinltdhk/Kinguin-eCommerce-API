@@ -14,7 +14,7 @@ Version: `v1`
 
 **PRODUCTION**: https://api2.kinguin.net/integration or https://gateway.kinguin.net/esa/api/v1 (recommended)
 
-> The `https://api2.kinguin.net/integration` will be off in the near future.
+> the `https://api2.kinguin.net/integration/v1` will be removed at end of the 2020.
 
 **SANDBOX**: https://gateway.sandbox.kinguin.net/esa/api/v1
 
