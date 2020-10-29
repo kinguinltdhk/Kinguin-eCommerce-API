@@ -12,7 +12,7 @@ Version: `v1`
 
 ## Environment
 
-**PRODUCTION**: https://api2.kinguin.net/integration or https://gateway.kinguin.net/esa/api (recommended)
+**PRODUCTION**: https://api2.kinguin.net/integration/v1 or https://gateway.kinguin.net/esa/api (recommended)
 
 > the `https://api2.kinguin.net/integration/v1` will be removed at end of the 2020.
 
