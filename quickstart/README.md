@@ -21,20 +21,17 @@ We'll inform you when your application is accepted.
 
 Sign in on Dashboard and add store in **My Stores** section.
 
-After you verify the store, a key will be generated and you can use it to [authorize](../api/README.md#authorization) all HTTP API requests.
+After you verify the store, store API key will be generated and you can use it to [authorize](../api/README.md#authorization) HTTP requests.
 
-**Keep your API key secret!**
-
-> Remember that credentials on SANDBOX environment are different.
+> Keep your API key secret!. Remember that credentials on SANDBOX environment are different.
 
 ## Search Products
 
 [Search products](../api/products/v1/README.md#search-products) you want to offer to your customers.
 
 ```bash
-curl -X POST
+curl -X GET
      -H 'X-Api-Key: [api-key]' \
-     -H 'Content-Type: application/json' \
      https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
 
