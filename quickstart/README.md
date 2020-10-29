@@ -60,7 +60,7 @@ curl -X GET \
 Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
 This means that the order is still being processed. 
 As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
-The exception to the rule are PRE-ORDER products, where in case of `ProcessingPreorder` error the request should be retried only after product release date.
+The exception to the rule are PRE-ORDER products, where the request should be retried only after product release date.
 
 ## Get keys
 
