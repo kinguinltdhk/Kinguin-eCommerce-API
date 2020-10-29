@@ -5,8 +5,8 @@ Version: `v2`
 ## Table of Contents
 
 - [Dispatch](#dispatch)
-- [Get Keys](#get-keys)
-- [Key Object](#key-object)
+- [Get keys](#get-keys)
+- [Key object](#key-object)
 
 
 ## Dispatch
@@ -52,7 +52,7 @@ curl -X POST
 
 
 
-## Get Keys
+## Get keys
 
 `GET /v2/order/{orderId}/keys`
 

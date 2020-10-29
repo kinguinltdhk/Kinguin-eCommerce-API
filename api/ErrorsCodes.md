@@ -1,4 +1,4 @@
-# Errors Codes
+# Errors codes
 
 In case of error API returns HTTP status code different than `2xx` and JSON object in below format:
 

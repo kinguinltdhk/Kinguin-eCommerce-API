@@ -4,17 +4,17 @@ Version: `v1`
 
 ## Table of Contents
 
-- [Place Order](#place-order)
+- [Place order](#place-order)
 - [Dispatch](#dispatch)
-- [Get Keys](#get-keys)
-- [Key Object](#key-object)
-- [Get Order](#get-order)
-- [Order Object](#order-object)
-- [Search Orders](#search-orders)
-- [Order Statuses](#order-statuses)
+- [Get keys](#get-keys)
+- [Key object](#key-object)
+- [Get order](#get-order)
+- [Order object](#order-object)
+- [Search orders](#search-orders)
+- [Order statuses](#order-statuses)
 
 
-## Place Order
+## Place order
 
 `POST /v1/order`
 
@@ -162,7 +162,7 @@ curl -X POST
 
 
 
-## Get Keys
+## Get keys
 
 `GET /v1/order/dispatch/keys?dispatchId={dispatchId}`
 
@@ -216,7 +216,7 @@ Field | Type | Description
 
 
 
-## Get Order
+## Get order
 
 `GET /v1/order/{orderId}`
 
@@ -312,7 +312,7 @@ Field | Type | Description
 
 
 
-## Search Orders
+## Search orders
 
 `GET /v1/order`
 

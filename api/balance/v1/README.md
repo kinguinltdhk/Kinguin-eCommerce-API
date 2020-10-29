@@ -4,9 +4,9 @@ Version: `v1`
 
 ## Table of Contents
 
-- [Get Balance](#get-balance)
+- [Get balance](#get-balance)
 
-## Get Balance
+## Get balance
 
 `GET /v1/balance`
 

@@ -4,15 +4,15 @@ Version: `v1`
 
 ## Table of Contents
 
-- [Get Product](#get-product)
-- [Search Products](#search-products)
-- [Product Object](#product-object)
-- [Offer Object](#offer-object)
+- [Get product](#get-product)
+- [Search products](#search-products)
+- [Product object](#product-object)
+- [Offer object](#offer-object)
 - [Tags](#tags)
 - [Regions](#regions)
 
 
-## Get Product
+## Get product
 
 `GET /v1/products/{kinguinId}`
 
@@ -224,7 +224,7 @@ Field | Type | Description
 
 
 
-## Search Products
+## Search products
 
 `GET /v1/products`
 

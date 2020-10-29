@@ -25,7 +25,7 @@ After you verify the store, store API key will be generated and you can use it t
 
 > Keep your API key secret!. Remember that credentials on SANDBOX environment are different.
 
-## Search Products
+## Search products
 
 [Search products](../api/products/v1/README.md#search-products) you want to offer to your customers.
 
@@ -35,7 +35,7 @@ curl -X GET
      https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
 
-## Place Order
+## Place order
 
 [Place order](../api/order/v1/README.md#place-order) with selected products.
 
@@ -59,7 +59,7 @@ curl -X GET
 
 Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. This means that the order is still being processed. As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
 
-## Get Keys
+## Get keys
 
 After dispatching you can [get keys](../api/order/v2/README.md#get-keys).
 
