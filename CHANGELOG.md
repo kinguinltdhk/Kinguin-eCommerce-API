@@ -5,7 +5,7 @@
 ### Removed
 - the `https://api2.kinguin.net/integration/v1` will be removed at end of the 2020, please switch to `https://gateway.kinguin.net/esa/api`
 
-## [2020-10-29]
+## [2020-10-30]
 
 ### Changed
 - type of `orderId` and `offerId` fields transformed to `string`,
