@@ -8,7 +8,7 @@
 
 ### How to dispatch PRE-ORDER
 
-PRE-ORDER product can be dispatched only after its release date. 
+PRE-ORDER can be dispatched only after its release date. 
 If you try to dispatch it before then API will return error in below format:
 
 ```json
