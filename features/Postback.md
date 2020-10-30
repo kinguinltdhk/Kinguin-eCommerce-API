@@ -8,20 +8,22 @@
 
 These notifications inform you about changes in products price or stock level.
 
-### Payload
+## Payload
 
 Each product update notification is an `application/json` message sending by `POST` request:
 
-```
+### Example
+
+```json
 {
-   "kinguinId": [integer],
-   "updatedAt": [string]
+   "kinguinId": 1949,
+   "updatedAt": "2020-10-16T11:24:08+00:00"
 }
 ```
 
 Where `kinguinId` is an id of updated product and `updatedAt` is a date of update.
 
-### Response
+## Response
 
 For each postback notification your endpoint should respond with status `200`.
 

@@ -1,20 +1,10 @@
-# [Kinguin eCommerce API](https://www.kinguin.net/integration) developers documentation
+# Kinguin E-Commerce API developers documentation
 
+Register on [Kinguin Integration](https://www.kinguin.net/integration)
 
-**Table of Contents**
+- [Quick Start](quickstart/README.md)
+- [API Documentation](api/README.md)
+- [Postback Notifications](features/Postback.md)
+- [Features](features/README.md)
+- [CHANGELOG](CHANGELOG.md)
 
-[Quick start](quickstart/README.md)
-
-[API](apidocs/README.md)
-
-[Postback notifications](features/Postback.md)
-
-[Order external id](features/OrderExternalId.md)
-
-[Coupon codes](features/CouponCode.md)
-
-[Pre-orders](how_to/Preorders.md)
-
-[How To](HOWTO.md)
-
-[Changelog](CHANGELOG.md)

@@ -1,70 +1,73 @@
 # Quick start
 
-- [Apply](#apply)
+- [Apply for access](#apply-for-access)
 - [Create store](#create-store)
-- [List products](#list-products)
+- [Search products](#search-products)
 - [Place order](#place-order)
-- [Dispatch order](#dispatch-order)
-- [Get serial keys](#get-serial-keys)
+- [Dispatch](#dispatch)
+- [Get keys](#get-keys)
 
 
-## Apply
+## Apply for access
 
-First go to https://www.kinguin.net/integration/ and apply for an eCommerce API account.
+First go to [Kinguin Integration](https://www.kinguin.net/integration) and apply for the **Kinguin Api E-Commerce** account.
 
-If you don't have Kinguin ID account yet register new account.
+Before apply you must to have registered and accepted Kinguin ID account.
 
 
 ## Create store
 
 We'll inform you when your application is accepted.
 
-Sign in on Dashboard and add store in "My Stores" section.
+Sign in on Dashboard and add store in **My Stores** section.
 
-After store is verified you can find there API KEY you should use to [authorize](../apidocs/README.md#authorization) HTTP request.
+After you verify the store, store API key will be generated and you can use it to [authorize](../api/README.md#authorization) HTTP requests.
 
-`Keep your API KEY secret !!!`
+> Keep your API key secret!. Remember that credentials on SANDBOX environment are different.
 
-**Remember that credentials on sandbox environment are different.**
+## Search products
 
-## List products
+[Search products](../api/products/v1/README.md#search-products) you want to offer to your customers.
 
-[List, search, filter products](../apidocs/products/README.md#list-products) you want to offer to your customers.
-```
-curl -H 'api-ecommerce-auth: ...' \
-     -H 'Content-Type: application/json' \
-     https://api2.kinguin.net/integration/v1/products?limit=10
+```bash
+curl -X GET \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
 
 ## Place order
 
-[Place order](../apidocs/order/README.md#place-order) with selected products.
-```
-curl -X POST
-     -H 'api-ecommerce-auth: ...' \
+[Place order](../api/order/v1/README.md#place-order) with selected products.
+
+```bash
+curl -X POST \
+     -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
-     -d '{"products":[{"kinguinId":5,"qty":1,"name":"Anno","price":3.59}, {"kinguinId":8,"qty":1,"name":"Aliens","price":4.99}]}' \
-     https://api2.kinguin.net/integration/v1/order
+     -d '{"products":[{"kinguinId":1949,"qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79"}]}' \
+     https://gateway.kinguin.net/esa/api/v1/order
 ```
 
-## Dispatch order
+## Dispatch
 
-After creating order you need to [dispatch](../apidocs/order/README.md#dispatch-order) it.
-```
-curl -X POST
-     -H 'api-ecommerce-auth: ...' \
-     -H 'Content-Type: application/json' \
-     -d '{"orderId": "20549751"}' \
-     https://api2.kinguin.net/integration/v1/order/dispatch
+After creating order you need to [dispatch](../api/order/v2/README.md#dispatch) it.
 
+```bash
+curl -X GET \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
 ```
 
-## Get serial keys
+Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
+This means that the order is still being processed. 
+As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
+The exception to the rule are PRE-ORDER products, where the request should be retried only after product release date.
 
-After dispatching you can [get serial keys](../apidocs/order/README.md#get-order-keys).
-```
-curl -X GET
-     -H 'api-ecommerce-auth: ...' \
-     -H 'Content-Type: application/json' \
-     https://api2.kinguin.net/integration/v1/order/dispatch/keys?dispatchId=14169762
+## Get keys
+
+After dispatching you can [get keys](../api/order/v2/README.md#get-keys).
+
+```bash
+curl -X GET \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```
