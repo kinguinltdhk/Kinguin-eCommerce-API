@@ -4,7 +4,8 @@ Version: `v1`
 
 ## Table of Contents
 
-- [Products](products/v1/README.md)
+- [Products `v1`](products/v1/README.md)
+- [Products `v2`](products/v2/README.md)
 - [Orders `v1`](order/v1/README.md)
 - [Orders `v2`](order/v2/README.md)
 - [Balance](balance/v1/README.md)
