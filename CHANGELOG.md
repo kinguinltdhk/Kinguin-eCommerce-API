@@ -18,8 +18,10 @@
 - added `offerId`, `productId` fields to response from `/api/v1/order/dispatch/keys` endpoint,
 - added `paymentPrice`, `requestTotalPrice`, `products.requestPrice`, `products.releaseDate`, `isPreorder`, `preorderReleaseDate` fields to order, [details here](features/CouponCode.md#using-coupon)
 - added `X-Api-Key` header as a replacement/alias for `Api-Ecommerce-Auth`,
+- added `/api/v2/order` endpoint, [details here](api/order/v2/README.md#place-order)
 - added `/api/v2/order/{orderId}/dispatch` endpoint, [details here](api/order/v2/README.md#dispatch)
 - added `/api/v2/order/{orderId}/keys` endpoint, [details here](api/order/v2/README.md#get-keys)
+- added `/api/v2/products/{productId}` endpoint, [details here](api/products/v2/README.md#get-product)
 - added multiple values search for `genre` and `platform` filters,
 - added `withText` filter for `/api/v1/products` endpoint,
 - added more order details in create order response,
