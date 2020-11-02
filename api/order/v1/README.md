@@ -59,7 +59,7 @@ HTTP Status: `201`
 
 Content-Type: `application/json`
 
-In case of error HTTP status other than `201` is return and [Error Object](../../ErrorsCodes.md) containing error details.
+Returns the [Order Object](#order-object)
 
 ### Example request
 
@@ -224,7 +224,7 @@ Field | Type | Description
 
 Parameter | Type | Description
 --------- | :-----: | -----------
-`orderId` | int | Order ID
+`orderId` | string | Order ID
 
 ### Output
 

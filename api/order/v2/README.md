@@ -4,10 +4,67 @@ Version: `v2`
 
 ## Table of Contents
 
+- [Place order](#place-order)
 - [Dispatch](#dispatch)
 - [Get keys](#get-keys)
 - [Key object](#key-object)
 
+## Place order
+
+`POST /v2/order`
+
+### Input
+
+Content-Type: `application/json`
+
+```json
+{
+    "products": [
+        {
+            "productId": [string],
+            "qty": [int],
+            "price": [float],
+            "name": [string],
+            "keyType": [string],
+            "offerId": [string]
+        },
+        (...)
+    ],
+    "orderExternalId": [string],
+    "couponCode": [string]
+}
+```
+
+Field | Type | Description
+--------- | :-----: | --------
+`products.productId` | string | Another product ID
+`products.qty` | int | Ordered quantity
+`products.price` | float | Requested price
+`products.name` | string | Product name
+`products.keyType`* | string | [Key type](../../../features/KeyType.md)
+`products.offerId`* | string | [Offer ID](../../../features/BuyOffer.md)
+`orderExternalId` | string | [Order external ID](../../../features/OrderExternalId.md)
+`couponCode`* | string | [Discount code](../../../features/CouponCode.md)
+
+> *feature property, in case of use please contact your business manager
+
+### Output
+
+HTTP Status: `201`
+
+Content-Type: `application/json`
+
+Returns the [Order Object](../v1/README.md#order-object)
+
+### Example request
+
+```bash
+curl -X POST \
+     -H 'X-Api-Key: [api-key]' \
+     -H 'Content-Type: application/json' \
+     -d '{"products":[{"productId":"5c9b68662539a4e8f17ae2fe","qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79"}]}' \
+     https://gateway.kinguin.net/esa/api/v2/order
+```
 
 ## Dispatch
 
@@ -19,7 +76,7 @@ Content-Type: No payload required.
 
 Parameter | Type | Description
 --------- | :-----: | -----------
-`orderId` | int | Order ID
+`orderId` | string | Order ID
 
 ### Output
 
@@ -60,7 +117,7 @@ curl -X POST \
 
 Parameter | Type | Description
 --------- | :-----: | -----------
-`orderId` | int | Order ID
+`orderId` | string | Order ID
 
 ### Output
 
