@@ -23,7 +23,7 @@ Sign in on Dashboard and add store in **My Stores** section.
 
 After you verify the store, store API key will be generated and you can use it to [authorize](../api/README.md#authorization) HTTP requests.
 
-> Keep your API key secret!. Remember that credentials on SANDBOX environment are different.
+> Keep your API key secret! Remember that credentials on SANDBOX environment are different.
 
 ## Search products
 
@@ -34,6 +34,10 @@ curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v1/products?name=forza
 ```
+
+Worth to read:
+
+- [How to keep products up to date](../features/ProductUpdates.md)
 
 ## Place order
 
@@ -47,6 +51,13 @@ curl -X POST \
      https://gateway.kinguin.net/esa/api/v1/order
 ```
 
+Worth to read:
+
+- [How to buy specific offer](../features/BuyOffer.md)
+- [How to buy text serial](../features/KeyType.md)
+- [How to use coupon code](../features/CouponCode.md)
+- [How to set custom order ID](../features/OrderExternalId.md)
+
 ## Dispatch
 
 After creating order you need to [dispatch](../api/order/v2/README.md#dispatch) it.
@@ -57,10 +68,10 @@ curl -X GET \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
 ```
 
-Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
-This means that the order is still being processed. 
-As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
-The exception to the rule are PRE-ORDER products, where the request should be retried only after product release date.
+Worth to read:
+
+- [How to dispatch order](../features/Dispatch.md)
+- [How to buy PRE-ORDER](../features/PRE-ORDER.md)
 
 ## Get keys
 

@@ -22,7 +22,8 @@
 - added `merchantName` field to offer object,
 - added `merchantName` filter for `/api/v1/products` endpoint,
 - added `productId` filter for `/api/v1/products` endpoint,
-- place order endpoint now return [Order Object](api/order/v1/README.md#order-object),
+- return [Order Object](api/order/v1/README.md#order-object) in place order response,
+- send webhook after order dispatch, [details here](features/Dispatch.md#postback-notifications-to-the-rescue)
 
 ### Removed
 - the `https://api2.kinguin.net/integration` will be removed at end of the 2020, please switch to `https://gateway.kinguin.net/esa/api`

@@ -1,4 +1,4 @@
-# How to mark order with custom identifier
+# How to set custom order ID
 
 In order request sent `orderExternalId` field with your custom value.
 

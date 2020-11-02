@@ -106,6 +106,12 @@ curl -X POST \
 }
 ```
 
+Worth to read:
+
+- [How to buy specific offer](../../../features/BuyOffer.md)
+- [How to buy text serial](../../../features/KeyType.md)
+- [How to use coupon code](../../../features/CouponCode.md)
+- [How to set custom order ID](../../../features/OrderExternalId.md)
 
 
 ## Dispatch
@@ -160,13 +166,18 @@ curl -X POST \
 }
 ```
 
+Worth to read:
+
+- [How to dispatch order](../../../features/Dispatch.md)
+- [How to buy PRE-ORDER](../../../features/PRE-ORDER.md)
+
 
 
 ## Get keys
 
 `GET /v1/order/dispatch/keys?dispatchId={dispatchId}`
 
-### Path parameters
+### Input
 
 Parameter | Type | Description
 --------- | :-----: | -----------
@@ -220,7 +231,7 @@ Field | Type | Description
 
 `GET /v1/order/{orderId}`
 
-### Path parameters
+### Input
 
 Parameter | Type | Description
 --------- | :-----: | -----------
@@ -316,7 +327,7 @@ Field | Type | Description
 
 `GET /v1/order`
 
-### Query parameters
+### Input
 
 Parameter | Type | Description
 --------- | :-----: | -----------

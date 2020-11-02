@@ -222,13 +222,17 @@ Field | Type | Description
 
 > *feature property, in case of use please contact your business manager
 
+Worth to read:
+
+- [How to keep products up to date](../../../features/ProductUpdates.md)
+
 
 
 ## Search products
 
 `GET /v1/products`
 
-### Query parameters
+### Input
 
 Parameter | Type | Description
 --------- | :-----: | -----------

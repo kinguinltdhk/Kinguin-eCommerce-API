@@ -66,11 +66,20 @@ curl -X POST \
      https://gateway.kinguin.net/esa/api/v2/order
 ```
 
+Worth to read:
+
+- [How to buy specific offer](../../../features/BuyOffer.md)
+- [How to buy text serial](../../../features/KeyType.md)
+- [How to use coupon code](../../../features/CouponCode.md)
+- [How to set custom order ID](../../../features/OrderExternalId.md)
+
+
+
 ## Dispatch
 
 `POST /v2/order/{orderId}/dispatch`
 
-### Path parameters
+### Input
 
 Content-Type: No payload required.
 
@@ -99,13 +108,10 @@ curl -X POST \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
 ```
 
-### Example response
+Worth to read:
 
-```json
-{
-    "dispatchId": 14169762
-}
-```
+- [How to dispatch order](../../../features/Dispatch.md)
+- [How to buy PRE-ORDER](../../../features/PRE-ORDER.md)
 
 
 
@@ -113,7 +119,7 @@ curl -X POST \
 
 `GET /v2/order/{orderId}/keys`
 
-### Path parameters
+### Input
 
 Parameter | Type | Description
 --------- | :-----: | -----------
@@ -125,6 +131,8 @@ HTTP Status: `200`
 
 Content-Type: `application/json`
 
+Returns the array of [Key Object](../v1/README.md#key-object)
+
 ### Example request
 
 ```bash
@@ -132,29 +140,3 @@ curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```
-
-### Example response
-
-```json
-[
-    {
-        "serial": "0ddbebb2-559d-42e9-a8e1-fd4b2bdea858",
-        "type": "text/plain",
-        "name": "Counter-Strike: Source Steam CD Key",
-        "kinguinId": 1949,
-        "offerId": "5f7efd272f3a650001f42722",
-        "productId": "5c9b68662539a4e8f17ae2fe"
-    }
-]
-```
-
-### Key Object
-
-Field | Type | Description
---------- | ----- | --------
-`name` | string | Product name
-`type`| string | Serial content type. Can be `text/plain` or `image/jpeg`, `image/png` or `image/gif`
-`serial` | string | Plain text serial key or in case of `image/*` base64 encoded content of the image
-`kinguinId` | int | Product ID
-`offerId` | string | Offer ID
-`productId` | string | Another product ID
