@@ -43,7 +43,7 @@ Content-Type: `application/json`
 Field | Type | Description
 --------- | :-----: | --------
 `products.kinguinId` | int | Product ID 
-`products.qty` | int | Ordered quantity
+`products.qty` | int | Ordered quantity (max: `100`)
 `products.price` | float | Requested price
 `products.name` | string | Product name
 `products.keyType`* | string | [Key type](../../../features/KeyType.md)
