@@ -2,11 +2,6 @@
 
 ## [Unreleased]
 
-### Removed
-- the `https://api2.kinguin.net/integration/v1` will be removed at end of the 2020, please switch to `https://gateway.kinguin.net/esa/api`
-
-## [2020-10-30]
-
 ### Changed
 - type of `orderId` and `offerId` fields transformed to `string`,
 - error response format, [details here](api/ErrorsCodes.md)
@@ -16,7 +11,7 @@
 - added `orderExternalId` field to order request payload, [details here](features/OrderExternalId.md)
 - added `orderExternalId` filter for `/api/v1/order` endpoint,
 - added `offerId`, `productId` fields to response from `/api/v1/order/dispatch/keys` endpoint,
-- added `paymentPrice`, `requestTotalPrice`, `products.requestPrice`, `products.releaseDate`, `isPreorder`, `preorderReleaseDate` fields to order, [details here](features/CouponCode.md#using-coupon)
+- added `paymentPrice`, `requestTotalPrice`, `products.requestPrice`, `products.releaseDate`, `isPreorder`, `preorderReleaseDate` fields to order object, [details here](features/CouponCode.md#using-coupon)
 - added `X-Api-Key` header as a replacement/alias for `Api-Ecommerce-Auth`,
 - added `/api/v2/order` endpoint, [details here](api/order/v2/README.md#place-order)
 - added `/api/v2/order/{orderId}/dispatch` endpoint, [details here](api/order/v2/README.md#dispatch)
@@ -24,18 +19,18 @@
 - added `/api/v2/products/{productId}` endpoint, [details here](api/products/v2/README.md#get-product)
 - added multiple values search for `genre` and `platform` filters,
 - added `withText` filter for `/api/v1/products` endpoint,
-- added more order details in create order response,
-- added `merchantName` field to offer,
+- added `merchantName` field to offer object,
 - added `merchantName` filter for `/api/v1/products` endpoint,
 - added `productId` filter for `/api/v1/products` endpoint,
-- added more details about order in `/api/v1/order` endpoint,
+- place order endpoint now return [Order Object](api/order/v1/README.md#order-object),
 
 ### Removed
-- removed product `preorderFromDate`, `preorderToDate`, `imageQty`, `originScore`, `type`, `status` fields, use `releaseDate` instead,
-- removed offer `type`, `vendorName`, `isCheapest`, `imageQty` fields,
+- the `https://api2.kinguin.net/integration` will be removed at end of the 2020, please switch to `https://gateway.kinguin.net/esa/api`
+- removed product object fields: `preorderFromDate` (use `releaseDate` instead), `preorderToDate`, `imageQty`, `originScore`, `type`, `status`,
+- removed offer object fields `type`, `vendorName`, `isCheapest`, `imageQty` fields,
 - removed product `vendorName` filter,
 - removed tags `steam gift` and `preorder`,
-- removed `image` choice from `keyType` property,
+- removed `image` choice from `keyType` field,
 
 ## [2019-12-10]
 
