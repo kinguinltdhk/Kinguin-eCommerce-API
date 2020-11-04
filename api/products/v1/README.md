@@ -185,7 +185,7 @@ Field | Type | Description
 `platform` | string | Platform name
 `releaseDate` | string | Release date
 `qty` | int | Total cheapest offers quantity
-`price` | float | Cheapest offer price
+`price` | float | Cheapest offer price in EUR
 `textQty`* | int | Quantity of `text` serials
 `offers`* | object[] | Array of [Offer Object](/#offer-object)
 `offersCount`* | int | Total number of offers
