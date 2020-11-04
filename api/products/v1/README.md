@@ -239,7 +239,7 @@ Parameter | Type | Description
 `page` | int | Page number (default: `1`)
 `limit` | int | Number products on page (default: `25`, maximum: `100`)
 `name` | string | Product name (minimum: `3` characters)
-`sortBy` | string | Sort field name (values: `kingiunId`, `name`, `qty` or `price`)
+`sortBy` | string | Sort field name (values: `kingiunId`, `updatedAt`, `name`, `qty` or `price`)
 `sortType` | string | Sort type (values: `asc` or `desc`)
 `priceFrom` | float | Price from
 `priceTo` | float | Price to

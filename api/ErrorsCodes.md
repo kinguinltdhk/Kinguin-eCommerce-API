@@ -21,7 +21,7 @@ The fields such as: `kind`, `status`, `title`, `detail`, `path`, `method`, `trac
 
 The rest of the available fields are intended to present the context of the problem. Each of error kind have an own set of additional fields.
 
-Check `detail` property for more info about the problem.
+> Check `detail` property for more info about the problem.
 
 Kind | Description
 -----|------------------
