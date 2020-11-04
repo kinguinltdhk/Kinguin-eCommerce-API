@@ -26,7 +26,7 @@ Request method: `POST`
 Field | Type | Description
 --------- | :-----: | -----------
 `kinguinId` | int | Product ID
-`updatedAt` | string | Date of change
+`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sT`
 
 
 ## Order complete notification
@@ -51,7 +51,7 @@ Field | Type | Description
 --------- | :-----: | -----------
 `orderId` | string | Order ID
 `orderExternalId` | string | Order external ID
-`updatedAt` | string | Date of change
+`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sT`
 
 
 ## How to respond for notification

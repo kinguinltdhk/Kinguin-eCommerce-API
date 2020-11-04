@@ -301,6 +301,7 @@ Field | Type | Description
 `storeId` | int | Store ID
 `createdAt` | string | Order creation date
 `orderId` | string | Order ID
+`kinguinOrderId` | int | Previous order ID
 `orderExternalId` | string | Order external ID
 `couponCode` | string | Discount code
 `isPreorder` | bool | PRE-ORDER
@@ -337,10 +338,12 @@ Parameter | Type | Description
 `sortType` | string | Sort type (default: `desc`, values: `asc` or `desc`)
 `totalPriceFrom` | float | Total price from
 `totalPriceTo` | float | Total price to
-`createdAtFrom` | string | RFC3339 date
-`createdAtTo` | string | RFC3339 date
+`createdAtFrom` | string | Date in format `Y-m-dTH:i:s`
+`createdAtTo` | string | Date in format `Y-m-dTH:i:s`
 `kinguinId` | int | Product ID
+`productId` | int | Another product ID
 `orderId` | string | Order ID
+`kinguinOrderId` | int | Previous order ID
 `orderExternalId` | string | Order external ID
 `name` | string | Product name
 `status` | string | [Order Status](#order-statuses)
