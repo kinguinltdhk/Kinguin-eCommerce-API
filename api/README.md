@@ -13,14 +13,17 @@ Version: `v1`
 
 ## Environment
 
-**PRODUCTION**: https://api2.kinguin.net/integration or https://gateway.kinguin.net/esa/api (recommended)
+**PRODUCTION API**: https://api2.kinguin.net/integration or https://gateway.kinguin.net/esa/api (recommended)
 
-> The `https://api2.kinguin.net/integration/v1` will be removed at end of the 2020.
+> The `https://api2.kinguin.net/integration/v1` will be removed at the end of the 2020.
 
-**SANDBOX**: https://gateway.sandbox.kinguin.net/esa/api
+**SANDBOX API**: https://gateway.sandbox.kinguin.net/esa/api
 
-> You can create SANDBOX account and get API key by your self. See [Quick start](../quickstart/README.md).
-> Ask your business manager to fill your account wih balance.
+## How to create SANDBOX account
+
+You can create SANDBOX account [here](https://sandbox.kinguin.net/integration) and get the API key analogical as on production. See [Quick start](../quickstart/README.md). 
+
+After that, ask your business manager to fill your account with balance.
 
 ## Authorization
 
