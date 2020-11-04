@@ -1,27 +1,20 @@
 # Quick start
 
-- [Apply for access](#apply-for-access)
-- [Create store](#create-store)
+- [How to get API key](#how-to-get-api-key)
 - [Search products](#search-products)
 - [Place order](#place-order)
 - [Dispatch](#dispatch)
 - [Get keys](#get-keys)
 
 
-## Apply for access
+## How to get API key
 
-First go to [Kinguin Integration](https://www.kinguin.net/integration) and apply for the **Kinguin Api E-Commerce** account.
-
-Before apply you must to have registered and accepted Kinguin ID account.
-
-
-## Create store
-
-We'll inform you when your application is accepted.
-
-Sign in on Dashboard and add store in **My Stores** section.
-
-After you verify the store, store API key will be generated and you can use it to [authorize](../api/README.md#authorization) HTTP requests.
+1. Go to [Kinguin Integration](https://www.kinguin.net/integration) and click **APPLY FOR ACCESS** button.
+2. If you don't have yet **Kinguin ID** account, please create it before.
+3. Submit application form and wait for our approval. If you're active Kinguin Seller your application will be automatically approved. You will be notified by e-mail when your application become approved.
+4. After positive verification of your application you can go to your [Dashboard](https://www.kinguin.net/integration/dashboard).
+5. Go to **MY STORES** section and click on **ADD STORE** button in top right corner. Fill form with your first store's data and verify it by choosing from two available options.
+6. After your store has been verified the **API key** will be generated.
 
 > Keep your API key secret! Remember that credentials on SANDBOX environment are different.
 
