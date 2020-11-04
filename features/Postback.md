@@ -2,11 +2,11 @@
 
 Kind | Description
 --------- | -----------
-**Product update** | Notification, when product or offer was changed
+**Product update** | Notification, when product was changed
 **Order complete** | Notification, when order status was changed to `completed`
 
 
-## Product update notifications
+## Product update notification
 
 The **Product update** notification is triggered when product is changed, or when new offer become available.
 
@@ -29,7 +29,7 @@ Field | Type | Description
 `updatedAt` | string | Date of change
 
 
-## Order complete notifications
+## Order complete notification
 
 The **Order complete** notification is triggered when an order has been dispatched. Purchased keys are ready to download.
 
@@ -54,7 +54,7 @@ Field | Type | Description
 `updatedAt` | string | Date of change
 
 
-## How to respond for postback notifications
+## How to respond for notification
 
 For each postback notification your endpoint should respond with status `2xx`.
 After first bad response we will try to resend notification a couple of times at appropriate intervals.
