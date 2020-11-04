@@ -16,7 +16,7 @@ Version: `v1`
 
 `GET /v1/products/{kinguinId}`
 
-### Path parameters
+### Input
 
 Parameter | Type | Description
 --------- | :-----: | -----------
