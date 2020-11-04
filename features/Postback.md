@@ -70,4 +70,4 @@ After first bad response we will try to resend notification a couple of times at
 4. Fill URL and mark as **Active**.
 5. Before saving, you can check if your endpoint responds correctly by clicking on **TEST URL** button.
 
-> Please keep in mind that every notification endpoint should be placed into the same host as store url.
+> Please keep in mind that every notification endpoint should have the sam host as given store URL.

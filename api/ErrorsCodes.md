@@ -17,6 +17,10 @@ In case of error API returns HTTP status code different than `2xx` and JSON obje
 }
 ```
 
+The fields such as: `kind`, `status`, `title`, `detail`, `path`, `method`, `trace` and `timestamps` should be always presented.
+
+The rest of the available fields are intended to present the context of the problem. Each of error kind have an own set of additional fields.
+
 Check `detail` property for more info about the problem.
 
 Kind | Description
@@ -47,11 +51,11 @@ Kind | Description
 - `ProcessingPreorder`
 
 Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
-This means that the order is not completed yet.
+It means, that the order is not completed yet.
 As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
 The exception to the rule are PRE-ORDER products, where the request should be retried only after product release date.
 
-> Instead of sending requests at appropriate intervals you can register [postback](../features/Postback.md) to receive events about order completion.
+> Instead of sending requests at appropriate intervals you can register a [postback](../features/Postback.md) to receive events about order completion.
 
 ### Example retryable error
 
