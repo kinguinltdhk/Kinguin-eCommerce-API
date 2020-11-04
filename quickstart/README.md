@@ -15,6 +15,7 @@
 4. After positive verification of your application you can go to your [Dashboard](https://www.kinguin.net/integration/dashboard).
 5. Go to **MY STORES** section and click on **ADD STORE** button in top right corner. Fill form with your first store's data and verify it by choosing from two available options.
 6. After your store has been verified the **API key** will be generated.
+7. Register endpoints for [postback notifications](../features/Postback.md).
 
 > Keep your API key secret! Remember that credentials on SANDBOX environment are different.
 
