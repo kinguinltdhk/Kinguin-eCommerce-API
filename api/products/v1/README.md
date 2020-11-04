@@ -212,7 +212,7 @@ Field | Type | Description
 --------- | -----| --------
 `name` | string | Offer name
 `offerId` | string | Offer ID
-`price` | float | Offer price
+`price` | float | Offer price in EUR
 `qty` | int | Offer quantity
 `textQty`* | int | Text serials quantity
 `status` | string | Offer status
