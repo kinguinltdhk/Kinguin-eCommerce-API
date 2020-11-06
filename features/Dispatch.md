@@ -38,3 +38,5 @@ curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```
+
+If for some reason a notification didn't have received to your application, then you should to make a request for [dispatch](../api/order/v2/README.md#dispatch) to update the status of your order.
