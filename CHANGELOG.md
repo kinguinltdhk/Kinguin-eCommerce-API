@@ -22,6 +22,8 @@
 - added `productId`, `merchantName`, `withText` filters for `/api/v1/products` endpoint,
 - return [Order Object](api/order/v1/README.md#order-object) in place order response,
 - send webhook after order dispatch, [details here](features/Dispatch.md#postback-notifications-to-the-rescue)
+- added `productId` field to product updates postback,
+- trigger product updates postback after `releaseDate` field changed,
 
 ### Removed
 - the `https://api2.kinguin.net/integration` will be removed at the end of the 2020, please switch to `https://gateway.kinguin.net/esa/api`,

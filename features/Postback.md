@@ -10,6 +10,18 @@ Kind | Description
 
 The **Product update** notification is triggered when product is changed, or when new offer become available.
 
+The webhook will be triggered if at least one of the bellowed product/offer fields has changed.
+
+Field |
+--------- |
+`qty` |
+`textQty` |
+`totalQty` |
+`offersCount` |
+`price` |
+`status` |
+`releaseDate` |
+
 ### Example payload
 
 Content-Type: `aplication/json`
@@ -19,6 +31,7 @@ Request method: `POST`
 ```json
 {
    "kinguinId": 1949,
+   "productId": "5c9b5f6b2539a4e8f172916a",
    "updatedAt": "2020-10-16T11:24:08+00:00"
 }
 ```
@@ -26,6 +39,7 @@ Request method: `POST`
 Field | Type | Description
 --------- | :-----: | -----------
 `kinguinId` | int | Product ID
+`productId` | string | Another product ID
 `updatedAt` | string | Date of change in format `Y-m-d\TH:i:sT`
 
 
