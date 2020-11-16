@@ -47,6 +47,8 @@ Field | Type | Description
 
 The **Order complete** notification is triggered when an order has been dispatched. Purchased keys are ready to download.
 
+> Webhook is triggered only for users that have been migrated to the new pool of products. Ask your business manager for more info.
+
 ### Example payload
 
 Content-Type: `aplication/json`
