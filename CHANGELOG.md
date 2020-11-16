@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [2020-11-16]
 
 ### Changed
 - type of `orderId` and `offerId` fields transformed to `string`,
