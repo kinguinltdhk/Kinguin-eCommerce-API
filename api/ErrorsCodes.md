@@ -19,7 +19,7 @@ In case of error API returns HTTP status code different than `2xx` and JSON obje
 
 The fields such as: `kind`, `status`, `title`, `detail`, `path`, `method`, `trace` and `timestamps` should be always presented.
 
-The rest of the available fields are intended to present the context of the problem. Each of error kind have an own set of additional fields.
+The rest of the fields are intended to present the context of the problem. Each of error kind have an own set of custom fields.
 
 > Check `detail` property for more info about the problem.
 
@@ -42,6 +42,7 @@ Kind | Description
 `ProductUnavailable` | Product has been sold or is not active. Maybe try to update product and send request again.
 `OrderNotFound` | Order not found - invalid `orderId` value
 `DispatchNotFound` | Dispatch not found - invalid `dispatchId` value
+`ResourceLock` | Conflict with current resource state - other process already modified target resource
 
 ## Retryable kinds
 
@@ -49,6 +50,7 @@ Kind | Description
 - `OrderNotDispatchedYet`
 - `OrderPartiallyDispatched`
 - `ProcessingPreorder`
+- `ResourceLock`
 
 Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
 It means, that the order is not completed yet.
