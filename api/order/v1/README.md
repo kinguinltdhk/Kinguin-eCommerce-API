@@ -414,3 +414,5 @@ Status | Description
 ------ | -------------
 `processing` | Order awaits dispatch
 `completed` | Order is completed, keys can be downloaded
+`canceled` | Order canceled
+`refunded` | Order refunded, balance has been returned
