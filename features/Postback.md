@@ -40,7 +40,7 @@ Field | Type | Description
 --------- | :-----: | -----------
 `kinguinId` | int | Product ID
 `productId` | string | Another product ID
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sT`
+`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sP`
 
 
 ## Order complete notification
@@ -67,7 +67,7 @@ Field | Type | Description
 --------- | :-----: | -----------
 `orderId` | string | Order ID
 `orderExternalId` | string | Order external ID
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sT`
+`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sP`
 
 
 ## How to respond for notification
