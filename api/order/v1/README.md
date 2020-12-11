@@ -338,8 +338,8 @@ Parameter | Type | Description
 `sortType` | string | Sort type (default: `desc`, values: `asc` or `desc`)
 `totalPriceFrom` | float | Total price from
 `totalPriceTo` | float | Total price to
-`createdAtFrom` | string | Date in format `Y-m-dTH:i:s`
-`createdAtTo` | string | Date in format `Y-m-dTH:i:s`
+`createdAtFrom` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
+`createdAtTo` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
 `kinguinId` | int | Product ID
 `productId` | int | Another product ID
 `orderId` | string | Order ID

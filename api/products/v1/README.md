@@ -252,8 +252,8 @@ Parameter | Type | Description
 `activePreorder` | string | Only active PRE-ORDER (values: `yes`)
 `regionId` | int | [Region](#regions)
 `tags` | string | Comma separated list of [Tags](#tags)
-`updatedSince` | string | Date in format `Y-m-d\TH:i:s`
-`updatedTo` | string | Date in format `Y-m-d\TH:i:s`
+`updatedSince` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
+`updatedTo` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
 `withText`* | string | Filter products only with text serials (values: `yes`)
 `merchantName` | string | Seller name
 
