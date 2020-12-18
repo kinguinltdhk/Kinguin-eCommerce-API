@@ -51,6 +51,7 @@ Kind | Description
 - `OrderPartiallyDispatched`
 - `ProcessingPreorder`
 - `ResourceLock`
+- `OrderFailed`
 
 Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
 It means, that the order is not completed yet.
