@@ -7,7 +7,7 @@ Version: `v2`
 - [Place order](#place-order)
 - [Dispatch](#dispatch)
 - [Get keys](#get-keys)
-- [Key object](#key-object)
+- [Key object](../v1/README.md#key-object)
 
 ## Place order
 

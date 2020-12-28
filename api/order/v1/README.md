@@ -341,7 +341,7 @@ Parameter | Type | Description
 `createdAtFrom` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
 `createdAtTo` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
 `kinguinId` | int | Product ID
-`productId` | int | Another product ID
+`productId` | string | Another product ID
 `orderId` | string | Order ID
 `kinguinOrderId` | int | Previous order ID
 `orderExternalId` | string | Order external ID
