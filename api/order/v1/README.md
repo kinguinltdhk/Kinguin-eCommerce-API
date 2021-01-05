@@ -93,6 +93,7 @@ curl -X POST \
             "qty": 1,
             "name": "Counter-Strike: Source Steam CD Key",
             "price": 5.79,
+            "totalPrice": 5.79,
             "requestPrice": 5.79,
             "isPreorder": true,
             "releaseDate": "2020-10-07",
@@ -101,6 +102,7 @@ curl -X POST \
             "broker": "internal"
         }
     ],
+    "totalQty": 1,
     "isPreorder": true,
     "preorderReleaseDate": "2020-10-07"
 }
@@ -275,6 +277,7 @@ curl -X GET \
             "qty": 1,
             "name": "Counter-Strike: Source Steam CD Key",
             "price": 5.79,
+            "totalPrice": 5.79,
             "requestPrice": 5.79,
             "isPreorder": true,
             "releaseDate": "2020-10-07",
@@ -283,6 +286,7 @@ curl -X GET \
             "broker": "internal"
         }
     ],
+    "totalQty": 1,
     "isPreorder": true,
     "preorderReleaseDate": "2020-10-07"
 }
@@ -305,6 +309,7 @@ Field | Type | Description
 `orderExternalId` | string | Order external ID
 `couponCode` | string | Discount code
 `isPreorder` | bool | PRE-ORDER
+`totalQty` | int | Total quantity from products
 `preorderReleaseDate` | string | PRE-ORDER release date
 `products.kinguinId` | int | Product ID
 `products.offerId` | string | Offer ID
@@ -312,6 +317,7 @@ Field | Type | Description
 `products.qty` | int | Ordered quantity
 `products.name` | string | Product name
 `products.price` | float | Product sell price
+`products.totalPrice` | float | Total product sell price
 `products.requestPrice` | float | Product request price
 `products.isPreorder` | bool | PRE-ORDER
 `products.releaseDate` | string | Product release date
@@ -392,6 +398,7 @@ curl -X GET \
                     "qty": 1,
                     "name": "Counter-Strike: Source Steam CD Key",
                     "price": 5.79,
+                    "totalPrice": 5.79,
                     "requestPrice": 5.79,
                     "isPreorder": true,
                     "releaseDate": "2020-10-07",
@@ -400,6 +407,7 @@ curl -X GET \
                     "broker": "internal"
                 }
             ],
+            "totalQty": 1,
             "isPreorder": true,
             "preorderReleaseDate": "2020-10-07"
         }

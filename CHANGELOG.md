@@ -1,5 +1,11 @@
 # Changelog
 
+## [2021-01-04]
+
+### Added
+- added `totalQty` field to order object,
+- added `products.totalPrice` field in order object,
+
 ## [2020-11-16]
 
 ### Changed
