@@ -62,7 +62,7 @@ Returns the [Order Object](../v1/README.md#order-object)
 curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
-     -d '{"products":[{"productId":"5c9b68662539a4e8f17ae2fe","qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79"}]}' \
+     -d '{"products":[{"productId":"5c9b68662539a4e8f17ae2fe","qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79}]}' \
      https://gateway.kinguin.net/esa/api/v2/order
 ```
 
