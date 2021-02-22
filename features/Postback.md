@@ -85,5 +85,3 @@ After first bad response we will try to resend notification a couple of times at
 3. View your store details and click on **POSTBACK NOTIFICATIONS** button in the top right corner.
 4. Fill URL and mark as **Active**.
 5. Before saving, you can check if your endpoint responds correctly by clicking on **TEST URL** button.
-
-> Please keep in mind that every notification endpoint should have the host that is equal to your store host.
