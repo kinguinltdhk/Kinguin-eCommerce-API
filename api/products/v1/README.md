@@ -202,6 +202,8 @@ Field | Type | Description
 `systemRequirements` | object[] | System requirements
 `tags` | string[] | Array of [Tags](#tags)
 `merchantName` | string[] | Array of cheapest offers seller names
+`ageRating` | string | Age rating (PEGI or ESRB)
+`steam` | string | Steam app id
 
 > *feature property, in case of use please contact your business manager
 

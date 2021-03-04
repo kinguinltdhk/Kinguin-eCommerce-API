@@ -1,5 +1,11 @@
 # Changelog
 
+## [2021-03-04]
+
+### Added
+- added `ageRating` field to product object,
+- added `steam` field in product object,
+
 ## [2021-01-04]
 
 ### Added
