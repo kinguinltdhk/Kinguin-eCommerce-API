@@ -1,5 +1,12 @@
 # Changelog
 
+## [2021-03-08]
+
+### Added
+- added `X-Event-Name` header to webhook,
+- added `X-Event-Secret` header to webhook,
+- added `order.status` webhook, [details here](features/Webhooks.md#order-status-changed-webhook)
+
 ## [2021-03-04]
 
 ### Added
@@ -33,9 +40,9 @@
 - added `merchantName` field to offer object,
 - added `productId`, `merchantName`, `withText` filters for `/api/v1/products` endpoint,
 - return [Order Object](api/order/v1/README.md#order-object) in place order response,
-- send webhook after order dispatch, [details here](features/Dispatch.md#postback-notifications-to-the-rescue)
-- added `productId` field to product updates postback,
-- trigger product updates postback after `releaseDate` field changed,
+- send webhook after order dispatch, [details here](features/Dispatch.md#webhooks-to-the-rescue)
+- added `productId` field to product update webhook,
+- trigger product update webhooks after `releaseDate` field changed,
 
 ### Removed
 - the `https://api2.kinguin.net/integration` will be removed at the end of the 2020, please switch to `https://gateway.kinguin.net/esa/api`,
@@ -49,7 +56,7 @@
 
 ### Added
 - possibility to select key type (`text` or `image`), [details here](features/KeyType.md#how-to-buy-text-serial)
-- possibility to buy selected offer, [details here](features/BuyOffer.md#how-to-buy-specific-offer)
+- possibility to buy selected offer, [details here](features/BuyOffer.md#how-to-buy-a-specific-offer)
 - added `vendorName` and `onlyText` filters to products, [details here](api/products/v1/README.md#search-products)
 - added `textQty`, `imageQty` to product, [details here](api/products/v1/README.md#product-object)
 - added `offers`, `offersCount`, `totalQty` to product, [details here](api/products/v1/README.md#offer-object)
@@ -93,7 +100,7 @@
 ## [2019-01-09]
 
 ### Added
-- postback notifications for products updates, [details here](features/Postback.md#products-updates-notifications)
+- webhooks for products updates, [details here](features/Webhooks.md#product-update-webhook)
 
 ## [2018-11-20]
 

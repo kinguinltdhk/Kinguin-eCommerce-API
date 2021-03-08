@@ -1,6 +1,6 @@
 # How to keep products up to date
 
-1. Register [Postback Notifications](Postback.md)
+1. Register [webhooks](Webhooks.md)
 2. Interval updates
 
     ```bash

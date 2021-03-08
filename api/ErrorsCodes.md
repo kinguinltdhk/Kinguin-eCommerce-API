@@ -58,7 +58,7 @@ It means, that the order is not completed yet.
 As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
 The exception to the rule are PRE-ORDER products, where the request should be retried only after product release date.
 
-> Instead of sending requests at appropriate intervals you can register a [postback](../features/Postback.md) to receive events about order completion.
+> Instead of sending requests at appropriate intervals you can register a [webhook](../features/Webhooks.md#order-completed-webhook).
 
 ### Example retryable error
 

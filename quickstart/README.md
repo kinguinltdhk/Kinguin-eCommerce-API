@@ -13,11 +13,12 @@
 2. If you don't have yet **Kinguin ID** account, please create it before.
 3. Submit application form and wait for our approval. If you're active Kinguin Seller your application will be automatically approved. You will be notified by e-mail when your application become approved.
 4. After positive verification of your application you can go to your [Dashboard](https://www.kinguin.net/integration/dashboard).
-5. Go to **MY STORES** section and click on **ADD STORE** button in top right corner. Fill form with your first store's data.
-6. After your store has been created the **API key** will be generated.
-7. Register endpoints for [postback notifications](../features/Postback.md).
+5. Go to **MY STORES** section and click on **ADD STORE** button in top right corner. Fill form with your first store's data. The **API key** will be generated.
+6. Register [webhooks](../features/Webhooks.md) for new store.
 
 > Keep your API key secret! Remember that credentials on SANDBOX environment are different.
+
+> Your Kinguin ID account should have configured a default billing address - it is required to place order through our API.
 
 ## Search products
 

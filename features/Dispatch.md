@@ -9,19 +9,19 @@ curl -X POST \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
 ```
 
-Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`.
+Due to the asynchronous nature of order processing, the API may return an error marked as `retryable`. 
 It means, that the order is not completed yet.
 As long as the API returns an `retryable` error, the request should be retried at appropriate intervals.
 The exception to the rule are **PRE-ORDER** products, where the request should be retried only after **release date**.
 
-### Postback notifications to the rescue
+### Webhooks to the rescue
 
-The other way to complete order is register [postback notification](Postback.md).
-When order has been dispatched the service will trigger an event to your registered endpoint.
-It means, that the order has been completed and all purchased keys are ready to download.
-Your application does not need to send requests at appropriate intervals, which means the integration is simpler and efficient.
+The other way to complete order is register [webhooks](Webhooks.md).
+The webhook will be sent after order has been dispatched.
+It means, that order status is `completed` and all purchased keys are ready to download.
+Your application does not need to send requests for dispatch, so the integration is simpler and efficient.
 
-### Example postback notification
+### Example webhook
 
 ```json
 {
@@ -39,4 +39,9 @@ curl -X GET \
      https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys
 ```
 
-If for some reason a notification didn't have received to your application, then you should to make a request for [dispatch](../api/order/v2/README.md#dispatch) to update the status of your order.
+### Backoff strategy
+
+In some cases order can be canceled or refunded.
+To handle such events you should register a [webhook](Webhooks.md#order-status-changed-webhook) for tracking changes of your order.
+
+Also, to get current order status you can use [Order Details](../api/order/v1/README.md#get-order) endpoint.

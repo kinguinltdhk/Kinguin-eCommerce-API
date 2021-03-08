@@ -1,7 +1,7 @@
 # How to buy text serial
 
 1. Contact with our business manager and ask for permissions.
-2. After permissions was granted you will able to use product `textQty` field and `withText` filter.
+2. After permissions was granted you will be able to use product `textQty` field and `withText` filter.
 3. Set `keyType` parameter with `text` value for each text serial you want to buy.
 
 ### Example request

@@ -2,7 +2,9 @@
 
 In order request sent `orderExternalId` field with your custom value.
 
-Remember, the value must be unique in context of your account.
+It prevents before creating duplicates in your account.
+
+The value of `orderExternalId` property should be unique across your account.
 
 ### Example request
 

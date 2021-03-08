@@ -1,7 +1,7 @@
 # How to buy specific offer
 
 1. Contact with our business manager and ask for permissions.
-2. After permissions was granted you will able to use product `offers`, `offersCount`, `totalQty` fields.
+2. After permissions was granted you will be able to use product `offers`, `offersCount`, `totalQty` properties.
 3. Set `offerId` parameter for the product for which you want to select an offer.
 4. The `offerId` parameter should be unique (you can't buy same offer in the different configuration).
 
