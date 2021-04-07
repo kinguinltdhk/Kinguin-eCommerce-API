@@ -1,10 +1,8 @@
-# How to set custom order ID
+# How to prevent order duplicates
 
-In order request sent `orderExternalId` field with your custom value.
+In order request you can set `orderExternalId` field with your custom value.
 
-It prevents before creating duplicates in your account.
-
-The value of `orderExternalId` property should be unique across your account.
+That unique value prevents before creating order duplicates.
 
 ### Example request
 

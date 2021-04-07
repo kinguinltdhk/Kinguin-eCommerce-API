@@ -1,9 +1,14 @@
 # How to buy specific offer
 
-1. Contact with our business manager and ask for permissions.
-2. After permissions was granted you will be able to use product `offers`, `offersCount`, `totalQty` properties.
-3. Set `offerId` parameter for the product for which you want to select an offer.
-4. The `offerId` parameter should be unique (you can't buy same offer in the different configuration).
+In addition to ordering only the cheapest offers, our API also allows you to purchase other offers - those that meet the more complex requirements of integrators.
+
+In that case, just set `products.offerId` property in order request.
+
+## Requirements
+
+Ask your business manager for permissions when `offers` property is not available in [Product Object](../api/products/v1/README.md#product-object).
+
+The `products.offerId` property must be unique in a single order request.
 
 ### Example request
 

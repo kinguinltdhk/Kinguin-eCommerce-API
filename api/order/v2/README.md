@@ -43,7 +43,7 @@ Field | Type | Description
 `products.name` | string | Product name
 `products.keyType`* | string | [Key type](../../../features/KeyType.md)
 `products.offerId`* | string | [Offer ID](../../../features/BuyOffer.md)
-`orderExternalId` | string | [Order external ID](../../../features/OrderExternalId.md)
+`orderExternalId` | string | [Order external ID](../../../features/OrderDuplicates.md)
 `couponCode`* | string | [Discount code](../../../features/CouponCode.md)
 
 > *feature property, in case of use please contact your business manager
@@ -69,13 +69,15 @@ curl -X POST \
 Worth to read:
 
 - [How to buy specific offer](../../../features/BuyOffer.md)
-- [How to buy text serial](../../../features/KeyType.md)
+- [How to buy text keys](../../../features/KeyType.md)
 - [How to use coupon code](../../../features/CouponCode.md)
-- [How to set custom order ID](../../../features/OrderExternalId.md)
+- [How to prevent order duplicates](../../../features/OrderDuplicates.md)
 
 
 
 ## Dispatch
+
+This endpoint is DEPRECATED. Consider to use [webhooks](../../../features/Webhooks.md#order-status-changed-webhook)
 
 `POST /v2/order/{orderId}/dispatch`
 
@@ -110,9 +112,7 @@ curl -X POST \
 
 Worth to read:
 
-- [How to dispatch order](../../../features/Dispatch.md)
-- [How to buy PRE-ORDER](../../../features/PRE-ORDER.md)
-
+- [How to load keys](../../../features/Keys.md)
 
 
 ## Get keys

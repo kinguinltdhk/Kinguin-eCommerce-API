@@ -3,7 +3,6 @@
 - [How to get API key](#how-to-get-api-key)
 - [Search products](#search-products)
 - [Place order](#place-order)
-- [Dispatch](#dispatch)
 - [Get keys](#get-keys)
 
 
@@ -34,6 +33,10 @@ Worth to read:
 
 - [How to keep products up to date](../features/ProductUpdates.md)
 
+## Register webhooks
+
+[Register webhooks](../features/Webhooks.md) to track order's status.
+
 ## Place order
 
 [Place order](../api/order/v1/README.md#place-order) with selected products.
@@ -49,28 +52,15 @@ curl -X POST \
 Worth to read:
 
 - [How to buy specific offer](../features/BuyOffer.md)
-- [How to buy text serial](../features/KeyType.md)
+- [How to buy text keys](../features/KeyType.md)
 - [How to use coupon code](../features/CouponCode.md)
-- [How to set custom order ID](../features/OrderExternalId.md)
+- [How to prevent order duplicates](../features/OrderDuplicates.md)
+- [How to load keys](../features/Keys.md)
 
-## Dispatch
-
-After creating order you need to [dispatch](../api/order/v2/README.md#dispatch) it.
-
-```bash
-curl -X GET \
-     -H 'X-Api-Key: [api-key]' \
-     https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/dispatch
-```
-
-Worth to read:
-
-- [How to dispatch order](../features/Dispatch.md)
-- [How to buy PRE-ORDER](../features/PRE-ORDER.md)
 
 ## Get keys
 
-After dispatching you can [get keys](../api/order/v2/README.md#get-keys).
+After order has become completed you can [get keys](../api/order/v2/README.md#get-keys).
 
 ```bash
 curl -X GET \

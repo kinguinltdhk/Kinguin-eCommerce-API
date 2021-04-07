@@ -1,5 +1,12 @@
 # Changelog
 
+## [2021-04-07]
+
+### Added
+- possibility to show and buy only text keys, [details here](features/KeyType.md#show-and-buy-only-products-with-text-keys)
+### Changed
+- dispatch endpoint set as **DEPRECATED**, consider to use [webhooks](features/Webhooks.md)
+
 ## [2021-03-08]
 
 ### Added
@@ -27,7 +34,7 @@
 
 ### Added
 - added `couponCode` field to order request payload, [details here](features/CouponCode.md#ask-for-coupon)
-- added `orderExternalId` field to order request payload, [details here](features/OrderExternalId.md)
+- added `orderExternalId` field to order request payload, [details here](features/OrderDuplicates.md)
 - added `orderExternalId`, `kinguinOrderId` and `productId` filters for `/api/v1/order` endpoint,
 - added `offerId`, `productId` fields to response from `/api/v1/order/dispatch/keys` endpoint,
 - added `paymentPrice`, `requestTotalPrice`, `products.requestPrice`, `products.releaseDate`, `isPreorder`, `preorderReleaseDate`, `kinguinOrderId` fields to order object, [details here](features/CouponCode.md#using-coupon)
@@ -40,7 +47,7 @@
 - added `merchantName` field to offer object,
 - added `productId`, `merchantName`, `withText` filters for `/api/v1/products` endpoint,
 - return [Order Object](api/order/v1/README.md#order-object) in place order response,
-- send webhook after order dispatch, [details here](features/Dispatch.md#webhooks-to-the-rescue)
+- send webhook after order dispatch, [details here](features/Keys.md)
 - added `productId` field to product update webhook,
 - trigger product update webhooks after `releaseDate` field changed,
 
@@ -56,7 +63,7 @@
 
 ### Added
 - possibility to select key type (`text` or `image`), [details here](features/KeyType.md#how-to-buy-text-serial)
-- possibility to buy selected offer, [details here](features/BuyOffer.md#how-to-buy-a-specific-offer)
+- possibility to buy selected offer, [details here](features/BuyOffer.md)
 - added `vendorName` and `onlyText` filters to products, [details here](api/products/v1/README.md#search-products)
 - added `textQty`, `imageQty` to product, [details here](api/products/v1/README.md#product-object)
 - added `offers`, `offersCount`, `totalQty` to product, [details here](api/products/v1/README.md#offer-object)
@@ -100,7 +107,7 @@
 ## [2019-01-09]
 
 ### Added
-- webhooks for products updates, [details here](features/Webhooks.md#product-update-webhook)
+- webhooks for products updates, [details here](features/Webhooks.md#product-updated-webhook)
 
 ## [2018-11-20]
 

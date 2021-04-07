@@ -16,20 +16,7 @@ Header name | Header value
 
 ## Product updated webhook
 
-The webhook is triggered when product was changed, or when new offer became available.
-
-At least one of the bellowed product/offer fields should be changed to trigger a webhook:
-
-Field |
---------- |
-`qty` |
-`textQty` |
-`totalQty` |
-`offersCount` |
-`price` |
-`status` |
-`releaseDate` |
-`merchantName` |
+The webhook is triggered when product was changed, became out of stock or when new offer became available.
 
 ### Example payload
 
@@ -56,7 +43,7 @@ Field | Type | Description
 
 ## Order completed webhook
 
-The webhook is triggered when order was dispatched and its status was changed to `completed`. Purchased keys are ready to download.
+The webhook is triggered when an order was dispatched and status was changed to `completed`. Purchased keys are ready to download.
 
 ### Example payload
 
@@ -83,7 +70,7 @@ Field | Type | Description
 
 ## Order status changed webhook
 
-The webhook is triggered when order status was changed.
+The webhook is triggered when an order status was changed.
 
 ### Example payload
 
@@ -112,7 +99,7 @@ Field | Type | Description
 
 ### How to respond for webhooks
 
-For each webhook your endpoint should respond with status `2xx`.
+For each webhook your endpoint must respond with status `2xx`.
 After the first failure response we will try to resend webhook a couple of times at appropriate intervals.
 
 > Keep in mind, that we are allowed to disable your endpoint when we detect too many failed responses. You should be notified about that case by e-mail.
