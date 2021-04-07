@@ -18,4 +18,4 @@ When status is `completed` then you can load keys.
 
 ## Loading keys for pre-order
 
-In case of pre-order the webhook is triggered only after `releaseDate`. So there is no need to ask for keys earlier than this date.
+In case of pre-order the webhooks are triggered only after `releaseDate`. So there is no need to ask for keys earlier than this date.
