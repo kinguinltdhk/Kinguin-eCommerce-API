@@ -186,10 +186,10 @@ Field | Type | Description
 `releaseDate` | string | Release date
 `qty` | int | Total cheapest offers quantity
 `price` | float | Cheapest offer price in EUR
-`textQty`* | int | Quantity of `text` serials
-`offers`* | object[] | Array of [Offer Object](/#offer-object)
-`offersCount`* | int | Total number of offers
-`totalQty`* | int | Total quantity from all offers
+`textQty` | int | Quantity of `text` serials
+`offers` | object[] | Array of [Offer Object](/#offer-object)
+`offersCount` | int | Total number of offers
+`totalQty` | int | Total quantity from all offers
 `isPreorder` | bool | PRE-ORDER
 `metacriticScore` | float | Metacritic score
 `regionalLimitations` | string | Region name
@@ -205,8 +205,6 @@ Field | Type | Description
 `ageRating` | string | Age rating (PEGI or ESRB)
 `steam` | string | Steam app id
 
-> *feature property, in case of use please contact your business manager
-
 
 ## Offer Object
 
@@ -216,13 +214,11 @@ Field | Type | Description
 `offerId` | string | Offer ID
 `price` | float | Offer price in EUR
 `qty` | int | Offer quantity
-`textQty`* | int | Text serials quantity
+`textQty` | int | Text serials quantity
 `status` | string | Offer status
 `isPreorder` | bool | PRE-ORDER
 `releaseDate` | string | Release date
 `merchantName` | string | Seller name
-
-> *feature property, in case of use please contact your business manager
 
 Worth to read:
 
@@ -256,10 +252,8 @@ Parameter | Type | Description
 `tags` | string | Comma separated list of [Tags](#tags)
 `updatedSince` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
 `updatedTo` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
-`withText`* | string | Filter products only with text serials (values: `yes`)
+`withText` | string | Filter products only with text serials (values: `yes`)
 `merchantName` | string | Seller name
-
-`* fetaure property, in case of use please contact your business manager`
 
 ### Output
 

@@ -11,9 +11,7 @@ Finally, to load keys use [Get Keys](../api/order/v2/README.md#get-keys) endpoin
 
 ## Backoff strategy
 
-In a situation where the webhook has not been received by you or has not arrived,
-
-it is recommended to prepare a solution that will periodically ask the API about the status of the order.
+In a situation where the webhook has not been received by you or has not arrived, it is recommended to prepare a solution that will periodically ask the API about the status of the order.
 
 When order is `completed` then you can load keys.
 

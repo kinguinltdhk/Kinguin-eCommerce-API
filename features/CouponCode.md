@@ -5,7 +5,7 @@
 
 ## Ask for coupon
 
-To get the coupon code, please contact your business manager.
+Ask your business manager for additional discount.
 
 ## Using coupon
 
