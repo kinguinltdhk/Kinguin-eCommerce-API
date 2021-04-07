@@ -93,9 +93,9 @@ Field | Type | Description
 --------- | :-----: | -----------
 `orderId` | string | Order ID
 `orderExternalId` | string | Order external ID
-`status` | string | [Order status](../api/v1/order/README.md#order-statuses)
+`status` | string | [Order Status](../api/order/v1/README.md#order-statuses)
 `updatedAt` | string | Date of change in format `Y-m-d\TH:i:sP`
-
+``
 
 ### How to respond for webhooks
 
