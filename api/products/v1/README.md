@@ -42,128 +42,160 @@ curl -X GET \
 
 ```json
 {
-    "name": "Counter-Strike: Source Steam CD Key",
-    "description": "Counter-Strike: Source blends Counter-Strike&#39;s award-winning teamplay action with the advanced technology of Source™ technology. Featuring state of the art graphics, all new sounds, and introducing physics, Counter-Strike: Source is a must-have for every action gamer.",
-    "coverImage": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover.jpg",
-    "coverImageOriginal": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover_original.jpg",
-    "developers": [
-        "Valve Corporation",
-        "Hidden Path Entertainment"
+  "name":"Counter-Strike: Source Steam CD Key",
+  "description":"Counter-Strike: Source blends Counter-Strike&#39;s award-winning teamplay action with the advanced technology of Source™ technology. Featuring state of the art graphics, all new sounds, and introducing physics, Counter-Strike: Source is a must-have for every action gamer.",
+  "coverImage":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover.jpg",
+  "coverImageOriginal":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover_original.jpg",
+  "developers":[
+    "Valve Corporation",
+    "Hidden Path Entertainment"
+  ],
+  "publishers":[
+    "Valve Corporation"
+  ],
+  "genres":[
+    "Action"
+  ],
+  "platform":"Steam",
+  "releaseDate":"2004-11-01",
+  "qty":149,
+  "textQty":149,
+  "price":5.79,
+  "cheapestOfferId":[
+    "5f7efe3b369b4a0001c5b46f"
+  ],
+  "isPreorder":false,
+  "metacriticScore":88,
+  "regionalLimitations":"Region free",
+  "regionId":3,
+  "activationDetails":"Go to:  http://store.steampowered.com/ and download STEAM client\r\n\r\n\r\nClick \"Install Steam\" (from the upper right corner)\r\n\r\n\r\nInstall and start application, login with your Account name and Password (create one if you don't have).\r\n\r\n\r\nPlease follow these instructions to activate a new retail purchase on Steam:\r\n\r\nLaunch Steam and log into your Steam account.\r\nClick the Games Menu.\r\nChoose Activate a Product on Steam...\r\nFollow the onscreen instructions to complete the process.\r\n\r\nAfter successful code verification go to the \"MY GAMES\" tab and start downloading.",
+  "kinguinId":1949,
+  "productId":"5c9b5f6b2539a4e8f172916a",
+  "originalName":"Counter-Strike: Source",
+  "screenshots":[
+    {
+      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_1.jpg",
+      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_1.jpg"
+    },
+    {
+      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_2.jpg",
+      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_2.jpg"
+    },
+    {
+      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_3.jpg",
+      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_3.jpg"
+    },
+    {
+      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_4.jpg",
+      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_4.jpg"
+    },
+    {
+      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_5.jpg",
+      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_5.jpg"
+    }
+  ],
+  "videos":[
+    {
+      "name":"Trailer",
+      "video_id":"bvI62FUDpKA"
+    }
+  ],
+  "languages":[
+    "German",
+    "English",
+    "French",
+    "Spanish",
+    "Japanese",
+    "Russian",
+    "Chinese",
+    "Korean",
+    "Italian"
+  ],
+  "systemRequirements":[
+    {
+      "system":"Windows",
+      "requirement":[
+        "OS: Windows® 7 (32/64-bit)/Vista/XP",
+        "Processor: 1.7 GHz ",
+        "Memory: 512MB RAM",
+        "Graphics: DirectX® 8.1 level Graphics Card (Requires support for SSE)",
+        "Input: Mouse, Keyboard",
+        "Additional note: Internet Connection"
+      ]
+    },
+    {
+      "system":"Mac",
+      "requirement":[
+        "OS: OS X version Leopard 10.5.8, Snow Leopard 10.6.3",
+        "Memory: 1GB RAM",
+        "Graphics: NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher ",
+        "Input: Mouse, Keyboard",
+        "Additional note: Internet Connection"
+      ]
+    },
+    {
+      "system":"Linux",
+      "requirement":[
+        "Processor: 1.7 GHz ",
+        "Memory: 512MB RAM",
+        "Input: Mouse, Keyboard",
+        "Additional note: Internet Connection"
+      ]
+    }
+  ],
+  "tags":[
+    "base"
+  ],
+  "offers":[
+    {
+      "name":"Counter-Strike: Source Steam CD Key",
+      "offerId":"5f7efe3b369b4a0001c5b46f",
+      "price":5.79,
+      "qty":149,
+      "textQty":149,
+      "merchantName":"KinguinHK",
+      "isPreorder":false,
+      "releaseDate":"2004-11-01"
+    }
+  ],
+  "offersCount":1,
+  "totalQty":149,
+  "merchantName":[
+    "KinguinHK"
+  ],
+  "images":{
+    "screenshots":[
+      {
+        "url":"https://cdns.kinguin.net/media/category//1/_/1_3418.jpg",
+        "thumbnail":"https://cdns.kinguin.net/media/category/1/_/cache/200x120/1_3418.jpg"
+      },
+      {
+        "url":"https://cdns.kinguin.net/media/category//4/_/4_3381.jpg",
+        "thumbnail":"https://cdns.kinguin.net/media/category/4/_/cache/200x120/4_3381.jpg"
+      },
+      {
+        "url":"https://cdns.kinguin.net/media/category//6/_/6_2882.jpg",
+        "thumbnail":"https://cdns.kinguin.net/media/category/6/_/cache/200x120/6_2882.jpg"
+      },
+      {
+        "url":"https://cdns.kinguin.net/media/category//7/_/7_101.jpg",
+        "thumbnail":"https://cdns.kinguin.net/media/category/7/_/cache/200x120/7_101.jpg"
+      },
+      {
+        "url":"https://cdns.kinguin.net/media/category//8/_/8_62.jpg",
+        "thumbnail":"https://cdns.kinguin.net/media/category/8/_/cache/200x120/8_62.jpg"
+      },
+      {
+        "url":"https://cdns.kinguin.net/media/category//9/_/9_37.jpg",
+        "thumbnail":"https://cdns.kinguin.net/media/category/9/_/cache/200x120/9_37.jpg"
+      }
     ],
-    "publishers": [
-        "Valve Corporation"
-    ],
-    "genres": [
-        "Action"
-    ],
-    "platform": "Steam",
-    "releaseDate": "2004-11-01",
-    "qty": 149,
-    "textQty": 149,
-    "price": 5.79,
-    "cheapestOfferId": [
-        "5f7efe3b369b4a0001c5b46f"
-    ],
-    "isPreorder": false,
-    "metacriticScore": 88,
-    "regionalLimitations": "Region free",
-    "regionId": 3,
-    "activationDetails": "Go to:  http://store.steampowered.com/ and download STEAM client\r\n\r\n\r\nClick \"Install Steam\" (from the upper right corner)\r\n\r\n\r\nInstall and start application, login with your Account name and Password (create one if you don't have).\r\n\r\n\r\nPlease follow these instructions to activate a new retail purchase on Steam:\r\n\r\nLaunch Steam and log into your Steam account.\r\nClick the Games Menu.\r\nChoose Activate a Product on Steam...\r\nFollow the onscreen instructions to complete the process.\r\n\r\nAfter successful code verification go to the \"MY GAMES\" tab and start downloading.",
-    "kinguinId": 1949,
-    "productId": "5c9b5f6b2539a4e8f172916a",
-    "originalName": "Counter-Strike: Source",
-    "screenshots": [
-        {
-            "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_1.jpg",
-            "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_1.jpg"
-        },
-        {
-            "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_2.jpg",
-            "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_2.jpg"
-        },
-        {
-            "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_3.jpg",
-            "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_3.jpg"
-        },
-        {
-            "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_4.jpg",
-            "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_4.jpg"
-        },
-        {
-            "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_5.jpg",
-            "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_5.jpg"
-        }
-    ],
-    "videos": [
-        {
-            "name": "Trailer",
-            "video_id": "bvI62FUDpKA"
-        }
-    ],
-    "languages": [
-        "German",
-        "English",
-        "French",
-        "Spanish",
-        "Japanese",
-        "Russian",
-        "Chinese",
-        "Korean",
-        "Italian"
-    ],
-    "systemRequirements": [
-        {
-            "system": "Windows",
-            "requirement": [
-                "OS: Windows® 7 (32/64-bit)/Vista/XP",
-                "Processor: 1.7 GHz ",
-                "Memory: 512MB RAM",
-                "Graphics: DirectX® 8.1 level Graphics Card (Requires support for SSE)",
-                "Input: Mouse, Keyboard",
-                "Additional note: Internet Connection"
-            ]
-        },
-        {
-            "system": "Mac",
-            "requirement": [
-                "OS: OS X version Leopard 10.5.8, Snow Leopard 10.6.3",
-                "Memory: 1GB RAM",
-                "Graphics: NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher ",
-                "Input: Mouse, Keyboard",
-                "Additional note: Internet Connection"
-            ]
-        },
-        {
-            "system": "Linux",
-            "requirement": [
-                "Processor: 1.7 GHz ",
-                "Memory: 512MB RAM",
-                "Input: Mouse, Keyboard",
-                "Additional note: Internet Connection"
-            ]
-        }
-    ],
-    "tags": [
-        "base"
-    ],
-    "offers": [
-        {
-            "name": "Counter-Strike: Source Steam CD Key",
-            "offerId": "5f7efe3b369b4a0001c5b46f",
-            "price": 5.79,
-            "qty": 149,
-            "textQty": 149,
-            "merchantName": "KinguinHK",
-            "isPreorder": false,
-            "releaseDate": "2004-11-01"
-        }
-    ],
-    "offersCount": 1,
-    "totalQty": 149,
-    "merchantName": [
-        "KinguinHK"
-    ],
-    "updatedAt": "2020-10-24T09:34:13+00:00"
+    "cover":{
+      "url":"https://cdns.kinguin.net/media/catalog/category/cache/1/hi_image/9df78eab33525d08d6e5fb8d27136e95/the-witcher-2-assassins-of-kings-enhanced-edition-cover.jpg",
+      "thumbnail":"https://cdns.kinguin.net/media/catalog/category/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/Witcher-2-Extended_PC_US_ESRB.jpg"
+    }
+  },
+  "updatedAt":"2020-10-24T09:34:13+00:00"
 }
 ```
 
@@ -177,8 +209,8 @@ Field | Type | Description
 `name` | string | Product name
 `originalName` | string | Product original name
 `description` | string | Product description
-`coverImage` | string | Cover image (thumb)
-`coverImageOriginal` | string | Full size cover image
+`coverImage` | string | Cover image (thumb) **DEPRECATED**
+`coverImageOriginal` | string | Full size cover image **DEPRECATED**
 `developers`| string[] | Array of developers list
 `publishers` | string[] | Array of publishers list
 `genres` | string[] |  Array of [Genres](#genres)
@@ -195,7 +227,7 @@ Field | Type | Description
 `regionalLimitations` | string | Region name
 `regionId` | int | [Region](#regions)
 `activationDetails` | string | Activation details
-`screenshots` | object[] |  Array of screenshots
+`screenshots` | object[] |  Array of screenshots **DEPRECATED**
 `videos` | object[] |  Array of videos
 `languages` | string[] | Array of languages
 `updatedAt` | string | Last update date
@@ -203,8 +235,14 @@ Field | Type | Description
 `tags` | string[] | Array of [Tags](#tags)
 `merchantName` | string[] | Array of cheapest offers seller names
 `ageRating` | string | Age rating (PEGI or ESRB)
-`steam` | string | Steam app id
-
+`steam` | string | Steam app id,
+`images` | object[] | Holds product screenshots and covers
+`images.screenshots` | object[] | Screenshots
+`images.screenshots.url` | string | URL to full width screenshot
+`images.screenshots.thumbnail` | string | URL to screenshot thumbnail
+`images.cover` | object[] | Cover
+`images.cover.url` | string | URL to full width cover image
+`images.cover.thumbnail` | string | URL to cover thumbnail
 
 ## Offer Object
 
@@ -278,133 +316,133 @@ curl -X GET \
 
 ```json
 {
-    "results": [
+  "results":[
+    {
+      "name":"Counter-Strike: Source Steam CD Key",
+      "description":"Counter-Strike: Source blends Counter-Strike&#39;s award-winning teamplay action with the advanced technology of Source™ technology. Featuring state of the art graphics, all new sounds, and introducing physics, Counter-Strike: Source is a must-have for every action gamer.",
+      "coverImage":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover.jpg",
+      "coverImageOriginal":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover_original.jpg",
+      "developers":[
+        "Valve Corporation",
+        "Hidden Path Entertainment"
+      ],
+      "publishers":[
+        "Valve Corporation"
+      ],
+      "genres":[
+        "Action"
+      ],
+      "platform":"Steam",
+      "releaseDate":"2004-11-01",
+      "qty":149,
+      "textQty":149,
+      "price":5.79,
+      "cheapestOfferId":[
+        "5f7efe3b369b4a0001c5b46f"
+      ],
+      "isPreorder":false,
+      "metacriticScore":88,
+      "regionalLimitations":"Region free",
+      "regionId":3,
+      "activationDetails":"Go to:  http://store.steampowered.com/ and download STEAM client\r\n\r\n\r\nClick \"Install Steam\" (from the upper right corner)\r\n\r\n\r\nInstall and start application, login with your Account name and Password (create one if you don't have).\r\n\r\n\r\nPlease follow these instructions to activate a new retail purchase on Steam:\r\n\r\nLaunch Steam and log into your Steam account.\r\nClick the Games Menu.\r\nChoose Activate a Product on Steam...\r\nFollow the onscreen instructions to complete the process.\r\n\r\nAfter successful code verification go to the \"MY GAMES\" tab and start downloading.",
+      "kinguinId":1949,
+      "productId":"5c9b5f6b2539a4e8f172916a",
+      "originalName":"Counter-Strike: Source",
+      "screenshots":[
         {
-            "name": "Counter-Strike: Source Steam CD Key",
-            "description": "Counter-Strike: Source blends Counter-Strike&#39;s award-winning teamplay action with the advanced technology of Source™ technology. Featuring state of the art graphics, all new sounds, and introducing physics, Counter-Strike: Source is a must-have for every action gamer.",
-            "coverImage": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover.jpg",
-            "coverImageOriginal": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover_original.jpg",
-            "developers": [
-                "Valve Corporation",
-                "Hidden Path Entertainment"
-            ],
-            "publishers": [
-                "Valve Corporation"
-            ],
-            "genres": [
-                "Action"
-            ],
-            "platform": "Steam",
-            "releaseDate": "2004-11-01",
-            "qty": 149,
-            "textQty": 149,
-            "price": 5.79,
-            "cheapestOfferId": [
-                "5f7efe3b369b4a0001c5b46f"
-            ],
-            "isPreorder": false,
-            "metacriticScore": 88,
-            "regionalLimitations": "Region free",
-            "regionId": 3,
-            "activationDetails": "Go to:  http://store.steampowered.com/ and download STEAM client\r\n\r\n\r\nClick \"Install Steam\" (from the upper right corner)\r\n\r\n\r\nInstall and start application, login with your Account name and Password (create one if you don't have).\r\n\r\n\r\nPlease follow these instructions to activate a new retail purchase on Steam:\r\n\r\nLaunch Steam and log into your Steam account.\r\nClick the Games Menu.\r\nChoose Activate a Product on Steam...\r\nFollow the onscreen instructions to complete the process.\r\n\r\nAfter successful code verification go to the \"MY GAMES\" tab and start downloading.",
-            "kinguinId": 1949,
-            "productId": "5c9b5f6b2539a4e8f172916a",
-            "originalName": "Counter-Strike: Source",
-            "screenshots": [
-                {
-                    "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_1.jpg",
-                    "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_1.jpg"
-                },
-                {
-                    "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_2.jpg",
-                    "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_2.jpg"
-                },
-                {
-                    "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_3.jpg",
-                    "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_3.jpg"
-                },
-                {
-                    "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_4.jpg",
-                    "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_4.jpg"
-                },
-                {
-                    "url": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_5.jpg",
-                    "url_original": "https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_5.jpg"
-                }
-            ],
-            "videos": [
-                {
-                    "name": "Trailer",
-                    "video_id": "bvI62FUDpKA"
-                }
-            ],
-            "languages": [
-                "German",
-                "English",
-                "French",
-                "Spanish",
-                "Japanese",
-                "Russian",
-                "Chinese",
-                "Korean",
-                "Italian"
-            ],
-            "systemRequirements": [
-                {
-                    "system": "Windows",
-                    "requirement": [
-                        "OS: Windows® 7 (32/64-bit)/Vista/XP",
-                        "Processor: 1.7 GHz ",
-                        "Memory: 512MB RAM",
-                        "Graphics: DirectX® 8.1 level Graphics Card (Requires support for SSE)",
-                        "Input: Mouse, Keyboard",
-                        "Additional note: Internet Connection"
-                    ]
-                },
-                {
-                    "system": "Mac",
-                    "requirement": [
-                        "OS: OS X version Leopard 10.5.8, Snow Leopard 10.6.3",
-                        "Memory: 1GB RAM",
-                        "Graphics: NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher ",
-                        "Input: Mouse, Keyboard",
-                        "Additional note: Internet Connection"
-                    ]
-                },
-                {
-                    "system": "Linux",
-                    "requirement": [
-                        "Processor: 1.7 GHz ",
-                        "Memory: 512MB RAM",
-                        "Input: Mouse, Keyboard",
-                        "Additional note: Internet Connection"
-                    ]
-                }
-            ],
-            "tags": [
-                "base"
-            ],
-            "offers": [
-                {
-                    "name": "Counter-Strike: Source Steam CD Key",
-                    "offerId": "5f7efe3b369b4a0001c5b46f",
-                    "price": 5.79,
-                    "qty": 149,
-                    "textQty": 149,
-                    "merchantName": "KinguinHK",
-                    "isPreorder": false,
-                    "releaseDate": "2004-11-01"
-                }
-            ],
-            "offersCount": 1,
-            "totalQty": 149,
-            "merchantName": [
-                "KinguinHK"
-            ],
-            "updatedAt": "2020-10-24T09:34:13+00:00"
+          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_1.jpg",
+          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_1.jpg"
+        },
+        {
+          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_2.jpg",
+          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_2.jpg"
+        },
+        {
+          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_3.jpg",
+          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_3.jpg"
+        },
+        {
+          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_4.jpg",
+          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_4.jpg"
+        },
+        {
+          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_5.jpg",
+          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_5.jpg"
         }
-    ],
-    "item_count": 1
+      ],
+      "videos":[
+        {
+          "name":"Trailer",
+          "video_id":"bvI62FUDpKA"
+        }
+      ],
+      "languages":[
+        "German",
+        "English",
+        "French",
+        "Spanish",
+        "Japanese",
+        "Russian",
+        "Chinese",
+        "Korean",
+        "Italian"
+      ],
+      "systemRequirements":[
+        {
+          "system":"Windows",
+          "requirement":[
+            "OS: Windows® 7 (32/64-bit)/Vista/XP",
+            "Processor: 1.7 GHz ",
+            "Memory: 512MB RAM",
+            "Graphics: DirectX® 8.1 level Graphics Card (Requires support for SSE)",
+            "Input: Mouse, Keyboard",
+            "Additional note: Internet Connection"
+          ]
+        },
+        {
+          "system":"Mac",
+          "requirement":[
+            "OS: OS X version Leopard 10.5.8, Snow Leopard 10.6.3",
+            "Memory: 1GB RAM",
+            "Graphics: NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher ",
+            "Input: Mouse, Keyboard",
+            "Additional note: Internet Connection"
+          ]
+        },
+        {
+          "system":"Linux",
+          "requirement":[
+            "Processor: 1.7 GHz ",
+            "Memory: 512MB RAM",
+            "Input: Mouse, Keyboard",
+            "Additional note: Internet Connection"
+          ]
+        }
+      ],
+      "tags":[
+        "base"
+      ],
+      "offers":[
+        {
+          "name":"Counter-Strike: Source Steam CD Key",
+          "offerId":"5f7efe3b369b4a0001c5b46f",
+          "price":5.79,
+          "qty":149,
+          "textQty":149,
+          "merchantName":"KinguinHK",
+          "isPreorder":false,
+          "releaseDate":"2004-11-01"
+        }
+      ],
+      "offersCount":1,
+      "totalQty":149,
+      "merchantName":[
+        "KinguinHK"
+      ],
+      "updatedAt":"2020-10-24T09:34:13+00:00"
+    }
+  ],
+  "item_count":1
 }
 ```
 

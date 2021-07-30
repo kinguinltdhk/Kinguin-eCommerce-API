@@ -1,5 +1,12 @@
 # Changelog
 
+## [2021-07-30]
+
+### Added
+- added `images` property to product object,
+### Changed
+- `coverImage`, `coverImageOriginal` and `screenshots` product properties set as **DEPRECATED** (`images` property should be used instead)
+
 ## [2021-04-07]
 
 ### Added
