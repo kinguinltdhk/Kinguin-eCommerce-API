@@ -43,6 +43,7 @@ Kind | Description
 `OrderNotFound` | Order not found - invalid `orderId` value
 `DispatchNotFound` | Dispatch not found - invalid `dispatchId` value
 `ResourceLock` | Conflict with current resource state - other process already modified target resource
+`OrderNotSupported` | Order not supported due to platform legacy
 
 ## Retryable kinds
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## [2021-09-28]
+
+### Added
+- added `OrderNotSupported` error kind
+
 ## [2021-07-30]
 
 ### Added
