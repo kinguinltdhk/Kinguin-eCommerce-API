@@ -34,7 +34,7 @@ Request method: `POST`
    "textQty": 845,
    "price": 4.45,
    "cheapestOfferId":["611222acff9ca40001f0b020"],
-   "updatedAt": "2020-10-16T11:24:08+00:00"
+   "updatedAt": "2020-10-16T11:24:08.015+00:00"
 }
 ```
 
