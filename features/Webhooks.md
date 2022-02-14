@@ -46,7 +46,7 @@ Field |   Type   | Description
 `textQty` |   int    | Quantity of `text` type serials
 `price` |  float   | Cheapest product price
 `cheapestOfferId` | string[] | List of cheapest product ids
-`updatedAt` |  string  | Date of change in format `Y-m-d\TH:i:sP`
+`updatedAt` |  string  | Date of change in format `Y-m-d\TH:i:s.vP`
 
 
 ## Order completed webhook
@@ -65,7 +65,7 @@ Request method: `POST`
 {
    "orderId": "PHS84FJAG5U",
    "orderExternalId": "AL2FEEHOO2OHF",
-   "updatedAt": "2020-10-16T11:24:08+00:00"
+   "updatedAt": "2020-10-16T11:24:08.015+00:00"
 }
 ```
 
@@ -73,7 +73,7 @@ Field | Type | Description
 --------- | :-----: | -----------
 `orderId` | string | Order ID
 `orderExternalId` | string | Order external ID
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sP`
+`updatedAt` | string | Date of change in format `Y-m-d\TH:i:s.vP`
 
 
 ## Order status changed webhook
@@ -93,7 +93,7 @@ Request method: `POST`
    "orderId": "PHS84FJAG5U",
    "orderExternalId": "AL2FEEHOO2OHF",
    "status": "canceled",
-   "updatedAt": "2020-10-16T11:24:08+00:00"
+   "updatedAt": "2020-10-16T11:24:08.025+00:00"
 }
 ```
 
@@ -102,7 +102,7 @@ Field | Type | Description
 `orderId` | string | Order ID
 `orderExternalId` | string | Order external ID
 `status` | string | [Order Status](../api/order/v1/README.md#order-statuses)
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sP`
+`updatedAt` | string | Date of change in format `Y-m-d\TH:i:s.vP`
 
 ### How to respond for webhooks
 
