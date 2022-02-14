@@ -30,15 +30,23 @@ Request method: `POST`
 {
    "kinguinId": 1949,
    "productId": "5c9b5f6b2539a4e8f172916a",
+   "qty": 845,
+   "textQty": 845,
+   "price": 4.45,
+   "cheapestOfferId":["611222acff9ca40001f0b020"],
    "updatedAt": "2020-10-16T11:24:08+00:00"
 }
 ```
 
-Field | Type | Description
---------- | :-----: | -----------
-`kinguinId` | int | Product ID
-`productId` | string | Another product ID
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:sP`
+Field |   Type   | Description
+--------- |:--------:| -----------
+`kinguinId` |   int    | Product ID
+`productId` |  string  | Another product ID
+`qty` |   int    | Total quantity of cheapest product
+`textQty` |   int    | Quantity of `text` type serials
+`price` |  float   | Cheapest product price
+`cheapestOfferId` | string[] | List of cheapest product ids
+`updatedAt` |  string  | Date of change in format `Y-m-d\TH:i:sP`
 
 
 ## Order completed webhook

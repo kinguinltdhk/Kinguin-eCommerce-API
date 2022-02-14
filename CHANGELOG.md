@@ -1,5 +1,10 @@
 # Changelog
 
+## [2022-02-14]
+
+### Added
+- added `qty`, `textQty`, `price` and `cheapestProductId` to `product.update` event payload
+
 ## [2021-09-28]
 
 ### Added
