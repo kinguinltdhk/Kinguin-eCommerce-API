@@ -104,14 +104,6 @@ Field | Type | Description
 `status` | string | [Order Status](../api/order/v1/README.md#order-statuses)
 `updatedAt` | string | Date of change in format `Y-m-d\TH:i:s.vP`
 
-### How to respond for webhooks
-
-For each webhook your endpoint must respond with status `2xx`.
-After the first failure response we will try to resend webhook a couple of times at appropriate intervals.
-
-> Keep in mind, that we are allowed to disable your endpoint when we detect too many failed responses. You should be notified about that case by e-mail.
-
-
 ### How to register webhooks
 
 1. Login to your [Dashboard](https://www.kinguin.net/integration/dashboard/stores).
@@ -120,3 +112,16 @@ After the first failure response we will try to resend webhook a couple of times
 4. Fill configuration form and click **SUBMIT** button.
 5. Before saving, you can check if your endpoint responds correctly by clicking on **TEST URL** button.
 6. Configure secret key to authorize incoming webhooks.
+
+
+### Webhooks handling
+
+Any webhook endpoint has to respond with any `2xx` status code and with empty body. If not, we will try to retry delivery several times.
+After all failure retries the webhook will be rejected.
+
+> We recommend to use **204 No Content** status.
+
+> Keep in mind, that we are allowed to disable your endpoint when too many failed responses have been detected.
+
+Webhooks are sent asynchronously, so the order in which they are sent may not be preserved.
+To keep your data consistent store and validate the `updatedAt` property which is provided in each notification.
