@@ -44,8 +44,6 @@ curl -X GET \
 {
   "name":"Counter-Strike: Source Steam CD Key",
   "description":"Counter-Strike: Source blends Counter-Strike&#39;s award-winning teamplay action with the advanced technology of Source™ technology. Featuring state of the art graphics, all new sounds, and introducing physics, Counter-Strike: Source is a must-have for every action gamer.",
-  "coverImage":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover.jpg",
-  "coverImageOriginal":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover_original.jpg",
   "developers":[
     "Valve Corporation",
     "Hidden Path Entertainment"
@@ -72,28 +70,6 @@ curl -X GET \
   "kinguinId":1949,
   "productId":"5c9b5f6b2539a4e8f172916a",
   "originalName":"Counter-Strike: Source",
-  "screenshots":[
-    {
-      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_1.jpg",
-      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_1.jpg"
-    },
-    {
-      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_2.jpg",
-      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_2.jpg"
-    },
-    {
-      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_3.jpg",
-      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_3.jpg"
-    },
-    {
-      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_4.jpg",
-      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_4.jpg"
-    },
-    {
-      "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_5.jpg",
-      "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_5.jpg"
-    }
-  ],
   "videos":[
     {
       "name":"Trailer",
@@ -209,8 +185,6 @@ Field | Type | Description
 `name` | string | Product name
 `originalName` | string | Product original name
 `description` | string | Product description
-`coverImage` | string | Cover image (thumb) **DEPRECATED**
-`coverImageOriginal` | string | Full size cover image **DEPRECATED**
 `developers`| string[] | Array of developers list
 `publishers` | string[] | Array of publishers list
 `genres` | string[] |  Array of [Genres](#genres)
@@ -227,7 +201,6 @@ Field | Type | Description
 `regionalLimitations` | string | Region name
 `regionId` | int | [Region](#regions)
 `activationDetails` | string | Activation details
-`screenshots` | object[] |  Array of screenshots **DEPRECATED**
 `videos` | object[] |  Array of videos
 `languages` | string[] | Array of languages
 `updatedAt` | string | Last update date
@@ -320,8 +293,6 @@ curl -X GET \
     {
       "name":"Counter-Strike: Source Steam CD Key",
       "description":"Counter-Strike: Source blends Counter-Strike&#39;s award-winning teamplay action with the advanced technology of Source™ technology. Featuring state of the art graphics, all new sounds, and introducing physics, Counter-Strike: Source is a must-have for every action gamer.",
-      "coverImage":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover.jpg",
-      "coverImageOriginal":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_cover_original.jpg",
       "developers":[
         "Valve Corporation",
         "Hidden Path Entertainment"
@@ -348,28 +319,6 @@ curl -X GET \
       "kinguinId":1949,
       "productId":"5c9b5f6b2539a4e8f172916a",
       "originalName":"Counter-Strike: Source",
-      "screenshots":[
-        {
-          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_1.jpg",
-          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_1.jpg"
-        },
-        {
-          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_2.jpg",
-          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_2.jpg"
-        },
-        {
-          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_3.jpg",
-          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_3.jpg"
-        },
-        {
-          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_4.jpg",
-          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_4.jpg"
-        },
-        {
-          "url":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_thumb_5.jpg",
-          "url_original":"https://storage.googleapis.com/api-ecommerce/counter-strike-source_original_5.jpg"
-        }
-      ],
       "videos":[
         {
           "name":"Trailer",
@@ -439,12 +388,46 @@ curl -X GET \
       "merchantName":[
         "KinguinHK"
       ],
+      "images":{
+        "screenshots":[
+          {
+            "url":"https://cdns.kinguin.net/media/category//1/_/1_3418.jpg",
+            "thumbnail":"https://cdns.kinguin.net/media/category/1/_/cache/200x120/1_3418.jpg"
+          },
+          {
+            "url":"https://cdns.kinguin.net/media/category//4/_/4_3381.jpg",
+            "thumbnail":"https://cdns.kinguin.net/media/category/4/_/cache/200x120/4_3381.jpg"
+          },
+          {
+            "url":"https://cdns.kinguin.net/media/category//6/_/6_2882.jpg",
+            "thumbnail":"https://cdns.kinguin.net/media/category/6/_/cache/200x120/6_2882.jpg"
+          },
+          {
+            "url":"https://cdns.kinguin.net/media/category//7/_/7_101.jpg",
+            "thumbnail":"https://cdns.kinguin.net/media/category/7/_/cache/200x120/7_101.jpg"
+          },
+          {
+            "url":"https://cdns.kinguin.net/media/category//8/_/8_62.jpg",
+            "thumbnail":"https://cdns.kinguin.net/media/category/8/_/cache/200x120/8_62.jpg"
+          },
+          {
+            "url":"https://cdns.kinguin.net/media/category//9/_/9_37.jpg",
+            "thumbnail":"https://cdns.kinguin.net/media/category/9/_/cache/200x120/9_37.jpg"
+          }
+        ],
+        "cover":{
+          "url":"https://cdns.kinguin.net/media/catalog/category/cache/1/hi_image/9df78eab33525d08d6e5fb8d27136e95/the-witcher-2-assassins-of-kings-enhanced-edition-cover.jpg",
+          "thumbnail":"https://cdns.kinguin.net/media/catalog/category/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/Witcher-2-Extended_PC_US_ESRB.jpg"
+        }
+      },
       "updatedAt":"2020-10-24T09:34:13+00:00"
     }
   ],
   "item_count":1
 }
 ```
+
+> API can return **404 Not Found** when product is not available or became out of stock.
 
 
 ## Tags
