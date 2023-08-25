@@ -2,7 +2,7 @@
 
 In order request you can set `orderExternalId` field with your custom value.
 
-That unique value prevents before creating order duplicates.
+That unique value prevents creating duplicate orders.
 
 ### Example request
 
