@@ -4,17 +4,12 @@ Version: `v1`
 
 ## Table of Contents
 
-- [Place order](#place-order)
-- [Dispatch](#dispatch)
-- [Get keys](#get-keys)
-- [Key object](#key-object)
+- [Place an order](#place-an-order)
 - [Get order](#get-order)
-- [Order object](#order-object)
 - [Search orders](#search-orders)
-- [Order statuses](#order-statuses)
 
 
-## Place order
+## Place an order
 
 `POST /v1/order`
 
@@ -29,7 +24,6 @@ Content-Type: `application/json`
             "kinguinId": [int],
             "qty": [int],
             "price": [float],
-            "name": [string],
             "keyType": [string],
             "offerId": [string]
         },
@@ -40,18 +34,17 @@ Content-Type: `application/json`
 }
 ```
 
-Field | Type | Description
---------- | :-----: | --------
-`products.kinguinId` | int | Product ID 
-`products.qty` | int | Ordered quantity (max: `100`)
-`products.price` | float | Requested price
-`products.name` | string | Product name
-`products.keyType`* | string | [Key type](../../../features/KeyType.md)
-`products.offerId`* | string | [Offer ID](../../../features/BuyOffer.md)
-`orderExternalId` | string | [Order external ID](../../../features/OrderDuplicates.md)
-`couponCode`* | string | [Discount code](../../../features/CouponCode.md)
+| Field                |  Type  | Required | Description                                                                                                                               |
+|----------------------|:------:|:--------:|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `products.kinguinId` |  int   |   Yes    | Product identifier from `kinguinId` field                                                                                                 |
+| `products.qty`*      |  int   |   Yes    | Quantity                                                                                                                                  |
+| `products.price`     | float  |   Yes    | Your price                                                                                                                                |
+| `products.keyType`   | string |    No    | Specify the type of key. The possible value is `text`. When the value is not provided, then the random type of the key will be delivered. |
+| `products.offerId`   | string |    No    | Specify the exact offer you want to buy, otherwise the API will select offers according to the given price and available quantity.        |
+| `orderExternalId`    | string |    No    | Custom reference to the order in your service. The value should be unique.                                                                |
+| `couponCode`         | string |    No    | The discount code                                                                                                                         |
 
-> *feature property, in case of use please contact your business manager
+> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`
 
 ### Output
 
@@ -67,7 +60,7 @@ Returns the [Order Object](#order-object)
 curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
-     -d '{"products":[{"kinguinId":1949,"qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79}]}' \
+     -d '{"products":[{"kinguinId":1949,"qty":1,"price":5.79}]}' \
      https://gateway.kinguin.net/esa/api/v1/order
 ```
 
@@ -108,136 +101,20 @@ curl -X POST \
 }
 ```
 
-Worth to read:
+Also read:
 
-- [How to buy specific offer](../../../features/BuyOffer.md)
-- [How to buy text keys](../../../features/KeyType.md)
-- [How to use coupon code](../../../features/CouponCode.md)
-- [How to prevent order duplicates](../../../features/OrderDuplicates.md)
-
-
-## Dispatch
-
-This endpoint is DEPRECATED. Consider to use [webhooks](../../../features/Webhooks.md#order-status-changed-webhook)
-
-`POST /v1/order/dispatch`
-
-### Input
-
-Content-Type: `application/json`
-
-```json
-{
-    "orderId": [string]
-}
-```
-
-Field | Type | Description
---------- | :-----: | --------
-`orderId` | string | Order ID
-
-### Output
-
-HTTP Status: `201`
-
-Content-Type: `application/json`
-
-```json
-{
-    "dispatchId": [int]
-}
-```
-
-Field | Type | Description
---------- | :-----: | --------
-`dispatchId` | int | Dispatch ID
-
-### Example request
-
-```bash
-curl -X POST \
-     -H 'X-Api-Key: [api-key]' \
-     -H 'Content-Type: application/json' \
-     -d '{"orderId": "PHS84FJAG5U"}' \
-     https://gateway.kinguin.net/esa/api/v1/order/dispatch
-```
-
-### Example response
-
-```json
-{
-    "dispatchId": 14169762
-}
-```
-
-Worth to read:
-
-- [How to load keys](../../../features/Keys.md)
-
-
-## Get keys
-
-`GET /v1/order/dispatch/keys?dispatchId={dispatchId}`
-
-### Input
-
-Parameter | Type | Description
---------- | :-----: | -----------
-`dispatchId` | int | Dispatch ID
-
-### Output
-
-HTTP Status: `200`
-
-Content-Type: `application/json`
-
-Returns the array of [Key Object](#key-object)
-
-### Example request
-
-```bash
-curl -X GET \
-     -H 'X-Api-Key: [api-key]' \
-     https://gateway.kinguin.net/esa/api/v1/order/dispatch/keys?dispatchId=14169762
-```
-
-### Example response
-
-```json
-[
-    {
-        "serial": "0ddbebb2-559d-42e9-a8e1-fd4b2bdea858",
-        "type": "text/plain",
-        "name": "Counter-Strike: Source Steam CD Key",
-        "kinguinId": 1949,
-        "offerId": "5f7efd272f3a650001f42722",
-        "productId": "5c9b68662539a4e8f17ae2fe"
-    }
-]
-```
-
-## Key Object
-
-Field | Type | Description
---------- | :-----: | --------
-`name` | string | Product name
-`type`| string | Serial content type. Can be `text/plain` or `image/jpeg`, `image/png` or `image/gif`
-`serial` | string | Plain text serial key or in case of `image/*` base64 encoded content of the image
-`kinguinId` | int | Product ID
-`offerId` | string | Offer ID
-`productId` | string | Another product ID
-
+- [Buying pre-orders](../../../features/BuyingPreorders.md)
 
 
 ## Get order
 
 `GET /v1/order/{orderId}`
 
-### Input
+### URL variables
 
-Parameter | Type | Description
---------- | :-----: | -----------
-`orderId` | string | Order ID
+| Field     |  Type  | Required | Description |
+|-----------|:------:|:--------:|-------------|
+| `orderId` | string |   Yes    | Order ID    |
 
 ### Output
 
@@ -294,66 +171,60 @@ curl -X GET \
 
 ## Order Object
 
-Field | Type | Description
---------- | :-----: | --------
-`totalPrice` | float | Order sell price
-`requestTotalPrice`| float | Order requested price
-`paymentPrice` | string | Balance amount charged for this order
-`status` | string | [Order Status](#order-statuses)
-`userEmail` | string | E-mail of the order owner
-`kidId` | int | ID of the order owner
-`storeId` | int | Store ID
-`createdAt` | string | Order creation date
-`orderId` | string | Order ID
-`kinguinOrderId` | int | Previous order ID
-`orderExternalId` | string | Order external ID
-`couponCode` | string | Discount code
-`isPreorder` | bool | PRE-ORDER
-`totalQty` | int | Total quantity from products
-`preorderReleaseDate` | string | PRE-ORDER release date
-`products.kinguinId` | int | Product ID
-`products.offerId` | string | Offer ID
-`products.productId` | string | Another product ID
-`products.qty` | int | Ordered quantity
-`products.name` | string | Product name
-`products.price` | float | Product sell price
-`products.totalPrice` | float | Total product sell price
-`products.requestPrice` | float | Product request price
-`products.isPreorder` | bool | PRE-ORDER
-`products.releaseDate` | string | Product release date
-`products.keyType` | string | Serial type for product
-`products.accurate` | bool | Determines if sell price is equal to requested price
-`products.broker` | string | Offer broker
-`dispatch.id` | int | Dispatch ID
-`dispatch.createdAt` | string | Dispatch creation date
-
-
-
+| Field                   |  Type  | Description                                          |
+|-------------------------|:------:|------------------------------------------------------|
+| `totalPrice`            | float  | Order sell price                                     |
+| `requestTotalPrice`     | float  | Order requested price                                |
+| `paymentPrice`          | string | Balance amount charged for this order                |
+| `status`                | string | [Order Status](#order-statuses)                      |
+| `userEmail`             | string | E-mail of the order owner                            |
+| `kidId`                 |  int   | ID of the order owner                                |
+| `storeId`               |  int   | Store ID                                             |
+| `createdAt`             | string | Order creation date                                  |
+| `orderId`               | string | Order ID                                             |
+| `kinguinOrderId`        |  int   | Previous order ID                                    |
+| `orderExternalId`       | string | Order external ID                                    |
+| `couponCode`            | string | Discount code                                        |
+| `isPreorder`            |  bool  | Pre-order                                            |
+| `totalQty`              |  int   | Total quantity from products                         |
+| `preorderReleaseDate`   | string | Release date                                         |
+| `products.kinguinId`    |  int   | Product ID                                           |
+| `products.offerId`      | string | Offer ID                                             |
+| `products.productId`    | string | Another product ID                                   |
+| `products.qty`          |  int   | Ordered quantity                                     |
+| `products.name`         | string | Product name                                         |
+| `products.price`        | float  | Product sell price                                   |
+| `products.totalPrice`   | float  | Total product sell price                             |
+| `products.requestPrice` | float  | Product request price                                |
+| `products.isPreorder`   |  bool  | Pre-order                                            |
+| `products.releaseDate`  | string | Product release date                                 |
+| `products.keyType`      | string | Serial type for product                              |
+| `products.accurate`     |  bool  | Determines if sell price is equal to requested price |
+| `dispatch.id`           |  int   | Dispatch ID **DEPRECATED**                           |
+| `dispatch.createdAt`    | string | Dispatch creation date **DEPRECATED**                |
 
 ## Search orders
 
 `GET /v1/order`
 
-### Input
+### Query parameters
 
-Parameter | Type | Description
---------- | :-----: | -----------
-`page` | int | Page number (default: `1`)
-`limit` | int | Limit results (default: `25`, maximum: `100`)
-`sortBy` | string | Sort field name
-`sortType` | string | Sort type (default: `desc`, values: `asc` or `desc`)
-`totalPriceFrom` | float | Total price from
-`totalPriceTo` | float | Total price to
-`createdAtFrom` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
-`createdAtTo` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
-`kinguinId` | int | Product ID
-`productId` | string | Another product ID
-`orderId` | string | Order ID
-`kinguinOrderId` | int | Previous order ID
-`orderExternalId` | string | Order external ID
-`name` | string | Product name
-`status` | string | [Order Status](#order-statuses)
-`isPreorder` | string | PRE-ORDER (values: `yes` or `no`)
+| Parameter         |  Type  | Description                                                                               |
+|-------------------|:------:|-------------------------------------------------------------------------------------------|
+| `page`            |  int   | Page number (default: `1`)                                                                |
+| `limit`           |  int   | Limit results (default: `25`, maximum: `100`)                                             |
+| `totalPriceFrom`  | float  | Total price from                                                                          |
+| `totalPriceTo`    | float  | Total price to                                                                            |
+| `createdAtFrom`   | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP` |
+| `createdAtTo`     | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP` |
+| `kinguinId`       |  int   | Product ID                                                                                |
+| `productId`       | string | Another product ID                                                                        |
+| `orderId`         | string | Order ID                                                                                  |
+| `kinguinOrderId`  |  int   | Previous order ID                                                                         |
+| `orderExternalId` | string | Order external ID                                                                         |
+| `name`            | string | Product name                                                                              |
+| `status`          | string | [Order Status](#order-statuses)                                                           |
+| `isPreorder`      | string | Pre-order (values: `yes` or `no`)                                                         |
 
 ### Output
 
@@ -361,10 +232,10 @@ HTTP Status: `200`
 
 Content-Type: `application/json`
 
-Field | Type | Description
---------- | :-----: | --------
-`results` | object[] | Array of [Order Object](#order-object)
-`item_count` | int | Total number of available orders matching criteria
+| Field        |   Type   | Description                                        |
+|--------------|:--------:|----------------------------------------------------|
+| `results`    | object[] | Array of [Order Object](#order-object)             |
+| `item_count` |   int    | Total number of available orders matching criteria |
 
 ### Example request
 
@@ -418,9 +289,9 @@ curl -X GET \
 
 ## Order Statuses
 
-Status | Description
------- | -------------
-`processing` | Order awaits dispatch
-`completed` | Order is completed, keys can be downloaded
-`canceled` | Order canceled
-`refunded` | Order refunded, balance has been returned
+|    Status    | Description                                       |
+|:------------:|---------------------------------------------------|
+| `processing` | Order is waiting for delivering the keys          |
+| `completed`  | Order is completed (all keys have been delivered) |
+|  `canceled`  | Order has been canceled                           |
+|  `refunded`  | Order has been refunded                           |

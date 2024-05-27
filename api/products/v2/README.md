@@ -11,11 +11,11 @@ Version: `v2`
 
 `GET /v2/products/{productId}`
 
-### Input
+### URL variables
 
-Parameter | Type | Description
---------- | :-----: | -----------
-`productId` | string | Another product ID
+| Field       |  Type  | Required | Description |
+|-------------|:------:|:--------:|-------------|
+| `productId` | string |   Yes    | Product ID  |
 
 ### Output
 
@@ -32,7 +32,3 @@ curl -X GET \
      -H 'X-Api-Key: [api-key]' \
      https://gateway.kinguin.net/esa/api/v2/products/5c9b5f6b2539a4e8f172916a
 ```
-
-Worth to read:
-
-- [How to keep products up to date](../../../features/ProductUpdates.md)

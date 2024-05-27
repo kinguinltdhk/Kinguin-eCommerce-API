@@ -22,9 +22,9 @@ Content-Type: `application/json`
 }
 ```
 
-Field | Type | Description
---------- | :-----: | --------
-`balance` | float | Balance value
+| Field     | Type  | Description   |
+|-----------|:-----:|---------------|
+| `balance` | float | Balance value |
 
 ### Example request
 

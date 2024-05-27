@@ -1,18 +1,16 @@
 # Webhooks
 
 * [Product updated webhook](#product-updated-webhook)
-* [Order completed webhook](#order-completed-webhook)
 * [Order status changed webhook](#order-status-changed-webhook)
 
 # Headers
 
 Each webhook contains a set of predefined headers:
 
-Header name | Header value
---------- | ---------
-`X-Event-Name` | Webhook event name
-`X-Event-Secret` | Your secret key
-
+| Header name      | Header value       |
+|------------------|--------------------|
+| `X-Event-Name`   | Webhook event name |
+| `X-Event-Secret` | Your secret key    |
 
 ## Product updated webhook
 
@@ -32,48 +30,19 @@ Request method: `POST`
    "productId": "5c9b5f6b2539a4e8f172916a",
    "qty": 845,
    "textQty": 845,
-   "price": 4.45,
    "cheapestOfferId":["611222acff9ca40001f0b020"],
    "updatedAt": "2020-10-16T11:24:08.015+00:00"
 }
 ```
 
-Field |   Type   | Description
---------- |:--------:| -----------
-`kinguinId` |   int    | Product ID
-`productId` |  string  | Another product ID
-`qty` |   int    | Total quantity of cheapest product
-`textQty` |   int    | Quantity of `text` type serials
-`price` |  float   | Cheapest product price
-`cheapestOfferId` | string[] | List of cheapest product ids
-`updatedAt` |  string  | Date of change in format `Y-m-d\TH:i:s.vP`
-
-
-## Order completed webhook
-
-The webhook is triggered when an order was dispatched and status was changed to `completed`. Purchased keys are ready to download.
-
-### Example payload
-
-Content-Type: `aplication/json`
-
-`X-Event-Name` header: `order.complete`
-
-Request method: `POST`
-
-```json
-{
-   "orderId": "PHS84FJAG5U",
-   "orderExternalId": "AL2FEEHOO2OHF",
-   "updatedAt": "2020-10-16T11:24:08.015+00:00"
-}
-```
-
-Field | Type | Description
---------- | :-----: | -----------
-`orderId` | string | Order ID
-`orderExternalId` | string | Order external ID
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:s.vP`
+| Field             |   Type   | Description                                |
+|-------------------|:--------:|--------------------------------------------|
+| `kinguinId`       |   int    | Product ID                                 |
+| `productId`       |  string  | Another product ID                         |
+| `qty`             |   int    | Total quantity from the cheapest offers    |
+| `textQty`         |   int    | Quantity of `text` type serials            |
+| `cheapestOfferId` | string[] | List of cheapest product ids               |
+| `updatedAt`       |  string  | Date of change in format `Y-m-d\TH:i:s.vP` |
 
 
 ## Order status changed webhook
@@ -97,12 +66,12 @@ Request method: `POST`
 }
 ```
 
-Field | Type | Description
---------- | :-----: | -----------
-`orderId` | string | Order ID
-`orderExternalId` | string | Order external ID
-`status` | string | [Order Status](../api/order/v1/README.md#order-statuses)
-`updatedAt` | string | Date of change in format `Y-m-d\TH:i:s.vP`
+| Field             |  Type  | Description                                              |
+|-------------------|:------:|----------------------------------------------------------|
+| `orderId`         | string | Order ID                                                 |
+| `orderExternalId` | string | Order external ID                                        |
+| `status`          | string | [Order Status](../api/order/v1/README.md#order-statuses) |
+| `updatedAt`       | string | Date of change in format `Y-m-d\TH:i:s.vP`               |
 
 ### How to register webhooks
 

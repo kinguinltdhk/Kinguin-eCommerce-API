@@ -2,8 +2,8 @@
 
 - [How to get API key](#how-to-get-api-key)
 - [Search products](#search-products)
-- [Place order](#place-order)
-- [Get keys](#get-keys)
+- [Place order](#place-an-order)
+- [Download keys](#download-keys)
 
 
 ## How to get API key
@@ -26,10 +26,10 @@
 ```bash
 curl -X GET \
      -H 'X-Api-Key: [api-key]' \
-     https://gateway.kinguin.net/esa/api/v1/products?name=forza
+     https://gateway.kinguin.net/esa/api/v1/products
 ```
 
-Worth to read:
+Also read:
 
 - [How to keep products up to date](../features/ProductUpdates.md)
 
@@ -37,30 +37,22 @@ Worth to read:
 
 [Register webhooks](../features/Webhooks.md) to track order's status.
 
-## Place order
+## Place an order
 
-[Place order](../api/order/v1/README.md#place-order) with selected products.
+[Place an order](../api/order/v2/README.md#place-an-order) with selected products.
 
 ```bash
 curl -X POST \
      -H 'X-Api-Key: [api-key]' \
      -H 'Content-Type: application/json' \
-     -d '{"products":[{"kinguinId":1949,"qty":1,"name":"Counter-Strike: Source Steam CD Key","price":5.79}]}' \
-     https://gateway.kinguin.net/esa/api/v1/order
+     -d '{"products":[{"productId":"5c9b68662539a4e8f17ae2fe","qty":1,"price":5.79}]}' \
+     https://gateway.kinguin.net/esa/api/v2/order
 ```
 
-Worth to read:
 
-- [How to buy specific offer](../features/BuyOffer.md)
-- [How to buy text keys](../features/KeyType.md)
-- [How to use coupon code](../features/CouponCode.md)
-- [How to prevent order duplicates](../features/OrderDuplicates.md)
-- [How to load keys](../features/Keys.md)
+## Download keys
 
-
-## Get keys
-
-After order has become completed you can [get keys](../api/order/v2/README.md#get-keys).
+After order has become completed you can [download keys](../api/order/v2/README.md#download-keys).
 
 ```bash
 curl -X GET \

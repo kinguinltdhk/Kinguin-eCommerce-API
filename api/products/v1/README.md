@@ -6,21 +6,17 @@ Version: `v1`
 
 - [Get product](#get-product)
 - [Search products](#search-products)
-- [Product object](#product-object)
-- [Offer object](#offer-object)
-- [Tags](#tags)
-- [Regions](#regions)
 
 
 ## Get product
 
 `GET /v1/products/{kinguinId}`
 
-### Input
+### URL variables
 
-Parameter | Type | Description
---------- | :-----: | -----------
-`kinguinId` | int | Product ID
+| Field       | Type | Required | Description |
+|-------------|:----:|:--------:|-------------|
+| `kinguinId` | int  |   Yes    | Product ID  |
 
 ### Output
 
@@ -177,63 +173,74 @@ curl -X GET \
 
 ## Product Object
 
-Field | Type | Description
---------- | :-----:| -------- 
-`kinguinId` | int | Product ID
-`productId` | string | Another product ID
-`cheapestOfferId` | string[] | Array of cheapest offers id
-`name` | string | Product name
-`originalName` | string | Product original name
-`description` | string | Product description
-`developers`| string[] | Array of developers list
-`publishers` | string[] | Array of publishers list
-`genres` | string[] |  Array of [Genres](#genres)
-`platform` | string | Platform name
-`releaseDate` | string | Release date
-`qty` | int | Total cheapest offers quantity
-`price` | float | Cheapest offer price in EUR
-`textQty` | int | Quantity of `text` serials
-`offers` | object[] | Array of [Offer Object](/#offer-object)
-`offersCount` | int | Total number of offers
-`totalQty` | int | Total quantity from all offers
-`isPreorder` | bool | PRE-ORDER
-`metacriticScore` | float | Metacritic score
-`regionalLimitations` | string | Region name
-`regionId` | int | [Region](#regions)
-`activationDetails` | string | Activation details
-`videos` | object[] |  Array of videos
-`languages` | string[] | Array of languages
-`updatedAt` | string | Last update date
-`systemRequirements` | object[] | System requirements
-`tags` | string[] | Array of [Tags](#tags)
-`merchantName` | string[] | Array of cheapest offers seller names
-`ageRating` | string | Age rating (PEGI or ESRB)
-`steam` | string | Steam app id,
-`images` | object[] | Holds product screenshots and covers
-`images.screenshots` | object[] | Screenshots
-`images.screenshots.url` | string | URL to full width screenshot
-`images.screenshots.thumbnail` | string | URL to screenshot thumbnail
-`images.cover` | object[] | Cover
-`images.cover.url` | string | URL to full width cover image
-`images.cover.thumbnail` | string | URL to cover thumbnail
+| Field                          |   Type   | Description                             |
+|--------------------------------|:--------:|-----------------------------------------|
+| `kinguinId`                    |   int    | Product ID                              |
+| `productId`                    |  string  | Another product ID                      |
+| `cheapestOfferId`              | string[] | Array of cheapest offers id             |
+| `name`                         |  string  | Product name                            |
+| `originalName`                 |  string  | Product original name                   |
+| `description`                  |  string  | Product description                     |
+| `developers`                   | string[] | Array of developers list                |
+| `publishers`                   | string[] | Array of publishers list                |
+| `genres`                       | string[] | Array of [Genres](#genres)              |
+| `platform`                     |  string  | Platform name                           |
+| `releaseDate`                  |  string  | Release date                            |
+| `qty`                          |   int    | Total cheapest offers quantity          |
+| `price`                        |  float   | Cheapest offer price in EUR             |
+| `textQty`                      |   int    | Quantity of `text` serials              |
+| `offers`                       | object[] | Array of [Offer Object](/#offer-object) |
+| `offersCount`                  |   int    | Total number of offers                  |
+| `totalQty`                     |   int    | Total quantity from all offers          |
+| `isPreorder`                   |   bool   | Pre-order                               |
+| `metacriticScore`              |  float   | Metacritic score                        |
+| `regionalLimitations`          |  string  | Region name                             |
+| `regionId`                     |   int    | [Region](#regions)                      |
+| `activationDetails`            |  string  | Activation details                      |
+| `videos`                       | object[] | Array of videos                         |
+| `languages`                    | string[] | Array of languages                      |
+| `updatedAt`                    |  string  | Last update date                        |
+| `systemRequirements`           | object[] | System requirements                     |
+| `tags`                         | string[] | Array of [Tags](#tags)                  |
+| `merchantName`                 | string[] | Array of cheapest offers seller names   |
+| `ageRating`                    |  string  | Age rating (PEGI or ESRB)               |
+| `steam`                        |  string  | Steam app id,                           |
+| `images`                       | object[] | Holds product screenshots and covers    |
+| `images.screenshots`           | object[] | Screenshots                             |
+| `images.screenshots.url`       |  string  | URL to full width screenshot            |
+| `images.screenshots.thumbnail` |  string  | URL to screenshot thumbnail             |
+| `images.cover`                 | object[] | Cover                                   |
+| `images.cover.url`             |  string  | URL to full width cover image           |
+| `images.cover.thumbnail`       |  string  | URL to cover thumbnail                  |
 
 ## Offer Object
 
-Field | Type | Description
---------- | -----| --------
-`name` | string | Offer name
-`offerId` | string | Offer ID
-`price` | float | Offer price in EUR
-`qty` | int | Offer quantity
-`textQty` | int | Text serials quantity
-`status` | string | Offer status
-`isPreorder` | bool | PRE-ORDER
-`releaseDate` | string | Release date
-`merchantName` | string | Seller name
+| Field                    |   Type    | Description                                                         |
+|--------------------------|:---------:|---------------------------------------------------------------------|
+| `name`                   |  string   | Offer name                                                          |
+| `offerId`                |  string   | Offer ID                                                            |
+| `price`                  |   float   | Offer price in EUR                                                  |
+| `qty`                    |    int    | Total quantity                                                      |
+| `availableQty`           |    int    | Physical available quantity                                         |
+| `availableTextQty`       |    int    | Physical available quantity for text keys only                      |
+| `textQty`                |    int    | Total available quantity for text keys only                         |
+| `status`                 |  string   | Offer status                                                        |
+| `isPreorder`             |   bool    | Pre-order                                                           |
+| `releaseDate`            |  string   | Release date                                                        |
+| `wholesale.enabled`*     |  boolean  | Determine whether offer can be purchased with wholesale tier prices |
+| `wholesale.tiers.level`* |    int    | Tier level                                                          |
+| `wholesale.tiers.price`* |   float   | Tier price                                                          |
 
-Worth to read:
+> *Wholesale purchasing is disabled by default
 
-- [How to keep products up to date](../../../features/ProductUpdates.md)
+## Tier levels
+
+| Level | Quantity |
+|:-----:|----------|
+|   1   | 10+      |
+|   2   | 50+      |
+|   3   | 100+     |
+|   4   | 500+     |
 
 
 
@@ -241,30 +248,30 @@ Worth to read:
 
 `GET /v1/products`
 
-### Input
+### Query parameters
 
-Parameter | Type | Description
---------- | :-----: | -----------
-`page` | int | Page number (default: `1`)
-`limit` | int | Number products on page (default: `25`, maximum: `100`)
-`name` | string | Product name (minimum: `3` characters)
-`sortBy` | string | Sort field name (values: `kingiunId`, `updatedAt`, `name`, `qty` or `price`)
-`sortType` | string | Sort type (values: `asc` or `desc`)
-`priceFrom` | float | Price from
-`priceTo` | float | Price to
-`platform` | string | Comma separated list of platforms
-`genre` | string | Comma separated list of [Genre](#genres)
-`kinguinId` | string | Comma separated list of product ID
-`productId` | string | Comma separated list of another product ID
-`languages` | string | Language
-`isPreorder` | string | PRE-ORDER (values: `yes` or `no`)
-`activePreorder` | string | Only active PRE-ORDER (values: `yes`)
-`regionId` | int | [Region](#regions)
-`tags` | string | Comma separated list of [Tags](#tags)
-`updatedSince` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
-`updatedTo` | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP`
-`withText` | string | Filter products only with text serials (values: `yes`)
-`merchantName` | string | Seller name
+| Parameter        |  Type  | Description                                                                               |
+|------------------|:------:|-------------------------------------------------------------------------------------------|
+| `page`           |  int   | Page number (default: `1`)                                                                |
+| `limit`          |  int   | Number products on page (default: `25`, maximum: `100`)                                   |
+| `name`           | string | Product name (minimum: `3` characters)                                                    |
+| `sortBy`         | string | Sort field name (values: `kingiunId`, `updatedAt`)                                        |
+| `sortType`       | string | Sort type (values: `asc` or `desc`)                                                       |
+| `priceFrom`      | float  | Price from **DEPRECATED**                                                                 |
+| `priceTo`        | float  | Price to **DEPRECATED**                                                                   |
+| `platform`       | string | Comma separated list of platforms                                                         |
+| `genre`          | string | Comma separated list of [Genre](#genres)                                                  |
+| `kinguinId`      | string | Comma separated list of product ID                                                        |
+| `productId`      | string | Comma separated list of another product ID                                                |
+| `languages`      | string | Language                                                                                  |
+| `isPreorder`     | string | Pre-order (values: `yes` or `no`)                                                         |
+| `activePreorder` | string | Only active pre-orders (values: `yes`)                                                    |
+| `regionId`       |  int   | [Region](#regions)                                                                        |
+| `tags`           | string | Comma separated list of [Tags](#tags)                                                     |
+| `updatedSince`   | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP` |
+| `updatedTo`      | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP` |
+| `withText`       | string | Filter products only with text serials (values: `yes`)                                    |
+| `merchantName`   | string | Seller name                                                                               |
 
 ### Output
 
@@ -272,10 +279,10 @@ HTTP Status: `200`
 
 Content-Type: `application/json`
 
-Field | Type | Description
---------- | :-----: | --------
-`results` | object[] | Array of [Product Object](#product-object)
-`item_count` | int | Total number of available products matching criteria
+| Field        |   Type   | Description                                          |
+|--------------|:--------:|------------------------------------------------------|
+| `results`    | object[] | Array of [Product Object](#product-object)           |
+| `item_count` |   int    | Total number of available products matching criteria |
 
 #### Example request
 
@@ -432,75 +439,73 @@ curl -X GET \
 
 ## Tags
 
-| Name
-| ----------------------
-| `indie valley`
-| `dlc`
-| `base`
-| `software`
-| `prepaid`
-
+| Name           |
+|----------------|
+| `indie valley` |
+| `dlc`          |
+| `base`         |
+| `software`     |
+| `prepaid`      |
 
 ## Regions
 
-ID | Name
---- | ----------------------
-1  | Europe
-2  | United States
-3  | Region free
-4  | Other
-5  | Outside Europe
-6  | RU VPN
-7  | Russia
-8  | United Kingdom
-9  | China
-10 | RoW (Rest of World)
-11 | Latin America
-12 | Asia
-13 | Germany
-14 | Australia
-15 | Brazil
-16 | India
-17 | Japan
-18 | North America
-
+| ID | Name                |
+|----|---------------------|
+| 1  | Europe              |
+| 2  | United States       |
+| 3  | Region free         |
+| 4  | Other               |
+| 5  | Outside Europe      |
+| 6  | RU VPN              |
+| 7  | Russia              |
+| 8  | United Kingdom      |
+| 9  | China               |
+| 10 | RoW (Rest of World) |
+| 11 | Latin America       |
+| 12 | Asia                |
+| 13 | Germany             |
+| 14 | Australia           |
+| 15 | Brazil              |
+| 16 | India               |
+| 17 | Japan               |
+| 18 | North America       |
 
 ## Genres
 
-| Name
-| ----------------------
-| Action
-| Adventure
-| Anime
-| Casual
-| Co-op
-| Dating Simulator
-| Fighting
-| FPS
-| Hack and Slash
-| Hidden Object
-| Horror
-| Indie
-| Life Simulation
-| MMO
-| Music / Soundtrack
-| Online Courses
-| Open World
-| Platformer
-| Point & click
-| PSN Card
-| Puzzle
-| Racing
-| RPG
-| Simulation
-| Software
-| Sport
-| Story rich
-| Strategy
-| Subscription
-| Survival
-| Third-Person Shooter
-| Visual Novel
-| VR Games
-| XBOX LIVE Gold Card
-| XBOX LIVE Points
+| Name                 |
+|----------------------|
+| Action               |
+| Adventure            |
+| Anime                |
+| Casual               |
+| Co-op                |
+| Dating Simulator     |
+| Fighting             |
+| FPS                  |
+| Hack and Slash       |
+| Hidden Object        |
+| Horror               |
+| Indie                |
+| Life Simulation      |
+| MMO                  |
+| Music / Soundtrack   |
+| Online Courses       |
+| Open World           |
+| Platformer           |
+| Point & click        |
+| PSN Card             |
+| Puzzle               |
+| Racing               |
+| RPG                  |
+| Simulation           |
+| Software             |
+| Sport                |
+| Story rich           |
+| Strategy             |
+| Subscription         |
+| Survival             |
+| Third-Person Shooter |
+| Visual Novel         |
+| VR Games             |
+| XBOX LIVE Gold Card  |
+| XBOX LIVE Points     |

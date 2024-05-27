@@ -1,5 +1,22 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- pagination for getting keys
+- wholesale purchasing
+- added `offers.availableQty` and `offers.availableTextQty` fields
+### Changed
+- quantity limit per offer is `9`
+- max `10` unique offers per order
+- allow to getting keys during order processing
+- all dispatch endpoints set as **DEPRECATED** (removed from documentation)
+- getting keys by `dispatchId` field set as **DEPRECATED** (removed from documentation)
+- sorting by `price` and `name` fields set as **DEPRECATED** (removed from documentation)
+- filtering by `priceFrom` and `priceTo` fields set as **DEPRECATED** (removed from documentation)
+- `order.complete` webhook set as **DEPRECATED** (removed from documentation)
+- `retryable` field from error response set as **DEPRECATED** (removed from documentation)
+
 ## [2022-02-14]
 
 ### Added
@@ -20,7 +37,7 @@
 ## [2021-04-07]
 
 ### Added
-- possibility to show and buy only text keys, [details here](features/KeyType.md#show-and-buy-only-products-with-text-keys)
+- possibility to show and buy only text keys
 ### Changed
 - dispatch endpoint set as **DEPRECATED**, consider to use [webhooks](features/Webhooks.md)
 
@@ -50,21 +67,21 @@
 - error response format, [details here](api/ErrorsCodes.md)
 
 ### Added
-- added `couponCode` field to order request payload, [details here](features/CouponCode.md#ask-for-coupon)
-- added `orderExternalId` field to order request payload, [details here](features/OrderDuplicates.md)
+- added `couponCode` field to order request payload
+- added `orderExternalId` field to order request payload
 - added `orderExternalId`, `kinguinOrderId` and `productId` filters for `/api/v1/order` endpoint,
 - added `offerId`, `productId` fields to response from `/api/v1/order/dispatch/keys` endpoint,
-- added `paymentPrice`, `requestTotalPrice`, `products.requestPrice`, `products.releaseDate`, `isPreorder`, `preorderReleaseDate`, `kinguinOrderId` fields to order object, [details here](features/CouponCode.md#using-coupon)
+- added `paymentPrice`, `requestTotalPrice`, `products.requestPrice`, `products.releaseDate`, `isPreorder`, `preorderReleaseDate`, `kinguinOrderId` fields to order object
 - added `X-Api-Key` header as a replacement/alias for `Api-Ecommerce-Auth`,
-- added `/api/v2/order` endpoint, [details here](api/order/v2/README.md#place-order)
-- added `/api/v2/order/{orderId}/dispatch` endpoint, [details here](api/order/v2/README.md#dispatch)
-- added `/api/v2/order/{orderId}/keys` endpoint, [details here](api/order/v2/README.md#get-keys)
+- added `/api/v2/order` endpoint, [details here](api/order/v2/README.md#place-an-order)
+- added `/api/v2/order/{orderId}/dispatch` endpoint
+- added `/api/v2/order/{orderId}/keys` endpoint, [details here](api/order/v2/README.md#download-keys)
 - added `/api/v2/products/{productId}` endpoint, [details here](api/products/v2/README.md#get-product)
 - added multiple values search for `genre` and `platform` filters,
 - added `merchantName` field to offer object,
 - added `productId`, `merchantName`, `withText` filters for `/api/v1/products` endpoint,
 - return [Order Object](api/order/v1/README.md#order-object) in place order response,
-- send webhook after order dispatch, [details here](features/Keys.md)
+- send webhook after order dispatch
 - added `productId` field to product update webhook,
 - trigger product update webhooks after `releaseDate` field changed,
 
@@ -79,8 +96,8 @@
 ## [2019-12-10]
 
 ### Added
-- possibility to select key type (`text` or `image`), [details here](features/KeyType.md#how-to-buy-text-serial)
-- possibility to buy selected offer, [details here](features/BuyOffer.md)
+- possibility to select key type (`text` or `image`)
+- possibility to buy selected offer
 - added `vendorName` and `onlyText` filters to products, [details here](api/products/v1/README.md#search-products)
 - added `textQty`, `imageQty` to product, [details here](api/products/v1/README.md#product-object)
 - added `offers`, `offersCount`, `totalQty` to product, [details here](api/products/v1/README.md#offer-object)
