@@ -169,7 +169,7 @@ curl -X GET \
 }
 ```
 
-## Order Object
+### Order Object
 
 | Field                   |  Type  | Description                                          |
 |-------------------------|:------:|------------------------------------------------------|
@@ -287,7 +287,7 @@ curl -X GET \
 }
 ```
 
-## Order Statuses
+### Order Statuses
 
 |    Status    | Description                                       |
 |:------------:|---------------------------------------------------|

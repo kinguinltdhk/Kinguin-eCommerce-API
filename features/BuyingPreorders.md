@@ -2,8 +2,8 @@
 
 ### Requirements
 
-1. Buying pre-order with specified `keyType` field is not allowed.
-2. You can buy only one pre-order per order request.
+1. The `keyType` field is not allowed with pre-order.
+2. You can order only one pre-order per request.
 3. Buying pre-order with regular products is not allowed.
 
 ### How to download the keys for pre-order

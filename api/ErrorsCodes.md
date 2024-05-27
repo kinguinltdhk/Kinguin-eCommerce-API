@@ -23,19 +23,19 @@ The rest of the fields are intended to present the context of the problem. Each 
 
 > Check `detail` property for more info about the problem.
 
-| Kind                       | Description                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------------|
-| `ConstraintViolation`      | The request payload is invalid.                                                             |
-| `Error`                    | Unexpected error.                                                                           |
-| `HttpClient`               | Internal communication failed.                                                              |
-| `Http`                     | Invalid request.                                                                            |
-| `Authorization`            | Bad authorization credentials.                                                              |
-| `InsufficientBalance`      | There are not enough funds to place order.                                                  |
-| `BalanceRequired`          | The balance value is lower than minimum balance required to place order.                    |
-| `OrderFailed`              | Order has not been created.                                                                 |
-| `ProcessingPreorder`       | Order will be dispatched after product release date.                                        |
-| `ProductUnavailable`       | Product has been sold or is not active. Maybe try to update product and send request again. |
-| `OrderNotFound`            | Order not found - invalid `orderId` value                                                   |
-| `ResourceLock`             | Conflict with current resource state - other process already modified target resource       |
-| `OrderNotSupported`        | Order not supported due to platform legacy                                                  |
+| Kind                  | Description                                                                                 |
+|-----------------------|---------------------------------------------------------------------------------------------|
+| `ConstraintViolation` | The request payload is invalid.                                                             |
+| `Error`               | Unexpected error.                                                                           |
+| `HttpClient`          | Internal communication failed.                                                              |
+| `Http`                | Invalid request.                                                                            |
+| `Authorization`       | Bad authorization credentials.                                                              |
+| `InsufficientBalance` | There are not enough funds to place order.                                                  |
+| `BalanceRequired`     | The balance value is lower than minimum balance required to place order.                    |
+| `OrderFailed`         | Order has not been created.                                                                 |
+| `Preorder`            | Invalid pre-order.                                                                          |
+| `ProductUnavailable`  | Product has been sold or is not active. Maybe try to update product and send request again. |
+| `OrderNotFound`       | Order not found - invalid `orderId` value                                                   |
+| `ResourceLock`        | Conflict with current resource state - other process already modified target resource       |
+| `OrderNotSupported`   | Order not supported due to platform legacy                                                  |
 

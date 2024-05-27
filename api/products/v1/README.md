@@ -437,7 +437,7 @@ curl -X GET \
 > API can return **404 Not Found** when product is not available or became out of stock.
 
 
-## Tags
+### Tags
 
 | Name           |
 |----------------|
@@ -447,7 +447,7 @@ curl -X GET \
 | `software`     |
 | `prepaid`      |
 
-## Regions
+### Regions
 
 | ID | Name                |
 |----|---------------------|
@@ -470,7 +470,7 @@ curl -X GET \
 | 17 | Japan               |
 | 18 | North America       |
 
-## Genres
+### Genres
 
 | Name                 |
 |----------------------|
