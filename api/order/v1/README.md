@@ -40,11 +40,12 @@ Content-Type: `application/json`
 | `products.qty`*      |  int   |   Yes    | Quantity                                                                                                                                  |
 | `products.price`     | float  |   Yes    | Your price                                                                                                                                |
 | `products.keyType`   | string |    No    | Specify the type of key. The possible value is `text`. When the value is not provided, then the random type of the key will be delivered. |
-| `products.offerId`   | string |    No    | Specify the exact offer you want to buy, otherwise the API will select offers according to the given price and available quantity.        |
+| `products.offerId`** | string |    No    | Specify the exact offer you want to buy, otherwise the API will select offers according to the given price and available quantity.        |
 | `orderExternalId`    | string |    No    | Custom reference to the order in your service. The value should be unique.                                                                |
 | `couponCode`         | string |    No    | The discount code                                                                                                                         |
 
-> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`
+> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`. For the wholesale purchase the limit is `2k`
+> **This field is required only for wholesale purchases
 
 ### Output
 

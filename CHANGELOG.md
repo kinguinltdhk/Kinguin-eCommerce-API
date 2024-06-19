@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [2024-06-18]
 
 ### Added
 - pagination for getting keys
@@ -8,7 +8,7 @@
 - added `offers.availableQty` and `offers.availableTextQty` fields
 ### Changed
 - quantity limit per offer is `9`
-- max `10` unique offers per order
+- max `10` unique items per order
 - allow to getting keys during order processing
 - all dispatch endpoints set as **DEPRECATED** (removed from documentation)
 - getting keys by `dispatchId` field set as **DEPRECATED** (removed from documentation)
