@@ -17,34 +17,34 @@
 {
   "offers": [
     {
-        "name": "Counter-Strike: Source Steam CD Key",
-        "offerId": "5f7efe3b369b4a0001c5b46f",
-        "price": 5.79,
-        "qty": 149,
-        "textQty": 149,
-        "merchantName": "KinguinHK",
-        "releaseDate": "2004-11-01",
-        "wholesale": {
-          "enabled": true,
-          "tiers": [
-            {
-              "level": 1,
-              "price": 5.5
-            },
-            {
-              "level": 2,
-              "price": 5.4
-            },
-            {
-              "level": 3,
-              "price": 5.3
-            },
-            {
-              "level": 4,
-              "price": 5.2
-            }
-          ]
-        }
+      "name": "Counter-Strike: Source Steam CD Key",
+      "offerId": "5f7efe3b369b4a0001c5b46f",
+      "price": 5.79,
+      "qty": 149,
+      "textQty": 149,
+      "merchantName": "KinguinHK",
+      "releaseDate": "2004-11-01",
+      "wholesale": {
+        "enabled": true,
+        "tiers": [
+          {
+            "level": 1,
+            "price": 5.5
+          },
+          {
+            "level": 2,
+            "price": 5.4
+          },
+          {
+            "level": 3,
+            "price": 5.3
+          },
+          {
+            "level": 4,
+            "price": 5.2
+          }
+        ]
+       }
     }
   ]
 }
