@@ -469,6 +469,8 @@ curl -X GET \
 | 16 | India               |
 | 17 | Japan               |
 | 18 | North America       |
+| 45 | Argentina           |
+| 46 | Turkey              |
 
 ### Genres
 
