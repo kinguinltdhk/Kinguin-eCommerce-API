@@ -2,12 +2,11 @@
 
 ### Guidelines
 
-1. In order to buy more than `9` quantity of given offer please contact us.
-2. The `offerId` field is required when creating the order.
-3. The maximum offer quantity for wholesale orders is `1000`.
-4. The maximum total quantity for order is `1000`.
-5. When `offers.wholesale.enabled` = false then buying more than `9` quantity is disabled.
-6. Use pagination when downloading the keys.
+1. The `offerId` field is required when creating the order.
+2. The maximum offer quantity for wholesale orders is `1000`.
+3. The maximum total quantity for order is `1000`.
+4. When `offers.wholesale.enabled` = false then buying more than `9` quantity is disabled.
+5. Use pagination when downloading the keys.
 
 ### How to buy wholesale
 
