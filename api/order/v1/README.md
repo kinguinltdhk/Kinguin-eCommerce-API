@@ -44,7 +44,7 @@ Content-Type: `application/json`
 | `orderExternalId`    | string |    No    | Custom reference to the order in your service. The value should be unique.                                                                |
 | `couponCode`         | string |    No    | The discount code                                                                                                                         |
 
-> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`. For the wholesale purchase the limit is `2k`
+> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`. For the wholesale purchase the limit is `1k`
 > **This field is required only for wholesale purchases
 
 ### Output
