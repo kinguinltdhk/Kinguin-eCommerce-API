@@ -9,11 +9,9 @@
 ## How to get API key
 
 1. Go to [Kinguin Integration](https://www.kinguin.net/integration) and click **APPLY FOR ACCESS** button.
-2. If you don't have yet **Kinguin ID** account, please create it before.
-3. Submit application form and wait for our approval. If you're active Kinguin Seller your application will be automatically approved. You will be notified by e-mail when your application become approved.
-4. After positive verification of your application you can go to your [Dashboard](https://www.kinguin.net/integration/dashboard).
-5. Go to **MY STORES** section and click on **ADD STORE** button in top right corner. Fill form with your first store's data. The **API key** will be generated.
-6. Register [webhooks](../features/Webhooks.md) for new store.
+2. If you don't have **Kinguin ID** account, please create it before.
+3. Submit application request and wait for our approval. If you're an active Kinguin Seller your application will be automatically approved. You will be notified by e-mail when your application become approved.
+4. Once your request has been approved you will be able to configure your first store [Dashboard](https://www.kinguin.net/integration/dashboard/stores).
 
 > Keep your API key secret! Remember that credentials on SANDBOX environment are different.
 
@@ -35,7 +33,7 @@ Also read:
 
 ## Register webhooks
 
-[Register webhooks](../features/Webhooks.md) to track order's status.
+[Register webhooks](../features/Webhooks.md) to be informed about order status changes.
 
 ## Place an order
 
@@ -49,10 +47,9 @@ curl -X POST \
      https://gateway.kinguin.net/esa/api/v2/order
 ```
 
-
 ## Download keys
 
-After order has become completed you can [download keys](../api/order/v2/README.md#download-keys).
+Download keys once they have been delivered [Download Keys](../api/order/v2/README.md#download-keys).
 
 ```bash
 curl -X GET \

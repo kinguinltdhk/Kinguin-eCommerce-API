@@ -6,6 +6,7 @@ Version: `v2`
 
 - [Place an order](#place-an-order)
 - [Download keys](#download-keys)
+- [Return keys](#return-keys)
 
 
 ## Place an order
@@ -23,7 +24,6 @@ Content-Type: `application/json`
             "productId": [string],
             "qty": [int],
             "price": [float],
-            "name": [string],
             "keyType": [string],
             "offerId": [string]
         },
@@ -36,16 +36,16 @@ Content-Type: `application/json`
 
 | Field                |  Type  | Required | Description                                                                                                                               |
 |----------------------|:------:|:--------:|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `products.productId` |  int   |   Yes    | Product identifier from `productId` field                                                                                                 |
+| `products.productId` |  int   |   Yes    | Product ID                                                                                                                                |
 | `products.qty`*      |  int   |   Yes    | Quantity                                                                                                                                  |
-| `products.price`     | float  |   Yes    | Your price                                                                                                                                |
+| `products.price`     | float  |   Yes    | Price                                                                                                                                     |
 | `products.keyType`   | string |    No    | Specify the type of key. The possible value is `text`. When the value is not provided, then the random type of the key will be delivered. |
 | `products.offerId`** | string |    No    | Specify the exact offer you want to buy, otherwise the API will select offers according to the given price and available quantity.        |
-| `orderExternalId`    | string |    No    | Custom reference to the order in your service. The value should be unique.                                                                |
+| `orderExternalId`    | string |    No    | Custom reference to the order in external system. The value should be unique.                                                             |
 | `couponCode`         | string |    No    | The discount code                                                                                                                         |
 
-> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`. For the wholesale purchase the limit is `1k`
-> > **This field is required only for wholesale purchases
+> *The `qty` limit for one offer is `9`. The maximum number of items in `products` is `10`. For the wholesale purchases the limit is `1k`
+> **This field is required only for wholesale purchases
 
 ### Output
 
@@ -108,6 +108,7 @@ curl -X GET \
 ```json
 [
     {
+        "id": "67041c31e4d991383ee2a278",
         "serial": "0ddbebb2-559d-42e9-a8e1-fd4b2bdea858",
         "type": "text/plain",
         "name": "Counter-Strike: Source Steam CD Key",
@@ -122,6 +123,7 @@ curl -X GET \
 
 | Field       |  Type  | Description                                                                          |
 |-------------|:------:|--------------------------------------------------------------------------------------|
+| `id`        | string | Key id                                                                               |
 | `name`      | string | Product name                                                                         |
 | `type`      | string | Serial content type. Can be `text/plain` or `image/jpeg`, `image/png` or `image/gif` |
 | `serial`    | string | Plain text serial key or in case of `image/*` base64 encoded content of the image    |
@@ -129,6 +131,57 @@ curl -X GET \
 | `offerId`   | string | Offer ID                                                                             |
 | `productId` | string | Product ID                                                                           |
 
-The key is available right after it has been delivered to the order. There are 2 strategies how to download the keys:
-1. Call the [Download keys](#download-keys) endpoint periodically and parse the response.
-2. Register the [order.status](../../../features/Webhooks.md) webhook and download all keys when order status will become `completed`.
+The key is available once it has been delivered to the order. There are few strategies how to download all keys:
+1. Call the [Download keys](#download-keys) endpoint periodically using pagination.
+2. Register the [order.status](../../../features/Webhooks.md) webhook and download all keys when order status will be `completed`.
+3. Load order details [Get Order](../v1/README.md#get-order) periodically and check whether given keys has been delivered.
+
+
+## Return keys
+
+`POST /v2/order/{orderId}/keys/return`
+
+### URL variables
+
+| Field     |  Type  | Required | Description |
+|-----------|:------:|:--------:|-------------|
+| `orderId` | string |   Yes    | Order ID    |
+
+### Output
+
+HTTP Status: `200`
+
+Content-Type: `application/json`
+
+| Field    |  Type  | Description                                |
+|----------|:------:|--------------------------------------------|
+| `id`     | string | Key id                                     |
+| `status` | string | [Key Status](../v1/README.md#key-statuses) |
+
+
+### Example request
+
+```bash
+curl -X POST \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v2/order/PHS84FJAG5U/keys/return
+```
+
+### Example response
+
+```json
+[
+    {
+        "id": "67041c31e4d991383ee2a278",
+        "status": "DELIVERED"
+    },
+    {
+        "id": "67041c31e4d991383ee2a279",
+        "status": "DELIVERED"
+    }
+]
+```
+
+Also read:
+
+- [Return Keys](../../../features/ReturnKeys.md)

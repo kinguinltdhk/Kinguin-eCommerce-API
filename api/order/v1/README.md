@@ -36,15 +36,15 @@ Content-Type: `application/json`
 
 | Field                |  Type  | Required | Description                                                                                                                               |
 |----------------------|:------:|:--------:|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `products.kinguinId` |  int   |   Yes    | Product identifier from `kinguinId` field                                                                                                 |
+| `products.kinguinId` |  int   |   Yes    | Product ID                                                                                                                                |
 | `products.qty`*      |  int   |   Yes    | Quantity                                                                                                                                  |
-| `products.price`     | float  |   Yes    | Your price                                                                                                                                |
+| `products.price`     | float  |   Yes    | Price                                                                                                                                     |
 | `products.keyType`   | string |    No    | Specify the type of key. The possible value is `text`. When the value is not provided, then the random type of the key will be delivered. |
 | `products.offerId`** | string |    No    | Specify the exact offer you want to buy, otherwise the API will select offers according to the given price and available quantity.        |
-| `orderExternalId`    | string |    No    | Custom reference to the order in your service. The value should be unique.                                                                |
+| `orderExternalId`    | string |    No    | Custom reference to the order in external system. The value should be unique.                                                             |
 | `couponCode`         | string |    No    | The discount code                                                                                                                         |
 
-> *The `qty` limit per offer is `9`. The maximum number of unique items in `products` is `10`. For the wholesale purchase the limit is `1k`
+> *The `qty` limit for one offer is `9`. The maximum number of items in `products` is `10`. For the wholesale purchases the limit is `1k`
 > **This field is required only for wholesale purchases
 
 ### Output
@@ -91,9 +91,7 @@ curl -X POST \
             "requestPrice": 5.79,
             "isPreorder": true,
             "releaseDate": "2020-10-07",
-            "keyType": "text",
-            "accurate": true,
-            "broker": "internal"
+            "keyType": "text"
         }
     ],
     "totalQty": 1,
@@ -160,8 +158,12 @@ curl -X GET \
             "isPreorder": true,
             "releaseDate": "2020-10-07",
             "keyType": "text",
-            "accurate": true,
-            "broker": "internal"
+            "keys": [
+                {
+                    "id": "67041c31e4d991383ee2a278",
+                    "status": "DELIVERED"
+                }
+            ]
         }
     ],
     "totalQty": 1,
@@ -172,37 +174,37 @@ curl -X GET \
 
 ### Order Object
 
-| Field                   |  Type  | Description                                          |
-|-------------------------|:------:|------------------------------------------------------|
-| `totalPrice`            | float  | Order sell price                                     |
-| `requestTotalPrice`     | float  | Order requested price                                |
-| `paymentPrice`          | string | Balance amount charged for this order                |
-| `status`                | string | [Order Status](#order-statuses)                      |
-| `userEmail`             | string | E-mail of the order owner                            |
-| `kidId`                 |  int   | ID of the order owner                                |
-| `storeId`               |  int   | Store ID                                             |
-| `createdAt`             | string | Order creation date                                  |
-| `orderId`               | string | Order ID                                             |
-| `kinguinOrderId`        |  int   | Previous order ID                                    |
-| `orderExternalId`       | string | Order external ID                                    |
-| `couponCode`            | string | Discount code                                        |
-| `isPreorder`            |  bool  | Pre-order                                            |
-| `totalQty`              |  int   | Total quantity from products                         |
-| `preorderReleaseDate`   | string | Release date                                         |
-| `products.kinguinId`    |  int   | Product ID                                           |
-| `products.offerId`      | string | Offer ID                                             |
-| `products.productId`    | string | Another product ID                                   |
-| `products.qty`          |  int   | Ordered quantity                                     |
-| `products.name`         | string | Product name                                         |
-| `products.price`        | float  | Product sell price                                   |
-| `products.totalPrice`   | float  | Total product sell price                             |
-| `products.requestPrice` | float  | Product request price                                |
-| `products.isPreorder`   |  bool  | Pre-order                                            |
-| `products.releaseDate`  | string | Product release date                                 |
-| `products.keyType`      | string | Serial type for product                              |
-| `products.accurate`     |  bool  | Determines if sell price is equal to requested price |
-| `dispatch.id`           |  int   | Dispatch ID **DEPRECATED**                           |
-| `dispatch.createdAt`    | string | Dispatch creation date **DEPRECATED**                |
+| Field                   |  Type  | Description                           |
+|-------------------------|:------:|---------------------------------------|
+| `totalPrice`            | float  | Order sell price                      |
+| `requestTotalPrice`     | float  | Order requested price                 |
+| `paymentPrice`          | string | Balance amount charged for this order |
+| `status`                | string | [Order Status](#order-statuses)       |
+| `userEmail`             | string | E-mail of the order owner             |
+| `storeId`               |  int   | Store ID                              |
+| `createdAt`             | string | Order creation date                   |
+| `orderId`               | string | Order ID                              |
+| `kinguinOrderId`        |  int   | Previous order ID                     |
+| `orderExternalId`       | string | Order external ID                     |
+| `couponCode`            | string | Discount code                         |
+| `isPreorder`            |  bool  | Pre-order                             |
+| `totalQty`              |  int   | Total quantity from products          |
+| `preorderReleaseDate`   | string | Release date                          |
+| `products.kinguinId`    |  int   | Product ID                            |
+| `products.offerId`      | string | Offer ID                              |
+| `products.productId`    | string | Another product ID                    |
+| `products.qty`          |  int   | Ordered quantity                      |
+| `products.name`         | string | Product name                          |
+| `products.price`        | float  | Product sell price                    |
+| `products.totalPrice`   | float  | Total product sell price              |
+| `products.requestPrice` | float  | Product request price                 |
+| `products.isPreorder`   |  bool  | Pre-order                             |
+| `products.releaseDate`  | string | Product release date                  |
+| `products.keyType`      | string | Serial type for product               |
+| `products.keys.id`      | string | Key id                                |
+| `products.keys.status`  | string | [Key Status](#key-statuses)           |
+| `dispatch.id`           |  int   | Dispatch ID **DEPRECATED**            |
+| `dispatch.createdAt`    | string | Dispatch creation date **DEPRECATED** |
 
 ## Search orders
 
@@ -214,16 +216,12 @@ curl -X GET \
 |-------------------|:------:|-------------------------------------------------------------------------------------------|
 | `page`            |  int   | Page number (default: `1`)                                                                |
 | `limit`           |  int   | Limit results (default: `25`, maximum: `100`)                                             |
-| `totalPriceFrom`  | float  | Total price from                                                                          |
-| `totalPriceTo`    | float  | Total price to                                                                            |
 | `createdAtFrom`   | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP` |
 | `createdAtTo`     | string | Date in formats `Y-m-d`, `Y-m-d H:i:s`, `Y-m-dTH:i:s`, `Y-m-dTH:i:s.uZ` or `Y-m-dTH:i:sP` |
 | `kinguinId`       |  int   | Product ID                                                                                |
 | `productId`       | string | Another product ID                                                                        |
 | `orderId`         | string | Order ID                                                                                  |
-| `kinguinOrderId`  |  int   | Previous order ID                                                                         |
 | `orderExternalId` | string | Order external ID                                                                         |
-| `name`            | string | Product name                                                                              |
 | `status`          | string | [Order Status](#order-statuses)                                                           |
 | `isPreorder`      | string | Pre-order (values: `yes` or `no`)                                                         |
 
@@ -275,8 +273,12 @@ curl -X GET \
                     "isPreorder": true,
                     "releaseDate": "2020-10-07",
                     "keyType": "text",
-                    "accurate": true,
-                    "broker": "internal"
+                    "keys": [
+                        {
+                            "id": "67041c31e4d991383ee2a278",
+                            "status": "DELIVERED"
+                        }
+                    ]
                 }
             ],
             "totalQty": 1,
@@ -296,3 +298,15 @@ curl -X GET \
 | `completed`  | Order is completed (all keys have been delivered) |
 |  `canceled`  | Order has been canceled                           |
 |  `refunded`  | Order has been refunded                           |
+
+
+### Key Statuses
+
+|    Status    | Description            |
+|:------------:|------------------------|
+|  `PENDING`   | Waiting for processing |
+| `PROCESSING` | Waiting for delivery   |
+| `DELIVERED`  | Delivered              |
+|  `RETURNED`  | Returned to stock      |
+|  `REFUNDED`  | Balance refunded       |
+|  `CANCELED`  | Canceled processing    |

@@ -176,7 +176,7 @@ curl -X GET \
 | Field                          |   Type   | Description                             |
 |--------------------------------|:--------:|-----------------------------------------|
 | `kinguinId`                    |   int    | Product ID                              |
-| `productId`                    |  string  | Another product ID                      |
+| `productId`*                   |  string  | Product ID                              |
 | `cheapestOfferId`              | string[] | Array of cheapest offers id             |
 | `name`                         |  string  | Product name                            |
 | `originalName`                 |  string  | Product original name                   |
@@ -212,6 +212,8 @@ curl -X GET \
 | `images.cover`                 | object[] | Cover                                   |
 | `images.cover.url`             |  string  | URL to full width cover image           |
 | `images.cover.thumbnail`       |  string  | URL to cover thumbnail                  |
+
+> *The property is required when using API with version `2`
 
 ## Offer Object
 
@@ -262,7 +264,7 @@ curl -X GET \
 | `platform`       | string | Comma separated list of platforms                                                         |
 | `genre`          | string | Comma separated list of [Genre](#genres)                                                  |
 | `kinguinId`      | string | Comma separated list of product ID                                                        |
-| `productId`      | string | Comma separated list of another product ID                                                |
+| `productId`      | string | Comma separated list of product ID                                                        |
 | `languages`      | string | Language                                                                                  |
 | `isPreorder`     | string | Pre-order (values: `yes` or `no`)                                                         |
 | `activePreorder` | string | Only active pre-orders (values: `yes`)                                                    |

@@ -1,5 +1,11 @@
 # Changelog
 
+## [2024-10-10]
+
+### Added
+- endpoint for returning keys
+- expose key statuses in order details response
+
 ## [2024-06-18]
 
 ### Added

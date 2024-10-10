@@ -17,25 +17,23 @@ In case of error API returns HTTP status code different from `2xx` and JSON obje
 }
 ```
 
-The fields such as: `kind`, `status`, `title`, `detail`, `path`, `method`, `trace` and `timestamps` should be always presented.
+> Check `detail` property for more info about the reason.
 
-The rest of the fields are intended to present the context of the problem. Each of error kind have an own set of custom fields.
+### Table of error codes
 
-> Check `detail` property for more info about the problem.
-
-| Kind                  | Description                                                                                 |
-|-----------------------|---------------------------------------------------------------------------------------------|
-| `ConstraintViolation` | The request payload is invalid.                                                             |
-| `Error`               | Unexpected error.                                                                           |
-| `HttpClient`          | Internal communication failed.                                                              |
-| `Http`                | Invalid request.                                                                            |
-| `Authorization`       | Bad authorization credentials.                                                              |
-| `InsufficientBalance` | There are not enough funds to place order.                                                  |
-| `BalanceRequired`     | The balance value is lower than minimum balance required to place order.                    |
-| `OrderFailed`         | Order has not been created.                                                                 |
-| `Preorder`            | Invalid pre-order.                                                                          |
-| `ProductUnavailable`  | Product has been sold or is not active. Maybe try to update product and send request again. |
-| `OrderNotFound`       | Order not found - invalid `orderId` value                                                   |
-| `ResourceLock`        | Conflict with current resource state - other process already modified target resource       |
-| `OrderNotSupported`   | Order not supported due to platform legacy                                                  |
+| Kind                  | Description                                               |
+|-----------------------|-----------------------------------------------------------|
+| `ConstraintViolation` | The requested payload is invalid.                         |
+| `Error`               | Unexpected error.                                         |
+| `HttpClient`          | Internal request failed.                                  |
+| `Http`                | Invalid http request.                                     |
+| `Authorization`       | Bad authorization credentials.                            |
+| `InsufficientBalance` | There are not enough funds to place an order.             |
+| `OrderFailed`         | Unable to create an order.                                |
+| `Preorder`            | Pre-orders validation error.                              |
+| `ProductUnavailable`  | Unable to find any offer matching order request criteria. |
+| `OrderNotFound`       | Order not found.                                          |
+| `ResourceLock`        | Conflict with current resource version.                   |
+| `OrderNotSupported`   | Order not supported due to platform legacy.               |
+| `NoKeysToReturn`      | Return keys is not allowed for current resource version.  |
 

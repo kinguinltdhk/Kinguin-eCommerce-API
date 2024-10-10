@@ -2,11 +2,11 @@
 
 ### Guidelines
 
-1. The `offerId` field is required when creating the order.
-2. The maximum offer quantity for wholesale orders is `1000`.
-3. The maximum total quantity for order is `1000`.
-4. When `offers.wholesale.enabled` = false then buying more than `9` quantity is disabled.
-5. Use pagination when downloading the keys.
+1. The `offerId` property is required when creating an order.
+2. The maximum offer quantity is `1000`.
+3. The maximum total order quantity is `1000`.
+4. Wholesale is enabled only for offers with `wholesale.enabled` property equals to `true` and with ordered quantity greater than `9`.
+5. Use pagination when downloading keys for wholesale when order total quantity is greater than `100`.
 
 ### How to buy wholesale
 
@@ -50,15 +50,14 @@
 ```
 2. Pick the valid price according to the ordered quantity.
 
-
 |  Level  | Qty  |
-|:-------:|:----:|
+|:-------:|:-----|
 |    1    | 10+  |  
 |    2    | 50+  |  
 |    3    | 100+ | 
 |    4    | 500+ | 
 
-3. Create an order request
+3. Create an order.
 
 ```json
 {
