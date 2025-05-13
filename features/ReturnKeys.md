@@ -5,7 +5,7 @@
 The return is not allowed, when:
 
 1. The key has been claimed.
-2. The order contains at least 1 wholesale item.
+2. The order contains at least one wholesale item.
 3. 24 hours have passed since the key was delivered.
 4. Pre-order.
 

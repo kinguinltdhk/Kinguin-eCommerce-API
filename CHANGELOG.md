@@ -1,5 +1,19 @@
 # Changelog
 
+## [2025-05-12]
+
+### Removed
+- api2.kinguin.net host
+### Added
+- countryLimitation property
+
+## [2025-03-25]
+
+### Removed
+- removed order deprecated endpoints and properties
+### Changed
+- product videos schema updated
+
 ## [2024-10-10]
 
 ### Added

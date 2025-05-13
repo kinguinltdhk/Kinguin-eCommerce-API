@@ -61,6 +61,12 @@ curl -X GET \
   "isPreorder":false,
   "metacriticScore":88,
   "regionalLimitations":"Region free",
+  "countryLimitation":[
+    "PR",
+    "PS",
+    "PT",
+    "PW"
+  ],
   "regionId":3,
   "activationDetails":"Go to:  http://store.steampowered.com/ and download STEAM client\r\n\r\n\r\nClick \"Install Steam\" (from the upper right corner)\r\n\r\n\r\nInstall and start application, login with your Account name and Password (create one if you don't have).\r\n\r\n\r\nPlease follow these instructions to activate a new retail purchase on Steam:\r\n\r\nLaunch Steam and log into your Steam account.\r\nClick the Games Menu.\r\nChoose Activate a Product on Steam...\r\nFollow the onscreen instructions to complete the process.\r\n\r\nAfter successful code verification go to the \"MY GAMES\" tab and start downloading.",
   "kinguinId":1949,
@@ -68,7 +74,6 @@ curl -X GET \
   "originalName":"Counter-Strike: Source",
   "videos":[
     {
-      "name":"Trailer",
       "video_id":"bvI62FUDpKA"
     }
   ],
@@ -173,45 +178,46 @@ curl -X GET \
 
 ## Product Object
 
-| Field                          |   Type   | Description                             |
-|--------------------------------|:--------:|-----------------------------------------|
-| `kinguinId`                    |   int    | Product ID                              |
-| `productId`*                   |  string  | Product ID                              |
-| `cheapestOfferId`              | string[] | Array of cheapest offers id             |
-| `name`                         |  string  | Product name                            |
-| `originalName`                 |  string  | Product original name                   |
-| `description`                  |  string  | Product description                     |
-| `developers`                   | string[] | Array of developers list                |
-| `publishers`                   | string[] | Array of publishers list                |
-| `genres`                       | string[] | Array of [Genres](#genres)              |
-| `platform`                     |  string  | Platform name                           |
-| `releaseDate`                  |  string  | Release date                            |
-| `qty`                          |   int    | Total cheapest offers quantity          |
-| `price`                        |  float   | Cheapest offer price in EUR             |
-| `textQty`                      |   int    | Quantity of `text` serials              |
-| `offers`                       | object[] | Array of [Offer Object](/#offer-object) |
-| `offersCount`                  |   int    | Total number of offers                  |
-| `totalQty`                     |   int    | Total quantity from all offers          |
-| `isPreorder`                   |   bool   | Pre-order                               |
-| `metacriticScore`              |  float   | Metacritic score                        |
-| `regionalLimitations`          |  string  | Region name                             |
-| `regionId`                     |   int    | [Region](#regions)                      |
-| `activationDetails`            |  string  | Activation details                      |
-| `videos`                       | object[] | Array of videos                         |
-| `languages`                    | string[] | Array of languages                      |
-| `updatedAt`                    |  string  | Last update date                        |
-| `systemRequirements`           | object[] | System requirements                     |
-| `tags`                         | string[] | Array of [Tags](#tags)                  |
-| `merchantName`                 | string[] | Array of cheapest offers seller names   |
-| `ageRating`                    |  string  | Age rating (PEGI or ESRB)               |
-| `steam`                        |  string  | Steam app id,                           |
-| `images`                       | object[] | Holds product screenshots and covers    |
-| `images.screenshots`           | object[] | Screenshots                             |
-| `images.screenshots.url`       |  string  | URL to full width screenshot            |
-| `images.screenshots.thumbnail` |  string  | URL to screenshot thumbnail             |
-| `images.cover`                 | object[] | Cover                                   |
-| `images.cover.url`             |  string  | URL to full width cover image           |
-| `images.cover.thumbnail`       |  string  | URL to cover thumbnail                  |
+| Field                           |   Type   | Description                             |
+|---------------------------------|:--------:|-----------------------------------------|
+| `kinguinId`                     |   int    | Product ID                              |
+| `productId`*                    |  string  | Product ID                              |
+| `cheapestOfferId`               | string[] | Array of cheapest offers id             |
+| `name`                          |  string  | Product name                            |
+| `originalName`                  |  string  | Product original name                   |
+| `description`                   |  string  | Product description                     |
+| `developers`                    | string[] | Array of developers list                |
+| `publishers`                    | string[] | Array of publishers list                |
+| `genres`                        | string[] | Array of [Genres](#genres)              |
+| `platform`                      |  string  | Platform name                           |
+| `releaseDate`                   |  string  | Release date                            |
+| `qty`                           |   int    | Total cheapest offers quantity          |
+| `price`                         |  float   | Cheapest offer price in EUR             |
+| `textQty`                       |   int    | Quantity of `text` serials              |
+| `offers`                        | object[] | Array of [Offer Object](/#offer-object) |
+| `offersCount`                   |   int    | Total number of offers                  |
+| `totalQty`                      |   int    | Total quantity from all offers          |
+| `isPreorder`                    |   bool   | Pre-order                               |
+| `metacriticScore`               |  float   | Metacritic score                        |
+| `regionalLimitations`           |  string  | Region name                             |
+| `countryLimitation`             | string[] | List of excluded country codes          |
+| `regionId`                      |   int    | [Region](#regions)                      |
+| `activationDetails`             |  string  | Activation details                      |
+| `videos`                        | object[] | Array of videos                         |
+| `languages`                     | string[] | Array of languages                      |
+| `updatedAt`                     |  string  | Last update date                        |
+| `systemRequirements`            | object[] | System requirements                     |
+| `tags`                          | string[] | Array of [Tags](#tags)                  |
+| `merchantName`                  | string[] | Array of cheapest offers seller names   |
+| `ageRating`                     |  string  | Age rating (PEGI or ESRB)               |
+| `steam`                         |  string  | Steam app id,                           |
+| `images`                        | object[] | Holds product screenshots and covers    |
+| `images.screenshots`            | object[] | Screenshots                             |
+| `images.screenshots.url`        |  string  | URL to full width screenshot            |
+| `images.screenshots.thumbnail`  |  string  | URL to screenshot thumbnail             |
+| `images.cover`                  | object[] | Cover                                   |
+| `images.cover.url`              |  string  | URL to full width cover image           |
+| `images.cover.thumbnail`        |  string  | URL to cover thumbnail                  |
 
 > *The property is required when using API with version `2`
 
@@ -323,6 +329,12 @@ curl -X GET \
       "isPreorder":false,
       "metacriticScore":88,
       "regionalLimitations":"Region free",
+      "countryLimitation":[
+        "PR",
+        "PS",
+        "PT",
+        "PW"
+      ],
       "regionId":3,
       "activationDetails":"Go to:  http://store.steampowered.com/ and download STEAM client\r\n\r\n\r\nClick \"Install Steam\" (from the upper right corner)\r\n\r\n\r\nInstall and start application, login with your Account name and Password (create one if you don't have).\r\n\r\n\r\nPlease follow these instructions to activate a new retail purchase on Steam:\r\n\r\nLaunch Steam and log into your Steam account.\r\nClick the Games Menu.\r\nChoose Activate a Product on Steam...\r\nFollow the onscreen instructions to complete the process.\r\n\r\nAfter successful code verification go to the \"MY GAMES\" tab and start downloading.",
       "kinguinId":1949,
@@ -330,7 +342,6 @@ curl -X GET \
       "originalName":"Counter-Strike: Source",
       "videos":[
         {
-          "name":"Trailer",
           "video_id":"bvI62FUDpKA"
         }
       ],

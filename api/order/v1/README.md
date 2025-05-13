@@ -29,8 +29,7 @@ Content-Type: `application/json`
         },
         (...)
     ],
-    "orderExternalId": [string],
-    "couponCode": [string]
+    "orderExternalId": [string]
 }
 ```
 
@@ -42,7 +41,6 @@ Content-Type: `application/json`
 | `products.keyType`   | string |    No    | Specify the type of key. The possible value is `text`. When the value is not provided, then the random type of the key will be delivered. |
 | `products.offerId`** | string |    No    | Specify the exact offer you want to buy, otherwise the API will select offers according to the given price and available quantity.        |
 | `orderExternalId`    | string |    No    | Custom reference to the order in external system. The value should be unique.                                                             |
-| `couponCode`         | string |    No    | The discount code                                                                                                                         |
 
 > *The `qty` limit for one offer is `9`. The maximum number of items in `products` is `10`. For the wholesale purchases the limit is `1k`
 > **This field is required only for wholesale purchases
@@ -77,7 +75,6 @@ curl -X POST \
     "createdAt": "2020-10-28T08:40:44+00:00",
     "orderId": "PHS84FJAG5U",
     "orderExternalId": "AL2FEEHOO2OHF",
-    "couponCode": "ESA",
     "paymentPrice": 5.29,
     "products": [
         {
@@ -143,7 +140,6 @@ curl -X GET \
     "createdAt": "2020-10-28T08:40:44+00:00",
     "orderId": "PHS84FJAG5U",
     "orderExternalId": "AL2FEEHOO2OHF",
-    "couponCode": "ESA",
     "paymentPrice": 5.29,
     "products": [
         {
@@ -186,7 +182,6 @@ curl -X GET \
 | `orderId`               | string | Order ID                              |
 | `kinguinOrderId`        |  int   | Previous order ID                     |
 | `orderExternalId`       | string | Order external ID                     |
-| `couponCode`            | string | Discount code                         |
 | `isPreorder`            |  bool  | Pre-order                             |
 | `totalQty`              |  int   | Total quantity from products          |
 | `preorderReleaseDate`   | string | Release date                          |
@@ -203,8 +198,6 @@ curl -X GET \
 | `products.keyType`      | string | Serial type for product               |
 | `products.keys.id`      | string | Key id                                |
 | `products.keys.status`  | string | [Key Status](#key-statuses)           |
-| `dispatch.id`           |  int   | Dispatch ID **DEPRECATED**            |
-| `dispatch.createdAt`    | string | Dispatch creation date **DEPRECATED** |
 
 ## Search orders
 
@@ -258,7 +251,6 @@ curl -X GET \
             "createdAt": "2020-10-28T08:40:44+00:00",
             "orderId": "PHS84FJAG5U",
             "orderExternalId": "AL2FEEHOO2OHF",
-            "couponCode": "ESA",
             "paymentPrice": 5.29,
             "products": [
                 {
