@@ -1,5 +1,10 @@
 # Changelog
 
+## [2025-06-11]
+
+### Added
+- endpoints for platforms and regions
+
 ## [2025-05-12]
 
 ### Removed

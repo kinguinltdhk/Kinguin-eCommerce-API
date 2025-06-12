@@ -6,6 +6,8 @@ Version: `v1`
 
 - [Get product](#get-product)
 - [Search products](#search-products)
+- [Regions](#regions)
+- [Platforms](#platforms)
 
 
 ## Get product
@@ -189,7 +191,7 @@ curl -X GET \
 | `developers`                    | string[] | Array of developers list                |
 | `publishers`                    | string[] | Array of publishers list                |
 | `genres`                        | string[] | Array of [Genres](#genres)              |
-| `platform`                      |  string  | Platform name                           |
+| `platform`                      |  string  | [Platform](#platforms)                  |
 | `releaseDate`                   |  string  | Release date                            |
 | `qty`                           |   int    | Total cheapest offers quantity          |
 | `price`                         |  float   | Cheapest offer price in EUR             |
@@ -267,7 +269,7 @@ curl -X GET \
 | `sortType`       | string | Sort type (values: `asc` or `desc`)                                                       |
 | `priceFrom`      | float  | Price from **DEPRECATED**                                                                 |
 | `priceTo`        | float  | Price to **DEPRECATED**                                                                   |
-| `platform`       | string | Comma separated list of platforms                                                         |
+| `platform`       | string | Comma separated list of [Platform](#platforms)                                            |
 | `genre`          | string | Comma separated list of [Genre](#genres)                                                  |
 | `kinguinId`      | string | Comma separated list of product ID                                                        |
 | `productId`      | string | Comma separated list of product ID                                                        |
@@ -462,28 +464,65 @@ curl -X GET \
 
 ### Regions
 
-| ID | Name                |
-|----|---------------------|
-| 1  | Europe              |
-| 2  | United States       |
-| 3  | Region free         |
-| 4  | Other               |
-| 5  | Outside Europe      |
-| 6  | RU VPN              |
-| 7  | Russia              |
-| 8  | United Kingdom      |
-| 9  | China               |
-| 10 | RoW (Rest of World) |
-| 11 | Latin America       |
-| 12 | Asia                |
-| 13 | Germany             |
-| 14 | Australia           |
-| 15 | Brazil              |
-| 16 | India               |
-| 17 | Japan               |
-| 18 | North America       |
-| 45 | Argentina           |
-| 46 | Turkey              |
+`GET /v1/regions`
+
+#### Example request
+
+```bash
+curl -X GET \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v1/regions
+```
+
+#### Example response
+
+```json
+[
+  {
+    "id":2,
+    "name":"United States"
+  },
+  {
+    "id":3,
+    "name":"REGION FREE"
+  },
+  {
+    "id":10,
+    "name":" Rest of the world (RoW) - custom"
+  }
+]
+```
+
+### Platforms
+
+`GET /v1/platforms`
+
+#### Example request
+
+```bash
+curl -X GET \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v1/platforms
+```
+
+#### Example response
+
+```json
+[
+  "PC Battle.net",
+  "PC Epic Games",
+  "PC GOG",
+  "PC Mog Station",
+  "PC Digital Download",
+  "EA App",
+  "PC Rockstar Games",
+  "PC Steam",
+  "PC Ubisoft Connect",
+  "PC",
+  "PC Digital Download",
+  "2DS"
+]
+```
 
 ### Genres
 
