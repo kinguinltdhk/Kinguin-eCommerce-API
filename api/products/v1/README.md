@@ -8,6 +8,7 @@ Version: `v1`
 - [Search products](#search-products)
 - [Regions](#regions)
 - [Platforms](#platforms)
+- [Genres](#genres)
 
 
 ## Get product
@@ -526,40 +527,28 @@ curl -X GET \
 
 ### Genres
 
-| Name                 |
-|----------------------|
-| Action               |
-| Adventure            |
-| Anime                |
-| Casual               |
-| Co-op                |
-| Dating Simulator     |
-| Fighting             |
-| FPS                  |
-| Hack and Slash       |
-| Hidden Object        |
-| Horror               |
-| Indie                |
-| Life Simulation      |
-| MMO                  |
-| Music / Soundtrack   |
-| Online Courses       |
-| Open World           |
-| Platformer           |
-| Point & click        |
-| PSN Card             |
-| Puzzle               |
-| Racing               |
-| RPG                  |
-| Simulation           |
-| Software             |
-| Sport                |
-| Story rich           |
-| Strategy             |
-| Subscription         |
-| Survival             |
-| Third-Person Shooter |
-| Visual Novel         |
-| VR Games             |
-| XBOX LIVE Gold Card  |
-| XBOX LIVE Points     |
+`GET /v1/genres`
+
+#### Example request
+
+```bash
+curl -X GET \
+     -H 'X-Api-Key: [api-key]' \
+     https://gateway.kinguin.net/esa/api/v1/genres
+```
+
+#### Example response
+
+```json
+[
+  "Action",
+  "Adult Games",
+  "Adventure",
+  "Anime",
+  "Casual",
+  "Co-op",
+  "Dating Simulator",
+  "FPS",
+  "Fighting"
+]
+```

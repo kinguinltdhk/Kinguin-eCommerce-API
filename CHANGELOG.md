@@ -1,5 +1,10 @@
 # Changelog
 
+## [2025-07-01]
+
+### Added
+- endpoint for genres
+
 ## [2025-06-11]
 
 ### Added
