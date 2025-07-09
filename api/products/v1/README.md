@@ -234,7 +234,6 @@ curl -X GET \
 | `availableQty`          |    int    | Physical available quantity                                         |
 | `availableTextQty`      |    int    | Physical available quantity for text keys only                      |
 | `textQty`               |    int    | Total available quantity for text keys only                         |
-| `status`                |  string   | Offer status                                                        |
 | `isPreorder`            |   bool    | Pre-order                                                           |
 | `releaseDate`           |  string   | Release date                                                        |
 | `wholesale.enabled`     |  boolean  | Determine whether offer can be purchased with wholesale tier prices |
