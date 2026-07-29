@@ -10,7 +10,6 @@ In case of error API returns HTTP status code different from `2xx` and JSON obje
     "detail": "Invalid \"products\" property. Sum of total values of \"qty\" must be lower than or equal 90.",
     "path": "/api/v1/order",
     "method": "POST",
-    "trace": "082a4cee9b",
     "timestamp": "2020-09-01T13:06:06+00:00",
     "propertyPath": "products",
     "invalidValue": 100
