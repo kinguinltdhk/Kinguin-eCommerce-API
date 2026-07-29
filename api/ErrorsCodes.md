@@ -36,4 +36,4 @@ In case of error API returns HTTP status code different from `2xx` and JSON obje
 | `ResourceLock`        | Conflict with current resource version.                   |
 | `OrderNotSupported`   | Order not supported due to platform legacy.               |
 | `NoKeysToReturn`      | Return keys is not allowed for current resource version.  |
-
+| `ProductNotFound`     | Product not found or out of stock.                        |
