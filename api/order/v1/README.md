@@ -91,9 +91,7 @@ curl -X POST \
             "keyType": "text"
         }
     ],
-    "totalQty": 1,
-    "isPreorder": true,
-    "preorderReleaseDate": "2020-10-07"
+    "totalQty": 1
 }
 ```
 
@@ -162,9 +160,7 @@ curl -X GET \
             ]
         }
     ],
-    "totalQty": 1,
-    "isPreorder": true,
-    "preorderReleaseDate": "2020-10-07"
+    "totalQty": 1
 }
 ```
 
@@ -182,9 +178,7 @@ curl -X GET \
 | `orderId`               | string | Order ID                              |
 | `kinguinOrderId`        |  int   | Previous order ID                     |
 | `orderExternalId`       | string | Order external ID                     |
-| `isPreorder`            |  bool  | Pre-order                             |
 | `totalQty`              |  int   | Total quantity from products          |
-| `preorderReleaseDate`   | string | Release date                          |
 | `products.kinguinId`    |  int   | Product ID                            |
 | `products.offerId`      | string | Offer ID                              |
 | `products.productId`    | string | Another product ID                    |
@@ -273,9 +267,7 @@ curl -X GET \
                     ]
                 }
             ],
-            "totalQty": 1,
-            "isPreorder": true,
-            "preorderReleaseDate": "2020-10-07"
+            "totalQty": 1
         }
     ],
     "item_count": 1
