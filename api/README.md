@@ -25,7 +25,7 @@ After that, ask your business manager to fill your account with balance.
 
 ## Authorization
 
-Authorization is based on HTTP header `X-Api-Key`. You can find your API key in a Dashboard in **MY STORES** section.
+Authorization is based on HTTP header `91ba8dc0cc48517a939b8d353433391c-Key`. You can find your API key in a Dashboard in **MY STORES** section.
 
 ### Example
 
